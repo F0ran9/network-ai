@@ -5,6 +5,7 @@
     width="780px"
     :close-on-click-modal="false"
     class="deploy-dialog"
+    append-to-body
   >
     <!-- 连接信息 -->
     <div class="section">
