@@ -160,3 +160,72 @@ def _parse_ping(out: str, mode: str):
             return False, "无法解析 ping 输出"
         rate = float(m.group(1))
         return rate == 100, f"成功率 {rate}%"
+
+
+# 一键巡检: 各厂商采集命令 (CPU / 内存 / 版本 / 接口概览)
+INSPECT_CMDS = {
+    "huawei": ["display cpu-usage", "display memory-usage", "display version", "display ip interface brief"],
+    "h3c":    ["display cpu-usage", "display memory", "display version", "display interface brief"],
+    "cisco":  ["show processes cpu | include CPU", "show memory statistics", "show version", "show ip interface brief"],
+    "ruijie": ["show processes cpu | include CPU", "show memory statistics", "show version", "show ip interface brief"],
+}
+
+
+def inspect_device(host: str, device_type: str, username: str, password: str,
+                   port: int = 22) -> dict:
+    """一键巡检: 采集 CPU/内存/版本/接口概览, 解析出关键指标供表格展示."""
+    from netmiko import ConnectHandler
+
+    dt = (device_type or "").lower()
+    if "comware" in dt:
+        cmds = INSPECT_CMDS["h3c"]
+    elif dt.startswith("cisco") or dt.startswith("ruijie"):
+        cmds = INSPECT_CMDS["cisco"]
+    else:
+        cmds = INSPECT_CMDS["huawei"]
+
+    conn = ConnectHandler(device_type=device_type, host=host, port=port,
+                          username=username, password=password, timeout=15)
+    try:
+        outputs = {}
+        for c in cmds:
+            try:
+                outputs[c] = conn.send_command(c, read_timeout=60)
+            except Exception as e:
+                outputs[c] = f"(采集失败: {e})"
+    finally:
+        conn.disconnect()
+
+    blob = "\n".join(outputs.values())
+
+    # CPU: 华为/H3C/思科通用格式 "five seconds: X%" / "five seconds: X%"
+    cpu = None
+    m = re.search(r"five seconds[:：]?\s*(\d+)(?::\s*\d+)?%", blob, re.I)
+    if not m:
+        m = re.search(r"cpu[^\d]{0,20}(\d+)%", blob, re.I)
+    if m:
+        cpu = float(m.group(1))
+
+    # 内存: 华为 "Memory Using Percentage Is: 32%" / H3C "Memory Using Percentage: 32%"
+    mem = None
+    m = re.search(r"memory[^\d]{0,30}(\d+(?:\.\d+)?)\s*%", blob, re.I)
+    if m:
+        mem = float(m.group(1))
+
+    # 版本: 取版本输出里的关键行
+    version = ""
+    ver_out = next((v for k, v in outputs.items() if "version" in k.lower()), "")
+    for line in ver_out.splitlines():
+        s = line.strip()
+        if re.search(r"(version|uptime|with \d+ byte)", s, re.I) and len(s) > 8:
+            version = s[:90]
+            break
+        if s and not version and re.search(r"^[A-Za-z]", s):
+            version = s[:90]
+            if "version" in s.lower():
+                break
+
+    return {"host": host, "device_type": device_type, "status": "success",
+            "cpu": cpu, "mem": mem, "version": version,
+            "outputs": outputs,
+            "time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}

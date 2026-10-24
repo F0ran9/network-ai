@@ -90,6 +90,18 @@
             :closable="false"
             show-icon
           />
+          <!-- 变更摘要 -->
+          <div v-if="pushResult.summary && Object.keys(pushResult.summary).length" class="summary-bar">
+            <span class="summary-title">本次变更:</span>
+            <el-tag v-for="(n, cat) in pushResult.summary" :key="cat" size="small" type="info" class="summary-tag">
+              {{ cat }} × {{ n }}
+            </el-tag>
+          </div>
+          <!-- 逃生口风险 -->
+          <el-alert v-for="(r, i) in (pushResult.escape_risks || [])" :key="i"
+            :type="r.level === 'danger' ? 'error' : 'warning'"
+            :title="`${r.level === 'danger' ? '危险' : '注意'}: ${r.command}`"
+            :description="r.reason" :closable="false" show-icon style="margin-top:6px" />
           <div v-if="pushResult.backup_file" class="result-line">
             备份文件: {{ pushResult.backup_file }}
           </div>
@@ -148,6 +160,11 @@
               <el-tag v-if="row.status === 'success'" type="success" size="small">下发成功</el-tag>
               <el-tag v-else-if="row.status === 'dry-run'" type="info" size="small">预览 OK</el-tag>
               <el-tag v-else-if="row.status === 'fail'" type="danger" size="small">失败</el-tag>
+              <el-tooltip v-if="row.risks && row.risks.length"
+                :content="row.risks.map((r) => `${r.level === 'danger' ? '危险' : '注意'}: ${r.command}`).join('\n')"
+                placement="top">
+                <el-tag type="warning" size="small" style="margin-left:4px">风险 {{ row.risks.length }}</el-tag>
+              </el-tooltip>
               <span v-if="row.message" class="form-tip batch-msg">{{ row.message }}</span>
             </template>
           </el-table-column>
@@ -323,6 +340,69 @@
           <el-table-column prop="detail" label="详情" min-width="200" show-overflow-tooltip />
         </el-table>
       </el-tab-pane>
+      <!-- Tab 6: 一键巡检 -->
+      <el-tab-pane label="一键巡检" name="inspect">
+        <el-alert type="info" :closable="false" show-icon style="margin-bottom:10px">
+          批量 SSH 采集设备 CPU / 内存 / 版本 / 接口概览。SSH 账号使用上方表单中的账号密码，逐台采集并实时回显。
+        </el-alert>
+        <div class="push-bar">
+          <el-button size="small" @click="inspectSelectAll(true)">全选</el-button>
+          <el-button size="small" @click="inspectSelectAll(false)">全不选</el-button>
+          <el-checkbox v-model="inspectSkipFail" size="small">失败自动跳过</el-checkbox>
+          <span v-if="inspectRunning" class="form-tip">巡检中 {{ inspectDone }}/{{ inspectQueue.length }} — {{ inspectCurrent }}</span>
+          <div class="push-actions">
+            <el-button type="primary" :loading="inspectRunning" :disabled="!inspectSelected.length"
+              @click="startInspect">
+              开始巡检 ({{ inspectSelected.length }})
+            </el-button>
+          </div>
+        </div>
+
+        <el-table :data="batchRows" size="small" max-height="200" style="width:100%;margin-bottom:10px"
+          @selection-change="onInspectSelectionChange" ref="inspectTableRef">
+          <el-table-column type="selection" width="40" />
+          <el-table-column label="设备" min-width="140">
+            <template #default="{ row }">{{ formatDeviceName(row.key) }}</template>
+          </el-table-column>
+          <el-table-column label="管理 IP" min-width="130">
+            <template #default="{ row }">{{ row.host || '—' }}</template>
+          </el-table-column>
+        </el-table>
+
+        <el-table :data="inspectResults" size="small" style="width:100%">
+          <el-table-column type="expand">
+            <template #default="{ row }">
+              <div v-for="(out, cmd) in (row.outputs || {})" :key="cmd" style="margin:4px 12px">
+                <div class="form-tip">{{ cmd }}</div>
+                <pre class="code-block" style="max-height:160px"><code>{{ out }}</code></pre>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop="name" label="设备" min-width="120" />
+          <el-table-column prop="host" label="管理 IP" min-width="120" />
+          <el-table-column label="状态" width="90">
+            <template #default="{ row }">
+              <el-tag v-if="row.status === 'running'" type="warning" size="small">采集中</el-tag>
+              <el-tag v-else-if="row.status === 'success'" type="success" size="small">完成</el-tag>
+              <el-tag v-else type="danger" size="small">{{ row.status === 'skipped' ? '跳过' : '失败' }}</el-tag>
+            </template>
+          </el-table-column>
+          <el-table-column label="CPU" width="80">
+            <template #default="{ row }">
+              <span v-if="row.cpu != null" :class="row.cpu >= 70 ? 'risk-text' : ''">{{ row.cpu }}%</span>
+              <span v-else>—</span>
+            </template>
+          </el-table-column>
+          <el-table-column label="内存" width="80">
+            <template #default="{ row }">
+              <span v-if="row.mem != null" :class="row.mem >= 80 ? 'risk-text' : ''">{{ row.mem }}%</span>
+              <span v-else>—</span>
+            </template>
+          </el-table-column>
+          <el-table-column prop="version" label="版本" min-width="180" show-overflow-tooltip />
+          <el-table-column prop="error" label="备注" min-width="120" show-overflow-tooltip />
+        </el-table>
+      </el-tab-pane>
     </el-tabs>
   </el-dialog>
 </template>
@@ -424,6 +504,39 @@ async function gateByPrecheck(errors, warns, scopeLabel) {
   return true
 }
 
+// ---- 逃生口检测 (下发前扫描自杀式配置, 纯文本不连设备) ----
+async function escapePrecheck(commands) {
+  try {
+    const resp = await fetch('/api/device/precheck', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...authHeaders() },
+      body: JSON.stringify({ deviceType: deviceType.value, commands }),
+    })
+    if (!resp.ok) return { risks: [], summary: {} }
+    return await resp.json().then((d) => ({ risks: d.data?.risks || [], summary: d.data?.summary || {} }))
+  } catch (_) {
+    return { risks: [], summary: {} }
+  }
+}
+
+function riskListText(risks, max = 8) {
+  return risks.slice(0, max).map((r) => `【${r.level === 'danger' ? '危险' : '注意'}】${r.command}\n    ${r.reason}`).join('\n')
+}
+
+async function gateByEscape(risks, scopeLabel) {
+  if (!risks.length) return true
+  const danger = risks.filter((r) => r.level === 'danger').length
+  try {
+    await ElMessageBox.confirm(
+      `逃生口检测${scopeLabel}发现 ${risks.length} 条风险命令 (其中危险 ${danger} 条):\n\n${riskListText(risks)}`
+      + `\n\n确认设备有带外管理手段 (Console) 且你清楚上述命令的影响后, 才建议继续。`,
+      '⚠️ 可能自断管理通道',
+      { type: 'warning', confirmButtonText: '我已知晓, 继续', cancelButtonText: '取消', customStyle: { whiteSpace: 'pre-wrap' } },
+    )
+    return true
+  } catch (_) { return false }
+}
+
 // ---- 单台下发 ----
 const dryRun = ref(true)
 const pushing = ref(false)
@@ -433,6 +546,9 @@ async function doPush() {
   // CLI 语法预检: error 需二次确认, warn 仅提示
   const pre = await precheckCommands(filteredCommands.value)
   if (!await gateByPrecheck(pre.errors, pre.warns, ` (设备 ${formatDeviceName(device.value) || host.value})`)) return
+  // 逃生口检测: 危险命令需二次确认
+  const esc = await escapePrecheck(filteredCommands.value)
+  if (!await gateByEscape(esc.risks, ``)) return
   if (!dryRun.value) {
     try {
       await ElMessageBox.confirm(
@@ -586,6 +702,17 @@ async function startBatch() {
   const allCmds = devices.flatMap((d) => d.commands)
   const pre = await precheckCommands(allCmds)
   if (!await gateByPrecheck(pre.errors, pre.warns, ` (批量 ${devices.length} 台)`)) return
+  // 批量逃生口检测: 逐台扫, 汇总有风险的设备
+  const riskyDevices = []
+  for (const d of devices) {
+    const esc = await escapePrecheck(d.commands)
+    if (esc.risks.length) riskyDevices.push({ name: d.name, risks: esc.risks })
+  }
+  if (riskyDevices.length) {
+    const text = riskyDevices.slice(0, 6).map((d) => `■ ${d.name}\n${riskListText(d.risks, 4)}`).join('\n\n')
+    if (!await gateByEscape(riskyDevices.flatMap((d) => d.risks),
+      `: ${riskyDevices.length} 台设备存在风险 — ${text}\n\n`)) return
+  }
   if (!batchDryRun.value) {
     try {
       await ElMessageBox.confirm(
@@ -635,7 +762,7 @@ async function startBatch() {
           batchLog.value.push(evt.message)
         } else if (evt.type === 'device') {
           const row = batchSelected.value.find((r) => r.host.trim() === evt.data.host && formatDeviceName(r.key) === evt.data.name)
-          if (row) { row.status = evt.data.status; row.message = evt.data.message }
+          if (row) { row.status = evt.data.status; row.message = evt.data.message; row.risks = evt.data.risks || [] }
         } else if (evt.type === 'result') {
           batchSummary.value = evt.data
         }
@@ -647,6 +774,85 @@ async function startBatch() {
     batchRunning.value = false
   }
 }
+
+// ---- 一键巡检 ----
+const inspectTableRef = ref(null)
+const inspectSelected = ref([])
+const inspectRunning = ref(false)
+const inspectSkipFail = ref(true)
+const inspectResults = ref([])
+const inspectQueue = ref([])
+const inspectDone = ref(0)
+const inspectCurrent = ref('')
+
+function onInspectSelectionChange(rows) { inspectSelected.value = rows }
+function inspectSelectAll(on) {
+  nextTick(() => {
+    const t = inspectTableRef.value
+    if (!t) return
+    if (on) t.toggleAllSelection()
+    else t.clearSelection()
+  })
+}
+
+async function startInspect() {
+  const devices = inspectSelected.value.filter((r) => r.host && r.host.trim())
+  if (!devices.length) {
+    ElMessage.warning('所选设备均未填写管理 IP (可在设备属性中维护)')
+    return
+  }
+  inspectRunning.value = true
+  inspectQueue.value = devices
+  inspectDone.value = 0
+  inspectCurrent.value = ''
+  inspectResults.value = devices.map((d) => ({
+    name: formatDeviceName(d.key), host: d.host.trim(), status: 'pending',
+    cpu: null, mem: null, version: '', outputs: null, error: '',
+  }))
+  const rows = inspectResults.value
+  for (let i = 0; i < devices.length; i++) {
+    if (!inspectRunning.value) break // 用户关闭弹窗即停止
+    const d = devices[i], row = rows[i]
+    inspectCurrent.value = `${formatDeviceName(d.key)} (${d.host.trim()})`
+    row.status = 'running'
+    try {
+      const resp = await fetch('/api/device/inspect', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...authHeaders() },
+        body: JSON.stringify({
+          host: d.host.trim(), deviceType: deviceType.value,
+          username: username.value, password: password.value, port: port.value,
+        }),
+      })
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data.detail || `HTTP ${resp.status}`)
+      row.status = 'success'
+      row.cpu = data.data.cpu
+      row.mem = data.data.mem
+      row.version = data.data.version
+      row.outputs = data.data.outputs
+    } catch (e) {
+      row.status = 'fail'
+      row.error = String(e.message).slice(0, 120)
+      if (inspectSkipFail.value) {
+        ElMessage.warning(`${row.name} 巡检失败已跳过: ${e.message}`)
+        continue
+      } else {
+        ElMessage.error(`巡检中止: ${e.message}`)
+        break
+      }
+    } finally {
+      inspectDone.value++
+    }
+  }
+  inspectRunning.value = false
+  inspectCurrent.value = ''
+  ElMessage.success(`巡检结束: ${rows.filter((r) => r.status === 'success').length}/${rows.length} 成功`)
+}
+
+watch(visible, (v) => {
+  if (!v) inspectRunning.value = false // 关弹窗停止后续采集
+})
 
 // ---- 验收报告导出 (md / docx / pdf) ----
 const REPORT_META = { md: 'Markdown', docx: 'Word', pdf: 'PDF' }
@@ -898,4 +1104,8 @@ watch(activeTab, (t) => { if (t === 'audit') loadAudit() })
 .diff-line.add { background: #e8f7ee; color: #1a7f37; }
 .diff-line.del { background: #fdeeee; color: #c0392b; text-decoration: line-through; text-decoration-thickness: 1px; }
 .diff-mark { display: inline-block; width: 14px; color: #909399; user-select: none; }
+.summary-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+.summary-title { font-size: 12px; color: #606266; font-weight: 600; }
+.summary-tag { margin: 0; }
+.risk-text { color: #c0392b; font-weight: 700; }
 </style>

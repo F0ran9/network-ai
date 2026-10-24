@@ -23,7 +23,8 @@ from kb_engine import (
     generate_config_from_kb as kb_generate, validate_cli_command, validate_cli_batch,
 )
 from vision_analyzer import analyze_topology_image
-from device_connector import push_config, run_ping_tests, collect_state, BACKUP_DIR
+from device_connector import push_config, run_ping_tests, collect_state, inspect_device, BACKUP_DIR
+from precheck import escape_risks, change_summary
 import network_scanner
 import audit as audit_log
 from change_plan import build_change_plan
@@ -643,6 +644,51 @@ def _run_blocking(fn, **kwargs):
     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as ex:
         return ex.submit(fn, **kwargs).result(timeout=180)
 
+
+# ---- 下发前安全预检 (逃生口检测 + 变更摘要, 纯文本不连设备) ----
+class PrecheckRequest(BaseModel):
+    deviceType: str
+    commands: list
+
+
+@app.post("/api/device/precheck")
+async def api_device_precheck(request: PrecheckRequest):
+    """扫描即将下发的命令: 返回逃生口风险列表与变更摘要统计."""
+    return {"status": "success", "data": {
+        "risks": escape_risks(request.commands),
+        "summary": change_summary(request.commands),
+    }}
+
+
+# ---- 一键巡检 ----
+class InspectRequest(BaseModel):
+    host: str
+    deviceType: str
+    username: str
+    password: str
+    port: int = 22
+
+
+@app.post("/api/device/inspect")
+async def api_device_inspect(request: InspectRequest):
+    """一键巡检: SSH 采集设备 CPU/内存/版本/接口概览."""
+    if not request.host.strip():
+        raise HTTPException(400, detail="未填写管理 IP")
+    try:
+        result = await _run_blocking(
+            inspect_device, host=request.host.strip(), device_type=request.deviceType,
+            username=request.username, password=request.password, port=request.port,
+        )
+        audit_log.audit("inspect", result="success", host=request.host,
+                        device_type=request.deviceType,
+                        detail=f"CPU {result.get('cpu')}% / MEM {result.get('mem')}%")
+        return {"status": "success", "data": result}
+    except Exception as e:
+        audit_log.audit("inspect", result="fail", host=request.host,
+                        device_type=request.deviceType, detail=str(e)[:200])
+        raise HTTPException(500, detail=f"巡检失败: {e}")
+
+
 @app.post("/api/device/push")
 async def api_device_push(request: DevicePushRequest):
     """真机下发配置. 默认 dryRun=true 只连接+备份+预览; dryRun=false 才真实下发."""
@@ -653,6 +699,8 @@ async def api_device_push(request: DevicePushRequest):
             commands=request.commands, dry_run=request.dryRun,
             backup=request.backup, port=request.port,
         )
+        result["escape_risks"] = escape_risks(request.commands)
+        result["summary"] = change_summary(request.commands)
         audit_log.audit("push", result="dry-run" if request.dryRun else "success",
                         host=request.host, device_type=request.deviceType,
                         command_count=result.get("command_count"),
@@ -812,6 +860,8 @@ async def api_device_push_batch(request: BatchPushRequest):
                             "message": f"{r.get('command_count', 0)} 条命令"
                                        + (f", 备份: {r['backup_file']}" if r.get("backup_file") else ""),
                             "commandCount": r.get("command_count")})
+                rec["risks"] = escape_risks(d.commands)
+                rec["summary"] = change_summary(d.commands)
                 if request.dryRun:
                     rec["commands"] = r.get("commands", [])
                 ok += 1
