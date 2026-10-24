@@ -1,30 +1,22 @@
 import json
 import os
-from openai import OpenAI
+import llm_client
 from prompts import VENDOR_STYLES, SYSTEM_PROMPT_TEMPLATE
 from kb_engine import generate_config_from_kb
 
-_client = None
-
-def _get_client():
-    global _client
-    if _client is None:
-        _client = OpenAI(
-            api_key=os.getenv("DEEPSEEK_API_KEY"),
-            base_url="https://api.deepseek.com"
-        )
-    return _client
+def reset_client():
+    """配置更新后使缓存的客户端失效, 下次调用用新配置重建."""
+    llm_client.reset_client()
 
 def _ai_generate(topology_json: dict, vendor: str) -> dict:
-    """Call DeepSeek AI to generate configs."""
+    """Call configured LLM (DeepSeek/GLM/Claude/...) to generate configs."""
     vendor = vendor.capitalize()
     style = VENDOR_STYLES.get(vendor, VENDOR_STYLES["default"])
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(vendor=vendor, style=style)
 
     user_prompt = json.dumps(topology_json, ensure_ascii=False, indent=2)
 
-    response = _get_client().chat.completions.create(
-        model="deepseek-v4-pro",
+    content = llm_client.chat_completion(
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
@@ -33,7 +25,6 @@ def _ai_generate(topology_json: dict, vendor: str) -> dict:
         max_tokens=4096,
     )
 
-    content = response.choices[0].message.content.strip()
     # Clean markdown code block
     if content.startswith("```"):
         lines = content.split('\n')

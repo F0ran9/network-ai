@@ -1,0 +1,108 @@
+/* ============================================================
+   tokens.css — 设计令牌层（工业实用方向）
+   调性：Industrial / utilitarian —— 机柜面板、发丝边框、等宽数字
+   配色：钢青主色 60% / 中性面 30% / 琥珀强调 10%（只给关键动作）
+   字体：离线约束下用系统等宽栈做技术展示字（Cascadia/Consolas），
+         中文正文用雅黑/苹方；刻意不引外部 Web 字体保证内网可用
+   ============================================================ */
+
+:root {
+  /* ---- 色彩：亮色主题 ---- */
+  --tct-bg: #e8ecf1;            /* 应用底：冷钢灰 */
+  --tct-surface: #f4f7fa;       /* 次级面板 */
+  --tct-panel: #ffffff;         /* 主面板 */
+  --tct-ink: #1b2733;           /* 近黑蓝，禁纯 #000 */
+  --tct-muted: #5c6b7a;         /* 次要文字 ≥4.5:1 */
+  --tct-border: #d3dce5;        /* 发丝边框 */
+  --tct-border-strong: #b9c5d1;
+
+  --tct-brand: #0e7490;         /* 钢青主色 */
+  --tct-brand-strong: #155e75;
+  --tct-brand-soft: rgba(14, 116, 144, 0.09);
+  --tct-accent: #b45309;        /* 琥珀强调（亮色下加深保对比） */
+  --tct-accent-strong: #92400e;
+  --tct-ok: #047857;
+  --tct-warn: #b45309;
+  --tct-danger: #b91c1c;
+
+  /* ---- 机柜头部（两种主题下恒定深色） ---- */
+  --tct-rack-bg: linear-gradient(180deg, #172029 0%, #0e141b 100%);
+  --tct-rack-line: rgba(148, 187, 208, 0.14);
+  --tct-rack-ink: #dfe9f1;
+  --tct-rack-muted: #7e93a5;
+
+  /* ---- 字体 ---- */
+  --tct-font: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  --tct-mono: "Cascadia Code", "JetBrains Mono", Consolas, "SFMono-Regular", monospace;
+
+  /* ---- 字阶（1.25 比例） ---- */
+  --tct-fs-xs: 11px;
+  --tct-fs-sm: 12px;
+  --tct-fs-base: 14px;
+  --tct-fs-md: 16px;
+  --tct-fs-lg: 20px;
+
+  /* ---- 间距梯度 ---- */
+  --tct-sp-1: 4px; --tct-sp-2: 8px; --tct-sp-3: 12px;
+  --tct-sp-4: 16px; --tct-sp-5: 24px; --tct-sp-6: 40px;
+
+  /* ---- 圆角 / 阴影（三级，带环境色） ---- */
+  --tct-radius: 6px;
+  --tct-radius-lg: 10px;
+  --tct-shadow-1: 0 1px 2px rgba(15, 23, 42, 0.07);
+  --tct-shadow-2: 0 4px 12px rgba(15, 23, 42, 0.10);
+  --tct-shadow-3: 0 12px 32px rgba(15, 23, 42, 0.16);
+
+  /* ---- 动效 ---- */
+  --tct-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --tct-dur-fast: 160ms;
+  --tct-dur-base: 320ms;
+
+  /* ---- Element Plus 品牌变量接管 ---- */
+  --el-color-primary: var(--tct-brand);
+  --el-color-primary-dark-2: var(--tct-brand-strong);
+  --el-color-primary-light-3: #3a96ad;
+  --el-color-primary-light-5: #6fb4c6;
+  --el-color-primary-light-7: #a3d1dc;
+  --el-color-primary-light-8: #c1e0e8;
+  --el-color-primary-light-9: var(--tct-brand-soft);
+  --el-border-radius-base: var(--tct-radius);
+  --el-font-family: var(--tct-font);
+  --el-text-color-primary: var(--tct-ink);
+  --el-text-color-regular: #33475a;
+  --el-border-color: var(--tct-border);
+  --el-border-color-light: var(--tct-border);
+  --el-border-color-lighter: #e2e9f0;
+  --el-fill-color-light: var(--tct-surface);
+}
+
+/* ---- 暗色主题：只翻令牌，组件代码不动 ---- */
+html.dark {
+  --tct-bg: #0d1218;
+  --tct-surface: #141b23;
+  --tct-panel: #18202a;
+  --tct-ink: #e2e9f0;
+  --tct-muted: #93a3b3;
+  --tct-border: rgba(226, 233, 240, 0.12);
+  --tct-border-strong: rgba(226, 233, 240, 0.22);
+
+  --tct-brand: #3bb8cf;
+  --tct-brand-strong: #5ecadd;
+  --tct-brand-soft: rgba(59, 184, 207, 0.12);
+  --tct-accent: #f0a72e;
+  --tct-accent-strong: #f5b944;
+  --tct-ok: #34d399;
+  --tct-warn: #f0a72e;
+  --tct-danger: #f87171;
+
+  --tct-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --tct-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --tct-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+  --el-text-color-primary: var(--tct-ink);
+  --el-text-color-regular: #b8c4cf;
+  --el-border-color: var(--tct-border);
+  --el-fill-color-light: var(--tct-surface);
+  --el-bg-color: var(--tct-panel);
+  --el-bg-color-overlay: #1c2530;
+}

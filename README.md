@@ -54,8 +54,9 @@ topology-config-tool/
 │   └── vite.config.js
 ├── .env.example                # 环境变量模板
 ├── .gitignore
-├── start.bat                   # 快速启动
-├── restart.bat                 # 重新构建并启动
+├── setup.bat                   # 一键安装+启动（推荐）
+├── start.bat                   # 快速启动（跳过安装步骤）
+├── restart.bat                 # 重新构建前端并重启后端
 └── build.bat                   # 仅构建前端
 ```
 
@@ -114,10 +115,11 @@ npm install
 
 ### 4. 启动服务
 
-**方式一：一键启动（Windows）**
+**方式一：一键启动（推荐）**
 ```
-双击 start.bat
+双击 setup.bat
 ```
+自动完成：创建虚拟环境 → 安装依赖 → 检查配置 → 构建前端 → 启动服务
 
 **方式二：手动启动**
 ```bash

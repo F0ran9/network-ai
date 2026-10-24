@@ -26,6 +26,9 @@
         <el-button size="small" type="primary" :icon="DocumentCopy" @click="copyAllConfigs">
           一键复制全部
         </el-button>
+        <el-button size="small" type="danger" :icon="Connection" @click="deployVisible = true">
+          下发到设备
+        </el-button>
         <el-dropdown @command="handleExport" trigger="click">
           <el-button size="small" type="success" :icon="Download">
             导出配置
@@ -126,15 +129,21 @@
     </div>
 
     <el-empty v-if="!configs || Object.keys(configs).length===0" description="暂无配置，请绘制拓扑后点击一键生成" />
+
+    <!-- 真机下发与验收 -->
+    <DeviceDeployDialog v-model="deployVisible" :configs="configs" :topology="topology" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { ElMessage } from 'element-plus'
-import { DocumentCopy, Download, FolderOpened } from '@element-plus/icons-vue'
+import { DocumentCopy, Download, FolderOpened, Connection } from '@element-plus/icons-vue'
 import { computeDiff } from '../utils/diff.js'
 import JSZip from 'jszip'
+import DeviceDeployDialog from './DeviceDeployDialog.vue'
+
+const deployVisible = ref(false)
 
 const props = defineProps({
   configs: Object,

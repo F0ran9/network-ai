@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 3Com_SuperStack_III__US_units___3C16478__F_.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="7.69055in" height="0.772441in"
+		viewBox="0 0 553.72 55.6157" xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#e6e6e6}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Network" v:index="0"/>
+		<g id="group1-1" transform="translate(0,-24.2079)" v:mID="1" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Manufacturer" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(3com)"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Product Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(3C16478)"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Part Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Product Description" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Equipment" v:invis="false" v:ask="false" v:langID="1033" v:cal="0"
+						v:val="VT4(3Com Baseline Switch 2816, 16 10/100/1000 Port)"/>
+				<v:cp v:nameU="RackUnits" v:lbl="Rack Units" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="PurchaseDate" v:lbl="Purchase Date" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="InstalledDate" v:lbl="Installed Date" v:prompt="" v:type="5" v:format="ddddd"
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="WarrantyExp" v:lbl="Warranty Exp" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="SupportAgreement" v:lbl="Support Agreement" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SupportContactName" v:lbl="Support Contact Name" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ContactPhone" v:lbl="Contact Phone" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Comments" v:lbl="Comments" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="Maintenance" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Asset Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Serial Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Location" v:lbl="Location" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Building" v:lbl="Building" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Room" v:lbl="Room" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Department" v:lbl="Department" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Network Name" v:prompt="Network Name" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP Address" v:prompt="IP Address" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Subnet Mask" v:prompt="Subnet Mask" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Admin. Interface" v:prompt="Administrative Interface" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NumberOfPorts" v:lbl="Number of Ports" v:prompt="Number of Ports" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC Address" v:prompt="MAC Address" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Community String" v:prompt="Community String" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Network Description" v:prompt="Network Description" v:type="0"
+						v:format="" v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="EQID" v:prompt="Equipment ID." v:val="VT4(3COM7641)"/>
+				<v:ud v:nameU="DateGenerated" v:prompt="Date Generated." v:val="VT4(8/25/2005)"/>
+				<v:ud v:nameU="visProductLine" v:prompt="Shape Product Line." v:val="VT4(SuperStack III)"/>
+				<v:ud v:nameU="visEquipType" v:prompt="Equipment Type." v:val="VT4(Switch)"/>
+				<v:ud v:nameU="visFMCategory" v:prompt="FM Category." v:val="VT4(Equipment)"/>
+				<v:ud v:nameU="visFMClass" v:prompt="FM Equipment Class." v:val="VT4(FMEquipment)"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<title>3C16478 (F)</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(204.945,-18.1559)">
+				<title>工作表.2</title>
+				<desc>3com 3C16478</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="68.315" cy="91.7717" width="64" height="17.6036"/>
+				<rect v:rectContext="foreign" x="0" y="43.5118" width="136.63" height="12.1039" class="st1"/>
+				<switch>
+					<foreignObject x="0" y="43.5118" width="136.63" height="12.1039"
+							requiredExtensions="http://schemas.microsoft.com/visio/2003/SVGExtensions/">
+						<v:foreignData v:orgSize="56252" v:data="data:metafile;base64,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"/>
+					</foreignObject>
+					<svg viewBox="0 0 1138.4 101.04" enable-background="new" color-interpolation-filters="sRGB" height="12.1039"
+							preserveAspectRatio="none" width="136.63" x="0" y="43.5118">
+						<defs>
+							<clipPath id="mfid601">
+								<rect id="mfid602" x="0" y="0" width="1138.4" height="101.04"/>
+							</clipPath>
+						</defs>
+						<g clip-path="url(#mfid601)">
+							<g transform="matrix(0.12366, 0, 0, 0.26649, 982.44, 22.119)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<polyline points="119,6 119,82 157,82" fill="none"/>
+									<path fill="none" d="M157,6 L232,6 M194,6 L194,82 M251,6 L251,82 M251,6 L251,82"/>
+									<polyline points="288,82 288,6 326,82 364,6 364,82" fill="none"/>
+									<polyline points="382,82 420,6 458,82" fill="none"/>
+									<path fill="none" d="M392,63 L448,63"/>
+									<polyline points="6,82 44,6 82,82" fill="none"/>
+									<path fill="none" d="M16,63 L72,63"/>
+									<polyline points="119,6 119,82 157,82" fill="none"/>
+									<path fill="none" d="M157,6 L232,6 M194,6 L194,82 M251,6 L251,82 M251,6 L251,82"/>
+									<polyline points="288,82 288,6 326,82 364,6 364,82" fill="none"/>
+									<polyline points="382,82 420,6 458,82" fill="none"/>
+									<path fill="none" d="M392,63 L448,63"/>
+									<polyline points="6,82 44,6 82,82" fill="none"/>
+									<path fill="none" d="M16,63 L72,63"/>
+								</g>
+							</g>
+							<mask id="mfid603" fill-rule="evenodd" fill="white" stroke="none"/>
+							<g mask="url(#mfid603)">
+								<g transform="matrix(0.1171, 0, 0, 0.11703, 0, 0)">
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#e6e9ed">
+										<polygon points="9714,2 2,2 2,858 9714,858 9714,2"/>
+										<polygon points="9278,2 438,2 438,858 9278,858 9278,2"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#cdd5d6">
+										<polygon
+												points="4547,774 7568,774 7602,770 7619,767 7635,763 7652,759 7667,753 7683,747 7713,733 7727,725 7741,716 7755,706 7768,696 7781,685 7793,674 7815,650 7825,637 7835,623 7844,609 7852,595 7860,580 7867,565 7873,549 7883,517 7887,500 7890,483 7892,466 7894,448 7894,412 7890,378 7887,361 7883,345 7878,328 7873,313 7867,297 7860,282 7852,267 7844,253 7835,239 7825,225 7815,212 7804,199 7781,176 7768,165 7755,155 7741,145 7727,136 7713,128 7698,120 7683,113 7667,107 7652,102 7635,97 7619,93 7602,90 7568,86 4547,86 4547,772 4547,774"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#e6e9ed">
+										<polygon points="4782,86 526,86 526,774 4782,774 4782,86"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<polygon
+												points="287,116 287,110 286,104 284,98 280,88 274,78 266,70 256,64 246,60 240,58 234,57 106,57 100,58 94,60 84,64 74,70 66,78 60,88 56,98 54,104 53,110 53,122 54,128 56,134 60,144 66,154 74,162 84,168 94,172 100,174 106,175 234,175 240,174 246,172 256,168 266,162 274,154 280,144 284,134 286,128 287,122 287,116"/>
+										<polygon
+												points="287,744 287,738 286,732 284,726 280,716 274,706 266,698 256,692 246,688 240,686 234,685 106,685 100,686 94,688 84,692 74,698 66,706 60,716 56,726 54,732 53,738 53,750 54,756 56,762 60,772 66,782 74,790 84,796 94,800 100,802 106,803 234,803 240,802 246,800 256,796 266,790 274,782 280,772 284,762 286,756 287,750 287,744"/>
+										<polygon
+												points="9663,116 9663,110 9662,104 9660,98 9656,88 9650,78 9642,70 9632,64 9622,60 9616,58 9610,57 9482,57 9476,58 9470,60 9460,64 9450,70 9442,78 9436,88 9432,98 9430,104 9429,110 9429,122 9430,128 9432,134 9436,144 9442,154 9450,162 9460,168 9470,172 9476,174 9482,175 9610,175 9616,174 9622,172 9632,168 9642,162 9650,154 9656,144 9660,134 9662,128 9663,122 9663,116"/>
+										<polygon
+												points="9663,744 9663,738 9662,732 9660,726 9656,716 9650,706 9642,698 9632,692 9622,688 9616,686 9610,685 9482,685 9476,686 9470,688 9460,692 9450,698 9442,706 9436,716 9432,726 9430,732 9429,738 9429,750 9430,756 9432,762 9436,772 9442,782 9450,790 9460,796 9470,800 9476,802 9482,803 9610,803 9616,802 9622,800 9632,796 9642,790 9650,782 9656,772 9660,762 9662,756 9663,750 9663,744"/>
+									</g>
+									<g stroke-width="3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" fill="none">
+										<polyline points="8036,4 8036,860" fill="none"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11998, 0, 0, 0.12024, 709.32, 69.979)">
+									<g fill-rule="evenodd" stroke-width="52.084" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<ellipse cx="36" cy="36" rx="35.5" ry="35.5"/>
+									</g>
+									<g stroke-width="52.084" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="36" cy="36" rx="35.5" ry="35.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="52.084" stroke="#000000" stroke-miterlimit="10"
+											fill="#efefef">
+										<ellipse cx="36" cy="36" rx="31.5" ry="31.5"/>
+									</g>
+									<g stroke-width="52.084" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="36" cy="36" rx="31.5" ry="31.5"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11713, 0, 0, 0.1169, 982.46, 22.094)">
+									<g fill-rule="evenodd" stroke-width="53.353" stroke="#7f7f7f" stroke-miterlimit="10"
+											fill="#7f7f7f">
+										<polygon
+												points="19,72 19,64 20,60 20,57 23,48 26,42 28,40 29,38 31,37 32,35 36,33 37,33 39,32 41,32 43,31 47,31 48,32 52,32 53,33 57,35 58,36 60,37 62,39 63,41 65,44 66,46 66,49 67,51 68,54 68,56 69,59 69,68 68,71 68,73 64,81 63,82 62,84 59,87 51,91 49,91 47,92 42,92 39,91 36,91 36,111 52,111 62,116 63,118 65,119 71,131 71,134 72,136 72,141 73,144 73,146 72,149 72,154 71,156 71,159 69,163 68,166 66,170 64,172 63,174 60,177 56,179 55,180 53,181 51,181 49,182 41,182 40,181 38,181 32,178 29,175 27,174 26,172 24,170 23,168 22,165 21,163 20,160 19,158 18,155 18,151 17,148 17,141 0,141 0,149 1,151 1,157 2,160 3,162 3,165 4,168 5,170 6,173 7,175 8,178 10,182 12,185 13,187 15,189 16,191 18,193 20,194 22,196 28,199 31,200 33,201 36,202 53,202 55,201 57,201 69,195 71,193 73,192 75,190 76,188 78,186 79,184 81,182 82,180 84,178 86,172 87,170 88,167 88,163 90,157 90,133 89,131 89,128 88,126 88,125 87,123 87,121 86,120 86,118 85,117 84,115 83,114 83,112 82,111 81,109 80,108 79,106 77,104 75,103 74,101 72,99 70,98 69,97 70,97 72,96 74,94 76,93 78,89 79,88 80,86 81,83 83,79 84,76 84,73 85,71 85,65 86,62 86,56 85,53 85,50 84,47 84,43 81,34 79,31 78,28 76,25 74,23 72,20 68,17 64,15 61,13 57,12 54,10 50,10 47,9 40,9 31,12 29,13 26,15 24,17 21,19 17,23 11,32 10,35 8,38 7,42 6,45 5,49 5,53 4,56 4,72 18,72 19,72"/>
+										<polygon
+												points="223,63 223,55 222,53 222,48 221,45 220,43 220,40 219,38 218,35 217,33 216,30 214,28 213,25 211,23 210,20 204,14 201,12 197,8 194,6 182,2 178,1 175,0 166,0 161,1 149,4 145,6 142,8 138,11 132,17 130,20 127,23 125,27 123,30 119,38 118,42 116,46 114,54 113,59 110,71 110,75 109,78 109,82 108,86 108,123 109,128 109,133 110,137 112,147 114,151 115,156 117,160 118,164 124,176 127,179 129,182 131,186 134,188 136,191 139,194 145,198 148,199 151,201 154,202 158,203 177,203 180,202 182,201 191,198 193,196 196,194 200,190 203,188 205,186 207,183 209,181 211,178 212,175 216,169 218,163 220,159 222,153 222,149 223,145 223,142 224,138 224,127 207,127 207,140 206,142 206,144 205,146 205,148 204,151 202,155 202,157 200,159 196,167 191,172 189,173 186,176 182,178 179,179 177,180 175,180 172,181 163,181 157,178 154,177 152,176 143,167 141,164 140,162 138,159 137,157 135,154 134,151 133,147 131,141 130,137 129,134 128,130 128,126 127,122 127,118 126,114 126,87 127,83 127,77 128,74 129,70 129,67 130,63 134,51 137,45 139,42 140,39 142,37 144,34 148,30 151,28 153,27 156,26 158,25 161,24 175,24 178,25 180,25 181,26 183,26 187,28 188,29 190,30 193,33 195,34 196,36 197,37 198,39 199,40 199,42 200,43 201,45 202,46 202,48 203,50 203,51 204,53 204,55 205,56 205,60 206,61 206,63 222,63 223,63"/>
+										<polygon
+												points="289,54 289,74 294,74 295,75 297,75 298,76 300,76 306,82 308,86 309,87 314,97 314,100 315,102 315,105 316,107 316,110 317,112 317,118 318,120 318,137 317,139 317,146 316,148 316,151 315,153 315,155 314,157 314,159 313,161 313,162 310,168 309,169 308,171 302,177 300,178 299,179 293,182 291,182 289,183 284,183 282,182 280,182 279,181 277,181 269,173 267,169 266,168 264,165 263,163 263,161 262,159 261,156 260,154 259,151 259,149 258,146 258,140 257,137 257,112 258,109 258,107 259,105 259,103 260,101 260,98 267,84 269,83 270,81 272,80 273,78 277,76 278,75 280,75 282,74 289,74 289,54 282,54 279,55 276,55 273,56 270,58 268,59 265,61 263,62 261,64 259,67 255,71 251,77 250,79 249,82 247,85 244,94 244,98 242,104 242,107 241,110 241,144 242,148 242,152 243,156 244,159 245,163 249,175 251,178 252,180 254,183 256,185 257,188 261,192 263,193 265,195 267,196 269,198 273,200 276,201 278,201 280,202 296,202 300,200 302,200 305,199 307,197 311,195 315,191 316,189 322,183 323,180 325,177 329,165 333,149 333,145 334,140 334,115 333,112 333,106 332,103 332,100 328,88 327,86 325,80 323,77 322,75 320,72 318,70 317,67 311,61 308,60 306,58 303,57 301,56 298,55 295,55 292,54 289,54"/>
+										<polygon
+												points="371,58 371,78 376,68 378,66 380,65 381,63 383,61 395,55 399,55 401,54 404,54 406,55 408,55 416,59 424,67 426,70 427,73 429,76 437,64 441,60 443,59 446,57 450,55 453,55 455,54 463,54 465,55 467,55 470,56 472,58 476,60 480,64 481,66 483,68 484,71 486,74 487,76 487,79 488,82 489,86 489,119 490,124 490,194 489,196 489,198 474,198 474,93 473,92 473,88 472,87 472,85 471,85 471,83 468,80 468,79 467,79 466,78 465,78 465,77 464,77 463,76 462,76 460,75 458,75 456,74 453,74 452,75 450,75 449,76 447,76 444,79 442,80 441,80 440,82 437,85 437,86 436,87 435,89 434,90 434,91 433,92 433,94 432,95 432,96 431,97 431,101 430,102 430,198 415,198 415,95 414,94 414,91 413,90 413,88 412,87 412,86 411,84 411,83 408,80 408,79 407,78 406,78 404,76 402,76 401,75 391,75 389,76 388,76 387,77 385,77 379,83 379,84 376,87 376,89 375,90 375,91 374,92 374,95 373,97 373,99 372,101 372,198 355,198 355,58 370,58 371,58"/>
+									</g>
+								</g>
+								<g transform="matrix(0.09026, 0, 0, 0.092491, 1012.9, 3.3297)">
+									<g fill-rule="evenodd" stroke-width="69.233" stroke="#d1d1d1" stroke-miterlimit="10"
+											fill="#d8d8d8">
+										<polygon
+												points="218,103 217,101 212,96 208,94 206,92 203,91 201,90 192,87 188,87 185,86 181,85 178,85 174,84 145,84 140,85 136,85 131,86 127,86 117,88 113,89 108,90 104,91 99,92 91,94 87,96 83,97 80,99 76,100 73,102 69,103 60,109 57,110 55,112 52,114 44,122 43,124 40,127 39,129 39,131 38,133 38,141 39,142 41,146 44,149 46,150 48,152 52,154 55,156 57,157 63,159 66,159 70,160 73,161 77,161 80,162 88,162 92,163 109,163 113,162 122,162 127,161 131,160 136,160 141,159 145,158 150,157 154,156 159,155 167,153 171,151 175,150 179,148 182,147 186,145 189,144 192,142 196,140 198,138 201,137 204,135 214,125 215,123 218,120 219,118 219,116 220,114 220,106 219,105 218,103 215,103 214,104 207,104 206,105 203,105 202,104 201,102 199,100 197,99 196,98 192,96 191,96 188,95 186,95 184,94 182,94 179,93 151,93 147,94 139,94 135,95 131,95 123,97 118,97 106,100 103,101 99,102 96,103 92,104 89,105 86,107 77,110 75,112 72,113 70,115 67,116 65,118 61,120 60,122 58,123 57,125 56,126 55,128 54,129 53,131 53,132 52,133 52,136 53,137 53,139 58,144 60,145 61,146 69,150 71,150 74,151 76,151 79,152 81,152 84,153 109,153 112,152 116,152 119,151 123,151 127,150 130,149 134,149 146,146 149,145 153,144 156,144 160,143 163,142 166,140 170,139 173,138 175,137 178,136 181,134 184,133 186,132 188,130 191,129 193,128 194,126 196,125 199,122 200,120 202,119 202,117 203,116 204,114 204,107 203,105 206,105 207,104 214,104 215,103 217,103 218,103"/>
+										<polygon
+												points="85,153 86,152 87,150 88,149 89,147 89,146 90,144 91,143 92,141 93,140 93,138 95,134 95,133 97,129 97,127 98,125 98,123 99,121 99,119 100,117 100,113 101,111 101,107 102,104 102,85 101,81 101,73 100,69 99,66 97,58 95,52 94,48 93,45 91,42 90,39 88,37 87,34 85,31 83,29 82,27 74,19 70,17 67,16 61,13 51,13 45,16 42,17 38,19 30,27 29,29 27,31 25,34 24,37 22,39 21,42 19,45 18,48 17,52 15,58 13,66 12,69 11,73 11,81 10,85 10,101 11,105 11,113 12,117 13,120 15,128 17,134 18,138 19,141 21,144 22,147 24,150 25,152 27,155 29,157 30,159 38,167 42,169 45,170 51,173 64,173 65,172 68,172 69,171 71,171 71,170 73,170 73,169 74,169 76,167 77,167 77,166 78,165 79,165 79,164 80,163 95,163 94,164 93,166 88,171 87,173 85,175 83,176 82,176 79,179 77,180 76,180 74,182 72,182 71,183 70,183 68,184 67,184 66,185 63,185 62,186 50,186 47,185 45,184 39,182 37,180 34,179 32,177 29,175 27,172 20,165 16,159 15,155 13,152 11,148 10,145 8,141 6,133 4,129 3,125 3,121 2,116 1,112 1,107 0,102 0,84 1,79 1,74 2,70 3,65 3,61 4,57 6,53 8,45 10,41 11,38 13,34 15,31 17,27 18,24 23,19 25,16 32,9 35,7 37,6 40,4 43,3 45,2 51,0 63,0 66,1 68,2 74,4 76,6 79,7 81,9 84,11 86,14 93,21 97,27 98,31 100,34 102,38 103,41 105,45 107,53 109,57 110,61 110,65 111,70 112,74 112,79 113,84 113,103 112,105 112,111 111,113 111,117 110,119 110,123 109,125 109,127 108,129 108,131 107,133 107,135 106,137 106,138 104,142 104,144 103,145 103,147 102,149 101,150 101,152 100,153 86,153 85,153"/>
+										<polygon
+												points="266,3 264,3 263,4 261,5 260,6 259,8 257,9 254,15 253,18 252,20 252,23 251,26 251,29 250,32 250,35 249,39 249,57 250,61 250,70 252,78 252,83 253,87 254,92 255,96 257,106 258,110 259,115 261,119 262,123 263,128 265,132 266,136 268,140 270,143 271,147 273,151 275,154 276,157 282,166 283,169 291,177 292,179 294,181 300,184 301,185 310,185 311,184 313,183 314,182 315,180 317,179 320,173 321,170 322,168 322,165 323,162 323,159 324,156 324,153 325,149 325,131 324,127 324,118 322,110 322,105 321,101 320,96 319,92 317,82 316,78 315,73 313,69 312,65 311,60 309,56 308,52 306,48 304,45 303,41 301,37 299,34 298,31 292,22 291,19 283,11 282,9 280,7 274,4 273,3 266,3 266,5 267,5 267,8 268,9 268,11 269,12 269,15 270,16 270,19 271,19 271,21 266,26 265,28 264,29 264,31 263,33 263,35 262,37 262,64 263,67 263,71 264,74 264,81 265,84 266,88 266,91 267,95 267,98 270,110 272,114 273,117 274,121 275,124 277,128 281,140 283,142 285,148 286,150 288,152 292,160 294,161 295,163 298,166 300,167 302,169 303,169 305,170 307,170 311,166 311,165 312,163 313,162 313,160 314,158 314,152 315,150 315,135 314,132 314,126 313,122 313,119 312,116 312,112 311,109 310,105 310,101 309,98 306,86 305,83 304,79 303,76 302,72 296,54 295,52 294,49 293,47 292,44 291,42 289,40 285,32 280,27 279,25 277,24 276,23 275,23 274,22 272,21 271,21 271,19 270,19 270,16 269,15 269,12 268,11 268,9 267,8 267,5 266,5 266,4 266,3"/>
+									</g>
+									<g stroke-width="6" stroke="#d8d8d8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+										<path fill="none" d="M208,105 L215,103 M267,6 L271,19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 602.96, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 602.96, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 602.96, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 602.96, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 613.3, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 613.3, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 613.3, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 613.3, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 624.09, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 624.09, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 624.09, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 624.09, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 634.29, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 634.29, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 634.29, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 634.29, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 644.63, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 644.63, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 644.63, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 644.63, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 655.43, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 655.43, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 655.43, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 655.43, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 665.77, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 665.77, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 665.77, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 665.77, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 676.56, 34.268)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 676.56, 46.442)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 676.56, 58.766)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14991, 0, 0, 0.1503, 676.56, 70.94)">
+									<g fill-rule="evenodd" stroke-width="41.684" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+									<g stroke-width="41.684" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="20.5" cy="20.5" rx="20" ry="20"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46851, 0, 0, 0.46977, -9.8386, -7.0465)">
+									<g fill-rule="evenodd" stroke-width="13.338" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(206,55)" xml:space="preserve">1</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(494,55)" xml:space="preserve">4</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.27166, 0, 0, 0.16585, 91.279, 18.409)">
+									<g fill-rule="evenodd" stroke-width="23.003" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="474,0 0,0 0,358 474,358 474,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46851, 0, 0, 0.46977, -9.8386, -7.0465)">
+									<g fill-rule="evenodd" stroke-width="13.338" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(202,165)" xml:space="preserve">9</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(494,165)" xml:space="preserve">12</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 96.472, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 96.472, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 127.01, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 127.01, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 157.85, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 157.85, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 188.39, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 188.39, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46851, 0, 0, 0.46977, -9.8386, -7.0465)">
+									<g fill-rule="evenodd" stroke-width="13.338" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(546,55)" xml:space="preserve">5</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(834,55)" xml:space="preserve">8</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.27166, 0, 0, 0.16585, 250.75, 18.409)">
+									<g fill-rule="evenodd" stroke-width="23.003" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="474,0 0,0 0,358 474,358 474,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46851, 0, 0, 0.46977, -9.8386, -7.0465)">
+									<g fill-rule="evenodd" stroke-width="13.338" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(539,165)" xml:space="preserve">13</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(834,165)" xml:space="preserve">16</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 255.78, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 255.78, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 286.31, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 286.31, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 317.16, 54.018)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 317.16, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 347.69, 54.536)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10351, 0, 0, 0.10348, 347.69, 19.248)">
+									<g fill-rule="evenodd" stroke-width="60.371" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,225 0,72 64,72 64,36 90,36 90,0 166,0 166,36 192,36 192,72 256,72 256,225 0,225"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46851, 0, 0, 0.46977, -9.8386, -7.0465)">
+									<g fill-rule="evenodd" stroke-width="13.338" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="14">
+											<text stroke="none" fill="#000000" baseline-shift="-71.4%"
+													x="0,9,13,17,21,30,39,45,50,58,62,70,76,85,89,98,107,112,121,125,138,148,152,156,169,179,183,188,197"
+													y="0" transform="translate(1292,39)" xml:space="preserve">All ports are Auto MDI/MDI-X</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="16">
+											<text stroke="none" fill="#000000" baseline-shift="-75%"
+													x="0,11,22,26,30,38,46,50,59,68,77,86" y="0" transform="translate(1844,42)"
+													xml:space="preserve">Switch 2816</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="italic" font-weight="400" font-size="21">
+											<text stroke="none" fill="#000000" baseline-shift="-71.4%" x="0,13,28,41,53,66,79,92"
+													y="0" transform="translate(1841,166)" xml:space="preserve">3C16478</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.40657, 0, 0, 0.18773, 605.79, 28.16)">
+									<g stroke-width="15.37" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline points="0,28 0,0 104,0" fill="none"/>
+									</g>
+								</g>
+								<g transform="matrix(0.40657, 0, 0, 0.18773, 678.98, 28.16)">
+									<g stroke-width="15.37" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline points="104,28 104,0 0,0" fill="none"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46851, 0, 0, 0.46977, -9.8386, -7.0465)">
+									<g fill-rule="evenodd" stroke-width="13.338" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%"
+													x="0,8,15,20,24,27,35,39,46,50,57,64" y="0" transform="translate(1405,67)"
+													xml:space="preserve">Port Status</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1311,89)" xml:space="preserve">1</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1333,89)" xml:space="preserve">2</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1356,89)" xml:space="preserve">3</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1378,89)" xml:space="preserve">4</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1400,89)" xml:space="preserve">5</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1423,89)" xml:space="preserve">6</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1445,89)" xml:space="preserve">7</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1468,89)" xml:space="preserve">8</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1468,115)" xml:space="preserve">8</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1445,115)" xml:space="preserve">7</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1423,115)" xml:space="preserve">6</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1400,115)" xml:space="preserve">5</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1378,115)" xml:space="preserve">4</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1356,115)" xml:space="preserve">3</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1333,115)" xml:space="preserve">2</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1311,115)" xml:space="preserve">1</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1465,141)" xml:space="preserve">16</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1442,141)" xml:space="preserve">15</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1420,141)" xml:space="preserve">14</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1397,141)" xml:space="preserve">13</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1375,141)" xml:space="preserve">12</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1353,141)" xml:space="preserve">11</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1330,141)" xml:space="preserve">10</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1311,141)" xml:space="preserve">9</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1465,167)" xml:space="preserve">16</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1442,167)" xml:space="preserve">15</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1420,167)" xml:space="preserve">14</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1397,167)" xml:space="preserve">13</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1375,167)" xml:space="preserve">12</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1353,167)" xml:space="preserve">11</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13" y="0"
+													transform="translate(1330,167)" xml:space="preserve">10</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(1311,167)" xml:space="preserve">9</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="11">
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%"
+													x="0,7,10,17,24,27,35,41,45,48,54,57,61,67" y="0"
+													transform="translate(1488,89)" xml:space="preserve">Link/Activity</text>
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%" x="0,9,15,21,23,30,36" y="0"
+													transform="translate(1488,115)" xml:space="preserve">Duplex</text>
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%"
+													x="0,7,10,17,24,27,35,41,45,48,54,57,61,67" y="0"
+													transform="translate(1488,141)" xml:space="preserve">Link/Activity</text>
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%" x="0,9,15,21,23,30,36" y="0"
+													transform="translate(1488,167)" xml:space="preserve">Duplex</text>
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%" x="0,6,13,21,28,32" y="0"
+													transform="translate(1561,167)" xml:space="preserve">Power</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="11">
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%"
+													x="0,6,8,14,20,26,29,35,38,46,52,55,57,63,65,68,74,77,80,87,93,99,101,107,113,116,119,122,130,136,139,145,148,154,160,162,164,167,170,178,182,186,189,195,198,205,211,213,217"
+													y="0" transform="translate(1309,193)" xml:space="preserve">Flash = Activity, Duplex : On = Full, Off = Half</text>
+											<text stroke="none" fill="#000000" baseline-shift="-72.7%"
+													x="0,6,8,14,19,22,30,36,39,41,47,49,52,58,61,64,67,75,79,85,91,97,100,106,109,115,121,127,133,141,144,147,155,161,163,165,171,181,184,190,193,199,205,208,214,220,226,234,237"
+													y="0" transform="translate(1299,180)" xml:space="preserve">Link/Activity : Green = 1000M, Yellow = 10/100M,</text>
+										</g>
+									</g>
+								</g>
+							</g>
+							<mask id="mfid604" fill-rule="evenodd" fill="white" stroke="none"/>
+						</g>
+					</svg>
+				</switch>
+				<rect v:rectContext="foreign" x="0" y="43.5118" width="136.63" height="12.1039" class="st1"/>
+			</g>
+			<g id="shape1-5" v:mID="1" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M204.94 55.62 L204.94 7.2 L0 7.2 L0 55.62 L204.94 55.62 ZM341.57 55.62 L341.57 7.2 L546.52 7.2 L546.52 55.62
+							 L341.57 55.62 Z" class="st2"/>
+				<path d="M204.94 55.62 L204.94 7.2 L0 7.2 L0 55.62 L204.94 55.62" class="st3"/>
+				<path d="M341.57 55.62 L341.57 7.2 L546.52 7.2 L546.52 55.62 L341.57 55.62" class="st3"/>
+				<path d="M204.94 55.62 L204.94 7.2 L341.57 7.2 L341.57 55.62 L204.94 55.62" class="st3"/>
+			</g>
+		</g>
+	</g>
+</svg>

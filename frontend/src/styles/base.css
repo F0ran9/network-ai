@@ -1,0 +1,95 @@
+/* ============================================================
+   base.css — 基础层：重置补充、滚动条、焦点、入场序列、全局细节
+   ============================================================ */
+
+/* ---- 焦点可见性（可访问性硬要求） ---- */
+:focus-visible {
+  outline: 2px solid var(--tct-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---- 自定义滚动条：细、圆、随主题 ---- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tct-border-strong) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--tct-border-strong);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--tct-muted); }
+
+/* ---- 全局文字渲染 ---- */
+body {
+  font-family: var(--tct-font);
+  color: var(--tct-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- 一次性编排的入场序列：头部→左栏→画布→右栏 ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .app-header {
+    animation: tct-drop var(--tct-dur-base) var(--tct-ease) both;
+  }
+  .device-sidebar {
+    animation: tct-slide-left var(--tct-dur-base) var(--tct-ease) 80ms both;
+  }
+  .el-main {
+    animation: tct-fade var(--tct-dur-base) var(--tct-ease) 160ms both;
+  }
+  .config-panel-aside {
+    animation: tct-slide-right var(--tct-dur-base) var(--tct-ease) 240ms both;
+  }
+}
+@keyframes tct-drop {
+  from { opacity: 0; transform: translateY(-14px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes tct-slide-left {
+  from { opacity: 0; transform: translateX(-18px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes tct-slide-right {
+  from { opacity: 0; transform: translateX(18px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes tct-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-header, .device-sidebar, .el-main, .config-panel-aside {
+    animation: none;
+  }
+  * { transition-duration: 1ms !important; }
+}
+
+/* ---- Element Plus 控件细节统一 ---- */
+.el-button {
+  transition: box-shadow var(--tct-dur-fast) ease-out,
+              transform var(--tct-dur-fast) ease-out,
+              border-color var(--tct-dur-fast) ease-out,
+              background-color var(--tct-dur-fast) ease-out;
+}
+.el-button:not(.is-disabled):hover { box-shadow: var(--tct-shadow-1); }
+.el-button:not(.is-disabled):active { transform: translateY(1px); box-shadow: none; }
+
+/* 弹层用等宽数字（VLAN 号、IP 地址场景多） */
+.el-input__inner,
+.el-select__selected-item {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- 对话框 / 抽屉工业质感 ---- */
+.el-dialog, .el-drawer, .el-message-box {
+  border: 1px solid var(--tct-border);
+  box-shadow: var(--tct-shadow-3);
+}
+.el-dialog__title, .el-drawer__title, .el-message-box__title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

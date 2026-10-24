@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 3Com_Router_5000_Series__US_units___3C13700__F_.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="6.09055in" height="1.37244in"
+		viewBox="0 0 438.52 98.8157" xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Network" v:index="0"/>
+		<g id="group1-1" v:mID="1" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Manufacturer" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(3com)"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Product Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(3C13700)"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Part Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Product Description" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Equipment" v:invis="false" v:ask="false" v:langID="1033" v:cal="0"
+						v:val="VT4(3Com Router 5009, 1 x 10/100 Port, 2 SIC slots, 1 MIM Slot)"/>
+				<v:cp v:nameU="RackUnits" v:lbl="Rack Units" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="PurchaseDate" v:lbl="Purchase Date" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="InstalledDate" v:lbl="Installed Date" v:prompt="" v:type="5" v:format="ddddd"
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="WarrantyExp" v:lbl="Warranty Exp" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="SupportAgreement" v:lbl="Support Agreement" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SupportContactName" v:lbl="Support Contact Name" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ContactPhone" v:lbl="Contact Phone" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Comments" v:lbl="Comments" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="Maintenance" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Asset Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Serial Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Location" v:lbl="Location" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Building" v:lbl="Building" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Room" v:lbl="Room" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Department" v:lbl="Department" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Network Name" v:prompt="Network Name" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP Address" v:prompt="IP Address" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Subnet Mask" v:prompt="Subnet Mask" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Admin. Interface" v:prompt="Administrative Interface" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NumberOfPorts" v:lbl="Number of Ports" v:prompt="Number of Ports" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC Address" v:prompt="MAC Address" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Community String" v:prompt="Community String" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Network Description" v:prompt="Network Description" v:type="0"
+						v:format="" v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="EQID" v:prompt="Equipment ID." v:val="VT4(3COM9991)"/>
+				<v:ud v:nameU="DateGenerated" v:prompt="Date Generated." v:val="VT4(8/25/2005)"/>
+				<v:ud v:nameU="visProductLine" v:prompt="Shape Product Line." v:val="VT4(Router 5000 Series)"/>
+				<v:ud v:nameU="visEquipType" v:prompt="Equipment Type." v:val="VT4(Bridge and Router)"/>
+				<v:ud v:nameU="visFMCategory" v:prompt="FM Category." v:val="VT4(Equipment)"/>
+				<v:ud v:nameU="visFMClass" v:prompt="FM Equipment Class." v:val="VT4(FMEquipment)"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<title>3C13700 (F)</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" v:layerMember="0">
+				<title>工作表.2</title>
+				<desc>3com 3C13700</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="215.66" cy="116.816" width="64" height="17.6036"/>
+				<rect v:rectContext="foreign" x="0" y="7.2" width="431.32" height="91.6157" class="st1"/>
+				<switch>
+					<foreignObject x="0" y="7.2" width="431.32" height="91.6157"
+							requiredExtensions="http://schemas.microsoft.com/visio/2003/SVGExtensions/">
+						<v:foreignData v:orgSize="25152" v:data="data:metafile;base64,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
+									xXm6un2db4YverzePTbH/ujW2rzfHTbDd6Yttq8/8024Pu2PHV5gZqtlnu2P1q8wY128mu2LbanELN9mZnbA3afEPN9h
+									3Hf/arzV8TI/PXdMeZvyZGziUnmssmxHgmJBznmdDByJzVRuKyyP/9txK/kQPs/SQvG5BkZ1cm6tn2hCPS0ITPpFXBHZ
+									Iv+LK0OPCkZA6skpb4b5T8/lZple9MKcdXJr3sTZXO9Tok0dsh3u15WxzueVZsd68Sr3cvEk9zzxJfd40T57qGi7IrTX
+									zOGRQnO7koOTuE3zh2CgWOt4U37K8IF9i3CIdsm4Rf2LYI3W2vCOutbwujrDuFvZYOYamFi6dbguI2c5o4zzxcTDaPE0
+									OmWeI00yLRblolPmR8Vmw0vi1+bugQbzQ4pH6GVGmjvkyq058pvctbpSn8RukTtkqayp6U/i69LNVJO6QN4mdSknhEmi
+									Po2Radnbl0XrpqB4hE1ojuRG+6kqcQg+jqWkBX2lq68o5hE3AeOxOz2FmYxybhWjYZS9gUrGBT8Rs2ja5qF2Ejm4WX2W
+									y8zlrxDmvDTjaf7hKuxl52Lb5gC+nOQXkGqDz/my53sFnyHnaZ3M4ul3ewNvkttkB+lV0t/4ldIz/HrpM3sOvltWyR/D
+									u2WL6DLZFvZsvl2exX8nS2Qj6b3Sq3sNvlenaHXMFWykXsTjmD3SUPIPqwu+UehMx+IycwJa/HuxYKJ/GsUYgx91KIMQ
+									/odl24nu/XhW2VeUDFtr14wqqQqyu2KexFvPS0RfQs1oXPSeqcTetneNKikK0bZlX4LG56zoromRmlp9SyC0+bFbJ0pR
+									aFXXHTs4EaMi23ROXrcds+FNoV8nWP2xT2xU3Ptkh8dkbpedS+F/kOhVzdo3aF+NXPvogeSTiar4cdn2GIUyFb97BDIX
+									714xLCenpG6Vnn3IVcl0KWbp1T4eTq52TnTkffOx87d167ti2QYt87aPPqNdtLg/9p+0NfB08mnrmKtsj9+QpiCdQ58V
+									gkTaBx0AQckt4kNksu9gKxTf3+ZOKq3PsruVmO8P3KishSsXOxN9V+f8i6UPbj08j44ohwdD/OD07AVcShAPkMhKT3A5
+									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"/>
+					</foreignObject>
+					<svg viewBox="0 0 898.44 191.2" enable-background="new" color-interpolation-filters="sRGB" height="91.6157"
+							preserveAspectRatio="none" width="431.32" x="0" y="7.2">
+						<defs>
+							<clipPath id="mfid94">
+								<rect id="mfid95" x="0" y="0" width="898.44" height="191.2"/>
+							</clipPath>
+						</defs>
+						<g clip-path="url(#mfid94)">
+							<mask id="mfid93" fill-rule="evenodd" fill="white" stroke="none"/>
+							<g mask="url(#mfid93)">
+								<g transform="matrix(0.11708, 0, 0, 0.11718, 0, 0)">
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#444749">
+										<polygon points="834,1526 1109,1526 1095,1578 848,1578 834,1526"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#7f7f7f">
+										<polygon
+												points="1077,1578 1077,1584 1076,1585 1076,1588 1075,1590 1075,1592 1074,1594 1074,1596 1073,1598 1072,1599 1071,1601 1071,1604 1069,1606 1067,1610 1058,1619 1056,1620 1054,1622 1051,1623 1049,1625 1046,1626 897,1626 894,1625 892,1623 889,1622 887,1620 885,1619 876,1610 874,1606 872,1604 872,1601 871,1599 870,1598 869,1596 869,1594 868,1592 868,1590 867,1588 867,1585 866,1584 866,1578 1076,1578 1077,1578"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#444749">
+										<polygon points="701,1526 976,1526 962,1578 715,1578 701,1526"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#7f7f7f">
+										<polygon
+												points="944,1578 944,1584 943,1585 943,1588 942,1590 942,1592 941,1594 941,1596 940,1598 939,1599 938,1601 938,1604 936,1606 934,1610 925,1619 923,1620 921,1622 918,1623 916,1625 913,1626 764,1626 761,1625 759,1623 756,1622 754,1620 752,1619 743,1610 741,1606 739,1604 739,1601 738,1599 737,1598 736,1596 736,1594 735,1592 735,1590 734,1588 734,1585 733,1584 733,1578 943,1578 944,1578"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#444749">
+										<polygon points="6834,1526 6559,1526 6573,1578 6820,1578 6834,1526"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#7f7f7f">
+										<polygon
+												points="6591,1578 6591,1584 6592,1585 6592,1588 6593,1590 6593,1592 6594,1594 6594,1596 6595,1598 6596,1599 6597,1601 6597,1604 6599,1606 6601,1610 6610,1619 6612,1620 6614,1622 6617,1623 6619,1625 6622,1626 6771,1626 6774,1625 6776,1623 6779,1622 6781,1620 6783,1619 6792,1610 6794,1606 6796,1604 6796,1601 6797,1599 6798,1598 6799,1596 6799,1594 6800,1592 6800,1590 6801,1588 6801,1585 6802,1584 6802,1578 6592,1578 6591,1578"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#444749">
+										<polygon points="6967,1526 6692,1526 6706,1578 6953,1578 6967,1526"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#7f7f7f">
+										<polygon
+												points="6724,1578 6724,1584 6725,1585 6725,1588 6726,1590 6726,1592 6727,1594 6727,1596 6728,1598 6729,1599 6730,1601 6730,1604 6732,1606 6734,1610 6743,1619 6745,1620 6747,1622 6750,1623 6752,1625 6755,1626 6904,1626 6907,1625 6909,1623 6912,1622 6914,1620 6916,1619 6925,1610 6927,1606 6929,1604 6929,1601 6930,1599 6931,1598 6932,1596 6932,1594 6933,1592 6933,1590 6934,1588 6934,1585 6935,1584 6935,1578 6725,1578 6724,1578"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#4c4f54">
+										<polygon
+												points="7529,1526 7537,1522 7546,1510 7553,1491 7561,1464 7568,1432 7575,1394 7582,1350 7589,1302 7595,1249 7601,1193 7607,1134 7612,1072 7618,1008 7623,942 7627,876 7632,809 7636,741 7640,675 7643,609 7647,545 7650,483 7653,424 7655,368 7657,315 7659,267 7661,223 7663,185 7664,153 7665,126 7665,107 7666,95 7666,91 6541,91 6541,89 6540,89 6540,86 6539,85 6539,83 6538,82 6538,78 6537,77 6537,74 6536,73 6536,71 6535,70 6535,67 6534,67 6534,65 6532,65 6529,66 6525,66 6521,67 6516,67 6509,68 6503,69 6495,70 6488,71 6479,72 6471,73 6462,74 6453,76 6443,77 6425,79 6415,80 6406,82 6397,83 6389,84 6380,85 6373,86 6365,87 6359,88 6352,89 6347,89 6343,90 6339,90 6336,91 6334,91 6334,59 6332,59 6329,60 6325,60 6321,61 6316,62 6309,63 6303,64 6295,65 6288,66 6279,68 6271,69 6262,71 6253,72 6243,74 6225,76 6215,78 6206,79 6197,81 6189,82 6180,84 6173,85 6165,86 6159,87 6152,88 6147,89 6143,90 6139,90 6136,91 6134,91 6134,52 6132,52 6129,53 6125,53 6121,54 6116,55 6109,56 6103,57 6095,58 6088,60 6079,61 6071,62 6062,64 6053,65 6043,67 6034,69 6025,70 6015,72 6006,73 5997,75 5989,76 5980,77 5973,79 5965,80 5959,81 5952,82 5947,83 5943,84 5939,84 5936,85 5934,85 5934,44 5932,44 5929,45 5921,47 5916,48 5909,49 5903,50 5895,52 5888,54 5879,55 5871,57 5853,61 5843,63 5834,65 5825,66 5815,68 5797,72 5789,74 5780,75 5773,77 5765,79 5759,80 5752,81 5747,82 5739,84 5736,85 5734,85 5734,40 5732,40 5729,41 5721,43 5716,44 5709,45 5703,46 5695,48 5688,50 5679,51 5671,53 5653,57 5643,59 5634,61 5625,62 5615,64 5597,68 5589,70 5580,71 5573,73 5565,75 5559,76 5552,77 5547,78 5539,80 5536,81 5534,81 5534,34 5533,34 5532,35 5529,35 5521,37 5516,38 5509,40 5503,41 5495,43 5488,45 5479,47 5471,49 5453,53 5443,55 5434,58 5425,60 5415,62 5397,66 5389,68 5380,70 5373,72 5365,74 5359,75 5352,77 5347,78 5339,80 5336,80 5335,81 5334,81 5334,29 5333,29 5332,30 5329,30 5321,32 5316,34 5309,35 5303,37 5295,39 5288,41 5279,43 5271,45 5262,48 5253,50 5243,53 5225,57 5215,60 5206,62 5197,65 5189,67 5180,69 5173,71 5165,73 5159,75 5152,76 5147,78 5139,80 5136,80 5135,81 5134,81 5134,23 5133,23 5132,24 5129,24 5125,25 5121,27 5116,28 5109,30 5103,32 5095,34 5088,36 5079,39 5071,41 5053,47 5043,49 5025,55 5015,57 4997,63 4989,65 4980,68 4973,70 4965,72 4959,74 4952,76 4947,77 4943,79 4939,80 4936,80 4935,81 4934,81 4934,18 4933,18 4932,19 4929,19 4925,20 4921,22 4916,23 4909,25 4903,27 4895,29 4888,31 4879,34 4871,36 4853,42 4843,44 4825,50 4815,52 4797,58 4789,60 4780,63 4773,65 4765,67 4759,69 4752,71 4747,72 4743,74 4739,75 4736,75 4735,76 4734,76 4734,12 4733,12 4732,13 4729,14 4721,16 4716,18 4709,20 4703,22 4695,24 4688,27 4679,29 4671,32 4653,38 4643,41 4625,47 4615,50 4597,56 4589,59 4580,61 4573,64 4565,66 4559,68 4552,70 4547,72 4539,74 4536,75 4535,76 4534,76 4534,8 4533,8 4532,9 4529,10 4521,12 4516,14 4509,16 4503,19 4495,21 4488,24 4479,27 4471,30 4453,36 4443,39 4425,45 4415,48 4397,54 4389,57 4380,60 4373,63 4365,65 4359,68 4352,70 4347,72 4339,74 4336,75 4335,76 4334,76 4334,7 4333,7 4332,8 4329,9 4325,10 4321,12 4316,13 4309,15 4303,18 4295,20 4288,23 4279,26 4271,29 4253,35 4243,38 4234,42 4225,45 4215,48 4197,54 4189,57 4180,60 4173,63 4165,65 4159,68 4152,70 4147,71 4143,73 4139,74 4136,75 4135,76 4134,76 4134,2 4133,2 4132,3 4129,4 4121,8 4116,10 4109,13 4103,16 4095,19 4088,23 4079,26 4071,30 4053,38 4043,42 4034,47 4025,51 4015,55 3997,63 3989,67 3980,70 3973,74 3965,77 3959,80 3952,83 3947,85 3939,89 3936,90 3935,91 3934,91 3934,2 3734,2 3734,90 3733,90 3732,89 3729,88 3721,84 3716,82 3709,79 3703,76 3695,73 3688,70 3679,66 3671,62 3653,54 3643,50 3625,42 3615,38 3597,30 3589,26 3580,22 3573,19 3565,16 3559,13 3552,10 3547,8 3539,4 3536,3 3535,2 3534,2 3534,76 3533,76 3532,75 3529,74 3525,73 3521,71 3516,70 3509,68 3503,65 3495,63 3488,60 3479,57 3471,54 3453,48 3443,45 3434,42 3425,38 3415,35 3397,29 3389,26 3380,23 3373,20 3365,18 3359,15 3352,13 3347,12 3343,10 3339,9 3336,8 3335,7 3334,7 3334,76 3333,76 3332,75 3329,74 3321,72 3316,70 3309,68 3303,65 3295,63 3288,60 3279,57 3271,54 3253,48 3243,45 3225,39 3215,36 3197,30 3189,27 3180,24 3173,21 3165,19 3159,16 3152,14 3147,12 3139,10 3136,9 3135,8 3134,8 3134,76 3133,76 3132,75 3129,74 3121,72 3116,70 3109,68 3103,66 3095,64 3088,61 3079,59 3071,56 3053,50 3043,47 3025,41 3015,38 2997,32 2989,29 2980,27 2973,24 2965,22 2959,20 2952,18 2947,16 2939,14 2936,13 2935,12 2934,12 2934,76 2933,76 2932,75 2929,75 2925,74 2921,72 2916,71 2909,69 2903,67 2895,65 2888,63 2879,60 2871,58 2853,52 2843,50 2825,44 2815,42 2797,36 2789,34 2780,31 2773,29 2765,27 2759,25 2752,23 2747,22 2743,20 2739,19 2736,19 2735,18 2734,18 2734,81 2733,81 2732,80 2729,80 2725,79 2721,77 2716,76 2709,74 2703,72 2695,70 2688,68 2679,65 2671,63 2653,57 2643,55 2625,49 2615,47 2597,41 2589,39 2580,36 2573,34 2565,32 2559,30 2552,28 2547,27 2543,25 2539,24 2536,24 2535,23 2534,23 2534,81 2533,81 2532,80 2529,80 2521,78 2516,76 2509,75 2503,73 2495,71 2488,69 2479,67 2471,65 2462,62 2453,60 2443,57 2425,53 2415,50 2406,48 2397,45 2389,43 2380,41 2373,39 2365,37 2359,35 2352,34 2347,32 2339,30 2336,30 2335,29 2334,29 2334,81 2333,81 2332,80 2329,80 2321,78 2316,77 2309,75 2303,74 2295,72 2288,70 2279,68 2271,66 2253,62 2243,60 2234,58 2225,55 2215,53 2197,49 2189,47 2180,45 2173,43 2165,41 2159,40 2152,38 2147,37 2139,35 2136,35 2135,34 2134,34 2134,81 2132,81 2129,80 2121,78 2116,77 2109,76 2103,75 2095,73 2088,71 2079,70 2071,68 2053,64 2043,62 2034,61 2025,59 2015,57 1997,53 1989,51 1980,50 1973,48 1965,46 1959,45 1952,44 1947,43 1939,41 1936,40 1934,40 1934,85 1932,85 1929,84 1921,82 1916,81 1909,80 1903,79 1895,77 1888,75 1879,74 1871,72 1853,68 1843,66 1834,65 1825,63 1815,61 1797,57 1789,55 1780,54 1773,52 1765,50 1759,49 1752,48 1747,47 1739,45 1736,44 1734,44 1734,85 1732,85 1729,84 1725,84 1721,83 1716,82 1709,81 1703,80 1695,79 1688,77 1679,76 1671,75 1662,73 1653,72 1643,70 1634,69 1625,67 1615,65 1606,64 1597,62 1589,61 1580,60 1573,58 1565,57 1559,56 1552,55 1547,54 1543,53 1539,53 1536,52 1534,52 1534,91 1532,91 1529,90 1525,90 1521,89 1516,88 1509,87 1503,86 1495,85 1488,84 1479,82 1471,81 1462,79 1453,78 1443,76 1425,74 1415,72 1406,71 1397,69 1389,68 1380,66 1373,65 1365,64 1359,63 1352,62 1347,61 1343,60 1339,60 1336,59 1334,59 1334,91 1332,91 1329,90 1325,90 1321,89 1316,89 1309,88 1303,87 1295,86 1288,85 1279,84 1271,83 1262,82 1253,80 1243,79 1225,77 1215,76 1206,74 1197,73 1189,72 1180,71 1173,70 1165,69 1159,68 1152,67 1147,67 1143,66 1139,66 1136,65 1134,65 1134,67 1133,67 1133,70 1132,71 1132,73 1131,74 1131,78 1130,79 1130,82 1129,83 1129,85 1128,86 1128,89 1127,89 1127,91 2,91 2,95 3,107 3,126 4,153 5,185 7,223 9,267 11,315 13,368 15,424 18,483 21,545 25,609 28,675 32,741 36,809 41,876 45,942 50,1008 56,1072 61,1134 67,1193 73,1249 79,1302 86,1350 93,1394 100,1432 107,1464 115,1491 122,1510 131,1522 139,1526 7528,1526 7529,1526"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#444749">
+										<polygon
+												points="7666,91 6541,91 6541,89 6540,89 6540,86 6539,85 6539,83 6538,82 6538,78 6537,77 6537,74 6536,73 6536,71 6535,70 6535,67 6534,67 6534,65 6532,65 6529,66 6525,66 6521,67 6516,67 6509,68 6503,69 6495,70 6488,71 6479,72 6471,73 6462,74 6453,76 6443,77 6425,79 6415,80 6406,82 6397,83 6389,84 6380,85 6373,86 6365,87 6359,88 6352,89 6347,89 6343,90 6339,90 6336,91 6334,91 6334,59 6332,59 6329,60 6325,60 6321,61 6316,62 6309,63 6303,64 6295,65 6288,66 6279,68 6271,69 6262,71 6253,72 6243,74 6225,76 6215,78 6206,79 6197,81 6189,82 6180,84 6173,85 6165,86 6159,87 6152,88 6147,89 6143,90 6139,90 6136,91 6134,91 6134,52 6132,52 6129,53 6125,53 6121,54 6116,55 6109,56 6103,57 6095,58 6088,60 6079,61 6071,62 6062,64 6053,65 6043,67 6034,69 6025,70 6015,72 6006,73 5997,75 5989,76 5980,77 5973,79 5965,80 5959,81 5952,82 5947,83 5943,84 5939,84 5936,85 5934,85 5934,44 5932,44 5929,45 5921,47 5916,48 5909,49 5903,50 5895,52 5888,54 5879,55 5871,57 5853,61 5843,63 5834,65 5825,66 5815,68 5797,72 5789,74 5780,75 5773,77 5765,79 5759,80 5752,81 5747,82 5739,84 5736,85 5734,85 5734,40 5732,40 5729,41 5721,43 5716,44 5709,45 5703,46 5695,48 5688,50 5679,51 5671,53 5653,57 5643,59 5634,61 5625,62 5615,64 5597,68 5589,70 5580,71 5573,73 5565,75 5559,76 5552,77 5547,78 5539,80 5536,81 5534,81 5534,34 5533,34 5532,35 5529,35 5521,37 5516,38 5509,40 5503,41 5495,43 5488,45 5479,47 5471,49 5453,53 5443,55 5434,58 5425,60 5415,62 5397,66 5389,68 5380,70 5373,72 5365,74 5359,75 5352,77 5347,78 5339,80 5336,80 5335,81 5334,81 5334,29 5333,29 5332,30 5329,30 5321,32 5316,34 5309,35 5303,37 5295,39 5288,41 5279,43 5271,45 5262,48 5253,50 5243,53 5225,57 5215,60 5206,62 5197,65 5189,67 5180,69 5173,71 5165,73 5159,75 5152,76 5147,78 5139,80 5136,80 5135,81 5134,81 5134,23 5133,23 5132,24 5129,24 5125,25 5121,27 5116,28 5109,30 5103,32 5095,34 5088,36 5079,39 5071,41 5053,47 5043,49 5025,55 5015,57 4997,63 4989,65 4980,68 4973,70 4965,72 4959,74 4952,76 4947,77 4943,79 4939,80 4936,80 4935,81 4934,81 4934,18 4933,18 4932,19 4929,19 4925,20 4921,22 4916,23 4909,25 4903,27 4895,29 4888,31 4879,34 4871,36 4853,42 4843,44 4825,50 4815,52 4797,58 4789,60 4780,63 4773,65 4765,67 4759,69 4752,71 4747,72 4743,74 4739,75 4736,75 4735,76 4734,76 4734,12 4733,12 4732,13 4729,14 4721,16 4716,18 4709,20 4703,22 4695,24 4688,27 4679,29 4671,32 4653,38 4643,41 4625,47 4615,50 4597,56 4589,59 4580,61 4573,64 4565,66 4559,68 4552,70 4547,72 4539,74 4536,75 4535,76 4534,76 4534,8 4533,8 4532,9 4529,10 4521,12 4516,14 4509,16 4503,19 4495,21 4488,24 4479,27 4471,30 4453,36 4443,39 4425,45 4415,48 4397,54 4389,57 4380,60 4373,63 4365,65 4359,68 4352,70 4347,72 4339,74 4336,75 4335,76 4334,76 4334,7 4333,7 4332,8 4329,9 4325,10 4321,12 4316,13 4309,15 4303,18 4295,20 4288,23 4279,26 4271,29 4253,35 4243,38 4234,42 4225,45 4215,48 4197,54 4189,57 4180,60 4173,63 4165,65 4159,68 4152,70 4147,71 4143,73 4139,74 4136,75 4135,76 4134,76 4134,2 4133,2 4132,3 4129,4 4121,8 4116,10 4109,13 4103,16 4095,19 4088,23 4079,26 4071,30 4053,38 4043,42 4034,47 4025,51 4015,55 3997,63 3989,67 3980,70 3973,74 3965,77 3959,80 3952,83 3947,85 3939,89 3936,90 3935,91 3934,91 3934,2 3734,2 3734,90 3733,90 3732,89 3729,88 3721,84 3716,82 3709,79 3703,76 3695,73 3688,70 3679,66 3671,62 3653,54 3643,50 3625,42 3615,38 3597,30 3589,26 3580,22 3573,19 3565,16 3559,13 3552,10 3547,8 3539,4 3536,3 3535,2 3534,2 3534,76 3533,76 3532,75 3529,74 3525,73 3521,71 3516,70 3509,68 3503,65 3495,63 3488,60 3479,57 3471,54 3453,48 3443,45 3434,42 3425,38 3415,35 3397,29 3389,26 3380,23 3373,20 3365,18 3359,15 3352,13 3347,12 3343,10 3339,9 3336,8 3335,7 3334,7 3334,76 3333,76 3332,75 3329,74 3321,72 3316,70 3309,68 3303,65 3295,63 3288,60 3279,57 3271,54 3253,48 3243,45 3225,39 3215,36 3197,30 3189,27 3180,24 3173,21 3165,19 3159,16 3152,14 3147,12 3139,10 3136,9 3135,8 3134,8 3134,76 3133,76 3132,75 3129,74 3121,72 3116,70 3109,68 3103,66 3095,64 3088,61 3079,59 3071,56 3053,50 3043,47 3025,41 3015,38 2997,32 2989,29 2980,27 2973,24 2965,22 2959,20 2952,18 2947,16 2939,14 2936,13 2935,12 2934,12 2934,76 2933,76 2932,75 2929,75 2925,74 2921,72 2916,71 2909,69 2903,67 2895,65 2888,63 2879,60 2871,58 2853,52 2843,50 2825,44 2815,42 2797,36 2789,34 2780,31 2773,29 2765,27 2759,25 2752,23 2747,22 2743,20 2739,19 2736,19 2735,18 2734,18 2734,81 2733,81 2732,80 2729,80 2725,79 2721,77 2716,76 2709,74 2703,72 2695,70 2688,68 2679,65 2671,63 2653,57 2643,55 2625,49 2615,47 2597,41 2589,39 2580,36 2573,34 2565,32 2559,30 2552,28 2547,27 2543,25 2539,24 2536,24 2535,23 2534,23 2534,81 2533,81 2532,80 2529,80 2521,78 2516,76 2509,75 2503,73 2495,71 2488,69 2479,67 2471,65 2462,62 2453,60 2443,57 2425,53 2415,50 2406,48 2397,45 2389,43 2380,41 2373,39 2365,37 2359,35 2352,34 2347,32 2339,30 2336,30 2335,29 2334,29 2334,81 2333,81 2332,80 2329,80 2321,78 2316,77 2309,75 2303,74 2295,72 2288,70 2279,68 2271,66 2253,62 2243,60 2234,58 2225,55 2215,53 2197,49 2189,47 2180,45 2173,43 2165,41 2159,40 2152,38 2147,37 2139,35 2136,35 2135,34 2134,34 2134,81 2132,81 2129,80 2121,78 2116,77 2109,76 2103,75 2095,73 2088,71 2079,70 2071,68 2053,64 2043,62 2034,61 2025,59 2015,57 1997,53 1989,51 1980,50 1973,48 1965,46 1959,45 1952,44 1947,43 1939,41 1936,40 1934,40 1934,85 1932,85 1929,84 1921,82 1916,81 1909,80 1903,79 1895,77 1888,75 1879,74 1871,72 1853,68 1843,66 1834,65 1825,63 1815,61 1797,57 1789,55 1780,54 1773,52 1765,50 1759,49 1752,48 1747,47 1739,45 1736,44 1734,44 1734,85 1732,85 1729,84 1725,84 1721,83 1716,82 1709,81 1703,80 1695,79 1688,77 1679,76 1671,75 1662,73 1653,72 1643,70 1634,69 1625,67 1615,65 1606,64 1597,62 1589,61 1580,60 1573,58 1565,57 1559,56 1552,55 1547,54 1543,53 1539,53 1536,52 1534,52 1534,91 1532,91 1529,90 1525,90 1521,89 1516,88 1509,87 1503,86 1495,85 1488,84 1479,82 1471,81 1462,79 1453,78 1443,76 1425,74 1415,72 1406,71 1397,69 1389,68 1380,66 1373,65 1365,64 1359,63 1352,62 1347,61 1343,60 1339,60 1336,59 1334,59 1334,91 1332,91 1329,90 1325,90 1321,89 1316,89 1309,88 1303,87 1295,86 1288,85 1279,84 1271,83 1262,82 1253,80 1243,79 1225,77 1215,76 1206,74 1197,73 1189,72 1180,71 1173,70 1165,69 1159,68 1152,67 1147,67 1143,66 1139,66 1136,65 1134,65 1134,67 1133,67 1133,70 1132,71 1132,73 1131,74 1131,78 1130,79 1130,82 1129,83 1129,85 1128,86 1128,89 1127,89 1127,91 2,91 103,112 231,132 384,150 560,168 757,183 974,198 1209,211 1460,223 1725,234 2002,243 2291,251 2588,257 2892,262 3202,266 3515,269 3831,270 4146,269 4459,267 4769,264 5074,259 5371,253 5660,246 5938,237 6203,227 6455,215 6690,201 6908,187 7105,171 7282,153 7436,134 7564,113 7666,91"/>
+									</g>
+									<g stroke-width="5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" fill="none">
+										<path fill="none" d="M3537,6 L3556,89 M4131,6 L4112,89"/>
+										<polyline points="1127,91 6525,91 6541,91" fill="none"/>
+										<path fill="none"
+												d="M1337,60 L1361,89 M1337,60 L1361,89 M1536,52 L1566,90 M1736,46 L1770,89 M1938,42 L1960,90 M2136,36 L2158,90 M2337,32 L2359,90 M2536,25 L2556,91 M2737,19 L2752,90 M2937,15 L2961,90 M3135,11 L3169,91 M3336,9 L3353,90 M6331,60 L6307,89 M6132,52 L6102,90 M5932,46 L5898,89 M5730,42 L5708,90 M5532,36 L5510,90 M5331,32 L5309,90 M5132,25 L5112,91 M4931,19 L4916,90 M4731,15 L4707,90 M4533,11 L4499,91 M4332,9 L4315,90"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="13.344" stroke="#000000" stroke-miterlimit="10"
+											fill="#444749">
+										<polygon
+												points="7586,1304 7394,1301 7211,1295 7038,1287 6872,1276 6715,1262 6565,1247 6422,1229 6285,1210 6155,1189 6031,1166 5911,1143 5797,1118 5687,1093 5581,1066 5478,1040 5379,1013 5281,986 5187,960 5093,933 5001,907 4910,882 4820,858 4729,835 4637,813 4545,793 4451,774 4356,757 4258,743 4157,730 4053,720 3946,713 3834,708 3722,713 3615,720 3511,730 3410,743 3312,757 3217,774 3123,793 3031,813 2939,835 2848,858 2758,882 2667,907 2575,933 2481,960 2387,986 2290,1013 2190,1040 2087,1066 1981,1093 1871,1118 1757,1143 1637,1166 1513,1189 1383,1210 1246,1229 1103,1247 953,1262 796,1276 630,1287 457,1295 274,1301 82,1304 82,1307 83,1311 83,1316 84,1321 84,1327 86,1341 88,1357 90,1366 92,1384 94,1394 96,1403 97,1413 99,1423 101,1432 103,1442 107,1460 110,1469 114,1485 117,1492 119,1499 125,1511 127,1516 130,1520 133,1523 136,1525 139,1526 7529,1526 7532,1525 7538,1519 7544,1509 7546,1503 7549,1497 7552,1489 7554,1482 7556,1473 7559,1465 7561,1455 7563,1446 7565,1436 7567,1427 7573,1397 7574,1388 7576,1378 7577,1369 7579,1360 7580,1351 7581,1343 7583,1329 7584,1323 7584,1317 7585,1313 7585,1309 7586,1306 7586,1304"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="13.344" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="3648,240 3512,240 3512,312 3648,312 3648,240"/>
+										<polygon points="3394,238 3258,238 3258,310 3394,310 3394,238"/>
+										<polygon points="3140,236 3004,236 3004,308 3140,308 3140,236"/>
+										<polygon points="3766,244 3902,244 3902,316 3766,316 3766,244"/>
+										<polygon points="4020,240 4156,240 4156,312 4020,312 4020,240"/>
+										<polygon points="4274,238 4410,238 4410,310 4274,310 4274,238"/>
+										<polygon points="4528,236 4664,236 4664,308 4528,308 4528,236"/>
+									</g>
+									<g stroke-width="5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" fill="none">
+										<path fill="none" d="M1137,67 L1152,89 M6533,64 L6516,89"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="13.344" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="1163,92 1139,92 1274,214 1274,1223 1298,1221 1298,215 1163,92"/>
+									</g>
+									<g stroke-width="13.344" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline points="1298,214 1274,214" fill="none"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="13.344" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="6505,92 6529,92 6394,214 6394,1222 6370,1220 6370,215 6505,92"/>
+									</g>
+									<g stroke-width="13.344" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline points="6370,214 6394,214" fill="none"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="13.344" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="6298,1322 6234,1322 6234,1478 6298,1478 6298,1322"/>
+										<polygon points="6146,1308 6082,1308 6082,1478 6146,1478 6146,1308"/>
+										<polygon points="5994,1274 5930,1274 5930,1478 5994,1478 5994,1274"/>
+										<polygon points="5841,1240 5777,1240 5777,1478 5841,1478 5841,1240"/>
+										<polygon points="5689,1206 5625,1206 5625,1478 5689,1478 5689,1206"/>
+										<polygon points="5537,1172 5473,1172 5473,1478 5537,1478 5537,1172"/>
+										<polygon points="5385,1142 5321,1142 5321,1478 5385,1478 5385,1142"/>
+										<polygon points="5232,1090 5168,1090 5168,1478 5232,1478 5232,1090"/>
+										<polygon points="5080,1070 5016,1070 5016,1478 5080,1478 5080,1070"/>
+										<polygon points="4928,1042 4864,1042 4864,1478 4928,1478 4928,1042"/>
+										<polygon points="4776,998 4712,998 4712,1478 4776,1478 4776,998"/>
+										<polygon points="4323,866 4259,866 4259,1478 4323,1478 4323,866"/>
+										<polygon points="4171,846 4107,846 4107,1478 4171,1478 4171,846"/>
+										<polygon points="4018,832 3954,832 3954,1478 4018,1478 4018,832"/>
+										<polygon points="3714,832 3650,832 3650,1478 3714,1478 3714,832"/>
+										<polygon points="3562,846 3498,846 3498,1478 3562,1478 3562,846"/>
+										<polygon points="3409,866 3345,866 3345,1478 3409,1478 3409,866"/>
+										<polygon points="3257,916 3193,916 3193,1478 3257,1478 3257,916"/>
+										<polygon points="2957,998 2893,998 2893,1478 2957,1478 2957,998"/>
+										<polygon points="2804,1042 2740,1042 2740,1478 2804,1478 2804,1042"/>
+										<polygon points="2652,1070 2588,1070 2588,1478 2652,1478 2652,1070"/>
+										<polygon points="2500,1090 2436,1090 2436,1478 2500,1478 2500,1090"/>
+										<polygon points="2348,1142 2284,1142 2284,1478 2348,1478 2348,1142"/>
+										<polygon points="2195,1172 2131,1172 2131,1478 2195,1478 2195,1172"/>
+										<polygon points="2043,1206 1979,1206 1979,1478 2043,1478 2043,1206"/>
+										<polygon points="1891,1240 1827,1240 1827,1478 1891,1478 1891,1240"/>
+										<polygon points="1739,1274 1675,1274 1675,1478 1739,1478 1739,1274"/>
+										<polygon points="1586,1308 1522,1308 1522,1478 1586,1478 1586,1308"/>
+										<polygon points="1434,1322 1370,1322 1370,1478 1434,1478 1434,1322"/>
+										<polygon points="4475,916 4411,916 4411,1478 4475,1478 4475,916"/>
+										<polygon points="4623,944 4563,944 4563,1478 4623,1478 4623,944"/>
+										<polygon points="3866,818 3802,818 3802,1478 3866,1478 3866,818"/>
+										<polygon points="3105,944 3045,944 3045,1478 3105,1478 3105,944"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46844, 0, 0, 0.46929, -5.1528, -7.5086)">
+									<g fill-rule="evenodd" stroke-width="3.335" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="11">
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%" x="0,6,13,21,28,34" y="0"
+													transform="translate(760,103)" xml:space="preserve">SLOT0</text>
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%" x="0,6,13,21,28,34" y="0"
+													transform="translate(824,103)" xml:space="preserve">SLOT1</text>
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%" x="0,6,13,21,28,34" y="0"
+													transform="translate(887,103)" xml:space="preserve">SLOT2</text>
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%" x="0,6,13,21,23,32,38,45"
+													y="0" transform="translate(947,103)" xml:space="preserve">SERIAL0</text>
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%"
+													x="0,6,13,20,26,33,40,46,53,59" y="0" transform="translate(1003,103)"
+													xml:space="preserve">ETHERNET0</text>
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%" x="0,6,13,19,26,32,41" y="0"
+													transform="translate(1074,103)" xml:space="preserve">SYSTEM</text>
+											<text stroke="none" fill="#ffffff" baseline-shift="-72.7%" x="0,6,15,26,32,41" y="0"
+													transform="translate(1141,103)" xml:space="preserve">POWER</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="700" font-size="27">
+											<text stroke="none" fill="#ffffff" baseline-shift="-74.1%"
+													x="0,20,37,54,63,78,89,97,112,127,142,157" y="0"
+													transform="translate(1375,105)" xml:space="preserve">Router 5009</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 352.8, 30.534)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 382.85, 30.967)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 442.22, 31.833)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 501.82, 30.967)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 531.63, 30.534)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 412.17, 31.4)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24231, 0, 0, 0.21655, 472.26, 31.4)">
+									<g fill-rule="evenodd" stroke-width="6.4474" stroke="#000000" stroke-miterlimit="10"
+											fill="#83ff00">
+										<polygon points="56,0 0,0 0,24 56,24 56,0"/>
+									</g>
+								</g>
+							</g>
+							<mask id="mfid96" fill-rule="evenodd" fill="white" stroke="none"/>
+						</g>
+					</svg>
+				</switch>
+				<rect v:rectContext="foreign" x="0" y="7.2" width="431.32" height="91.6157" class="st1"/>
+			</g>
+		</g>
+	</g>
+</svg>

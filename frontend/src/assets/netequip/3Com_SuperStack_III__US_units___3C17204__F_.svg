@@ -1,0 +1,1962 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 3Com_SuperStack_III__US_units___3C17204__F_.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="7.09055in" height="0.791339in"
+		viewBox="0 0 510.52 56.9764" xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#e6e6e6}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Network" v:index="0"/>
+		<g id="group1-1" transform="translate(0,-24.8882)" v:mID="1" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Manufacturer" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(3com)"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Product Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(3C17204)"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Part Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Product Description" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Equipment" v:invis="false" v:ask="false" v:langID="1033" v:cal="0"
+						v:val="VT4(4400 48-Port 10Base-T/100Base-TX Switch)"/>
+				<v:cp v:nameU="RackUnits" v:lbl="Rack Units" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="PurchaseDate" v:lbl="Purchase Date" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="InstalledDate" v:lbl="Installed Date" v:prompt="" v:type="5" v:format="ddddd"
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="WarrantyExp" v:lbl="Warranty Exp" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="SupportAgreement" v:lbl="Support Agreement" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SupportContactName" v:lbl="Support Contact Name" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ContactPhone" v:lbl="Contact Phone" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Comments" v:lbl="Comments" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="Maintenance" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Asset Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Serial Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Location" v:lbl="Location" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Building" v:lbl="Building" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Room" v:lbl="Room" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Department" v:lbl="Department" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Network Name" v:prompt="Network Name" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP Address" v:prompt="IP Address" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Subnet Mask" v:prompt="Subnet Mask" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Admin. Interface" v:prompt="Administrative Interface" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NumberOfPorts" v:lbl="Number of Ports" v:prompt="Number of Ports" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC Address" v:prompt="MAC Address" v:type="0" v:format="" v:sortKey="Network"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Community String" v:prompt="Community String" v:type="0" v:format=""
+						v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Network Description" v:prompt="Network Description" v:type="0"
+						v:format="" v:sortKey="Network" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="EQID" v:prompt="Equipment ID." v:val="VT4(3COM0361)"/>
+				<v:ud v:nameU="DateGenerated" v:prompt="Date Generated." v:val="VT4(8/25/2005)"/>
+				<v:ud v:nameU="visProductLine" v:prompt="Shape Product Line." v:val="VT4(SuperStack III)"/>
+				<v:ud v:nameU="visEquipType" v:prompt="Equipment Type." v:val="VT4(Switch)"/>
+				<v:ud v:nameU="visFMCategory" v:prompt="FM Category." v:val="VT4(Equipment)"/>
+				<v:ud v:nameU="visFMClass" v:prompt="FM Equipment Class." v:val="VT4(FMEquipment)"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<title>3C17204 (F)</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(188.745,-18.6661)">
+				<title>工作表.2</title>
+				<desc>3com 3C17204</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="62.915" cy="93.6425" width="64" height="17.6036"/>
+				<rect v:rectContext="foreign" x="0" y="44.5323" width="125.83" height="12.4441" class="st1"/>
+				<switch>
+					<foreignObject x="0" y="44.5323" width="125.83" height="12.4441"
+							requiredExtensions="http://schemas.microsoft.com/visio/2003/SVGExtensions/">
+						<v:foreignData v:orgSize="105468" v:data="data:metafile;base64,eNrtnQecFEXaxt+eWXaJEtYA7i5hhRVRkJwEVjKSl
+									CBmBAQBRVDCLigICCgoKiBhUZBkPkwgCB4mDiTomU9OxAM5MZx+gkgSFvj+NVOzDMNMbw8zs9tz18vvZbq7qut966mnq
+									56a7q4xRGSCnPornyAyyG//urIibxoildt2aSdiSO5ThnTkWCJpxbAhOl+FZJGD5UU+YfscQ077m13dLYsrJ0hXGSAj5
+									UYZxr+7dBpFSUmsqP4s43deCb3vi6mY3n+bzN/yWTwgv2+/G9bMQn5f+qF0kSy3SIred1UUGeo6tV+u0un7TSuLXGay/
+									17A/v4q5AnIvyYgv9r3xfftyZMnG2C++G5JEnnBL33HiZMnx544lV6mnsi5RU6lX3XcPH3VMfP0hKOnp+8KSFf+d+eef
+									n6tAP9m6cq/Wbry75++KyD9ziPm8eUeMq/foIPm6f/4wzxd+TeLT/k3q5/yb5au/JulHzl+Oj9uCODHT7+fHn/7uqfHf
+									8E+8/o1/80c30O/mp+v/PvHr/zXCvBvVj/l3wxf5d/s/Nt+MY8v62fz+rX6yfz85B/N8VX+zeJT/s3qp/ybna/8m+FbJ
+									te8/5j8vXn9ft9tnt77O/P0DjvN8VX+zeqn/JulK/9m6cq/Gb6vfGse3zM7zOtX9hvz9Pu/Nk9X/s3iU/7N6qf8m6Ur/
+									2bpDbh+ZvvxY3BVkfnu09PbmKSv+yX/dLPyz7eQblb+wv/kn25W/qGf8083K3+chXSz8rf9lH+6WfmNfzg9fc3FZ6bPN
+									kn/64/m/lW6mX/3HnP/Kt3Mf84P5v5zfjD3v/Hf5v5Vupn/0XvM/Y/eY+7/kd3m/lW6mf8bvjf3r9LN/Hf7zty/SjfzP
+									/+guX+Vbua/6gFz/yrdzH/WAXP/WQfM/RsW0s3K7/VH/ulm5e/en3+6WfmNLKSblb/+9/zTzcpPsZBuVv7z+/JPNys/d
+									2/+6WblP2Qh3az8Hb/ln25W/iAL6Wbll/7V/Poo/av59dXm/8z9q3Qz/ydO5J9uVv40C+lm5b983Lz+Kt2s/oOPm/sff
+									Nzc/4hcc/8q3cx/x1xz/x1z89FXx8z9q3Qz/xnHzP1nHDP3L0fN/at0M/8ljpr7L3HU3H//P/NPNyv/lyP5p5uV39ZCu
+									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
+									F877Bzd94kuR23/P4yaT/0="/>
+					</foreignObject>
+					<svg viewBox="0 0 1048.4 103.88" enable-background="new" color-interpolation-filters="sRGB" height="12.4441"
+							preserveAspectRatio="none" width="125.83" x="0" y="44.5323">
+						<defs>
+							<clipPath id="mfid273">
+								<rect id="mfid274" x="0" y="0" width="1048.4" height="103.88"/>
+							</clipPath>
+						</defs>
+						<g clip-path="url(#mfid273)">
+							<g transform="matrix(0.10054, 0, 0, 0.21443, 908.86, 34.309)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<polyline points="119,6 119,82 157,82" fill="none"/>
+									<path fill="none" d="M157,6 L232,6 M194,6 L194,82 M251,6 L251,82 M251,6 L251,82"/>
+									<polyline points="288,82 288,6 326,82 364,6 364,82" fill="none"/>
+									<polyline points="382,82 420,6 458,82" fill="none"/>
+									<path fill="none" d="M392,63 L448,63"/>
+									<polyline points="6,82 44,6 82,82" fill="none"/>
+									<path fill="none" d="M16,63 L72,63"/>
+									<polyline points="119,6 119,82 157,82" fill="none"/>
+									<path fill="none" d="M157,6 L232,6 M194,6 L194,82 M251,6 L251,82 M251,6 L251,82"/>
+									<polyline points="288,82 288,6 326,82 364,6 364,82" fill="none"/>
+									<polyline points="382,82 420,6 458,82" fill="none"/>
+									<path fill="none" d="M392,63 L448,63"/>
+									<polyline points="6,82 44,6 82,82" fill="none"/>
+									<path fill="none" d="M16,63 L72,63"/>
+								</g>
+							</g>
+							<mask id="mfid275" fill-rule="evenodd" fill="white" stroke="none"/>
+							<g mask="url(#mfid275)">
+								<g transform="matrix(0.11709, 0, 0, 0.11738, 0, 0)">
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#efefef">
+										<polygon points="8946,2 2,2 2,882 8946,882 8946,2"/>
+									</g>
+									<g stroke-width="53.367" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline
+												points="7086,826 7121,816 7154,803 7185,788 7214,770 7240,751 7264,729 7286,706 7305,682 7322,656 7337,629 7350,600 7361,571 7369,542 7375,511 7379,480 7380,450 7379,418 7376,388 7371,357 7364,327 7354,297 7342,268 7328,240 7311,213 7292,188 7271,164 7248,141 7223,120 7195,101 7165,85 7133,70 7098,58 138,58 138,826 7066,826 7086,826"
+												fill="none"/>
+										<polyline
+												points="8802,515 8802,509 8801,507 8801,505 8800,503 8800,501 8797,495 8796,494 8794,490 8786,482 8782,480 8781,479 8775,476 8773,476 8771,475 8769,475 8767,474 7653,474 7651,475 7649,475 7647,476 7645,476 7639,479 7638,480 7634,482 7626,490 7624,494 7623,495 7620,501 7620,503 7619,505 7619,507 7618,509 7618,850 8802,850 8802,516 8802,515"
+												fill="none"/>
+										<path fill="none"
+												d="M7682,622 L7810,622 M7954,622 L8086,622 M8250,556 L8300,556 M8250,556 L8300,556 M8384,556 L8452,556 M8690,570 L8690,602 M8250,696 L8300,696 M8384,696 L8452,696"/>
+									</g>
+								</g>
+								<g transform="matrix(0.55597, 0, 0, 0.15294, 19.459, 31.047)">
+									<g fill-rule="evenodd" stroke-width="11.24" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="474,0 0,0 0,358 474,358 474,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 23.41, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 55.719, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 88.108, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.08, 120.9, 31.04)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 23.41, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 55.719, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 88.108, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.078431, 120.9, 62.588)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.08, 153.18, 31.04)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 185.04, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 217.42, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 249.73, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.078431, 153.18, 62.588)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 185.04, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 217.42, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 249.73, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.55715, 0, 0, 0.15294, 289.72, 31.047)">
+									<g fill-rule="evenodd" stroke-width="11.216" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="474,0 0,0 0,358 474,358 474,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.081423, 0, 0, 0.08, 293.78, 31.04)">
+									<g fill-rule="evenodd" stroke-width="76.747" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 326.54, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.08, 358.83, 31.04)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 390.76, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.081423, 0, 0, 0.078431, 293.78, 62.588)">
+									<g fill-rule="evenodd" stroke-width="76.747" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 326.54, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.078431, 358.83, 62.588)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 390.76, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 423.06, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.08, 455.34, 31.04)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 487.28, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.081423, 0, 0, 0.08, 519.56, 31.04)">
+									<g fill-rule="evenodd" stroke-width="76.747" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 423.06, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.078431, 455.34, 62.588)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 487.28, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.081423, 0, 0, 0.078431, 519.56, 62.588)">
+									<g fill-rule="evenodd" stroke-width="76.747" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.55597, 0, 0, 0.15294, 560.42, 31.047)">
+									<g fill-rule="evenodd" stroke-width="11.24" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="474,0 0,0 0,358 474,358 474,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 564.09, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 596.39, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 628.7, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.08, 661, 31.04)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 564.09, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 596.39, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 628.7, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.078431, 661, 62.588)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.08, 693.35, 31.04)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 725.71, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 758.02, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.08, 790.33, 31.04)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,298 0,149 74,149 74,75 149,75 149,0 223,0 223,75 298,75 298,149 372,149 372,298 0,298"/>
+									</g>
+								</g>
+								<g transform="matrix(0.078916, 0, 0, 0.078431, 693.35, 62.588)">
+									<g fill-rule="evenodd" stroke-width="79.186" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 725.71, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 758.02, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.080171, 0, 0, 0.078431, 790.33, 62.588)">
+									<g fill-rule="evenodd" stroke-width="77.946" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,149 74,149 74,223 149,223 149,298 223,298 223,223 298,223 298,149 372,149 372,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 569.7, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 569.7, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 583.31, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 583.31, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1312,85)" xml:space="preserve">17</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1311,105)" xml:space="preserve">41</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 601.97, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 601.97, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 615.58, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 615.58, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1381,85)" xml:space="preserve">18</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1380,105)" xml:space="preserve">42</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 634.35, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 634.35, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 647.96, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 647.96, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1450,85)" xml:space="preserve">19</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1449,105)" xml:space="preserve">43</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 666.62, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 666.62, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 680.25, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 680.25, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1519,85)" xml:space="preserve">20</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1518,105)" xml:space="preserve">44</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 698.55, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 698.55, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 712.1, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 712.1, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1587,85)" xml:space="preserve">21</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1586,105)" xml:space="preserve">45</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 731.27, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 731.27, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 744.88, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 744.88, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1657,85)" xml:space="preserve">22</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1656,105)" xml:space="preserve">46</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 763.65, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 763.65, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 777.24, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 777.24, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1726,85)" xml:space="preserve">23</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1725,105)" xml:space="preserve">47</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 795.92, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 795.92, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 809.6, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 809.6, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1795,85)" xml:space="preserve">24</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1794,105)" xml:space="preserve">48</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 299.41, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 299.41, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 312.92, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 312.92, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(737,85)" xml:space="preserve">9</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(734,105)" xml:space="preserve">33</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 332.13, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 332.13, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 345.29, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 345.29, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(805,85)" xml:space="preserve">10</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(804,105)" xml:space="preserve">34</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 364.51, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 364.51, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 377.55, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 377.55, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(874,85)" xml:space="preserve">11</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(873,105)" xml:space="preserve">35</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 396.78, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 396.78, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 409.94, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 409.94, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(943,85)" xml:space="preserve">12</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(942,105)" xml:space="preserve">36</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 428.71, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 428.71, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 441.75, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 441.75, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1011,85)" xml:space="preserve">13</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1010,105)" xml:space="preserve">37</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 460.98, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 460.98, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 474.14, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 474.14, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1080,85)" xml:space="preserve">14</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1079,105)" xml:space="preserve">38</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 493.36, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 493.36, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 506.4, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 506.4, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1148,85)" xml:space="preserve">15</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1147,105)" xml:space="preserve">39</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 526.16, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 526.16, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 539.23, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 539.23, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1218,85)" xml:space="preserve">16</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(1217,105)" xml:space="preserve">40</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 29.008, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 29.008, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 42.163, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 42.163, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(159,85)" xml:space="preserve">1</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(156,105)" xml:space="preserve">25</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 61.326, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 61.326, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 74.544, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 74.544, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(228,85)" xml:space="preserve">2</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(225,105)" xml:space="preserve">26</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 93.689, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 93.689, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 106.81, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 106.81, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(297,85)" xml:space="preserve">3</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(294,105)" xml:space="preserve">27</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 126.46, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 126.46, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 139.64, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 139.64, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(367,85)" xml:space="preserve">4</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(364,105)" xml:space="preserve">28</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 158.31, 12.195)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10307, 0, 0, 0.11292, 158.31, 21.229)">
+									<g fill-rule="evenodd" stroke-width="60.63" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+									<g stroke-width="60.63" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19" cy="19.5" rx="18.5" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 171.46, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 171.46, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(435,85)" xml:space="preserve">5</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(432,105)" xml:space="preserve">29</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 190.24, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 190.24, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 203.84, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 203.84, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(504,85)" xml:space="preserve">6</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(501,105)" xml:space="preserve">30</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 222.51, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 222.51, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 236.11, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 236.11, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(573,85)" xml:space="preserve">7</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(570,105)" xml:space="preserve">31</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 254.89, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 254.89, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 268.49, 21.229)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11243, 0, 0, 0.11292, 268.49, 12.195)">
+									<g fill-rule="evenodd" stroke-width="55.579" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+									<g stroke-width="55.579" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="19.5" cy="19.5" rx="19" ry="19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4" y="0"
+													transform="translate(642,85)" xml:space="preserve">8</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,4,9" y="0"
+													transform="translate(639,105)" xml:space="preserve">32</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,6,11,15,19,23,26" y="0"
+													transform="translate(1844,126)" xml:space="preserve">Packet</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,6,11,15,17,21,26" y="0"
+													transform="translate(1844,137)" xml:space="preserve">Duplex</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%"
+													x="0,7,12,14,16,21,27,30,35,38,45,50,52,56" y="0"
+													transform="translate(1844,149)" xml:space="preserve">Yellow = Half</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%" x="0,6,9,13,15,19,23" y="0"
+													transform="translate(1844,178)" xml:space="preserve">Status</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%"
+													x="0,7,12,14,16,21,27,30,35,38,43,48,55,60,65" y="0"
+													transform="translate(1844,189)" xml:space="preserve">Yellow = 10Mps</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%"
+													x="0,7,10,15,20,25,28,33,36,41,46,51,58,63,68" y="0"
+													transform="translate(1844,200)" xml:space="preserve">Green = 100Mps</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%"
+													x="0,6,8,13,18,23,26,31,34,39,41,46,51,56,58,63,68" y="0"
+													transform="translate(1844,212)" xml:space="preserve">Flash = disabled</text>
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%"
+													x="0,5,10,13,18,21,23,25,30,35,38,45,51" y="0" transform="translate(1844,223)"
+													xml:space="preserve">on = link OK</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.095221, 0, 0, 0.094118, 908.88, 34.353)">
+									<g fill-rule="evenodd" stroke-width="65.627" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="19,72 19,64 20,60 20,57 23,48 26,42 28,40 29,38 31,37 32,35 36,33 37,33 39,32 41,32 43,31 47,31 48,32 52,32 53,33 57,35 58,36 60,37 62,39 63,41 65,44 66,46 66,49 67,51 68,54 68,56 69,59 69,68 68,71 68,73 64,81 63,82 62,84 59,87 51,91 49,91 47,92 42,92 39,91 36,91 36,111 52,111 62,116 63,118 65,119 71,131 71,134 72,136 72,141 73,144 73,146 72,149 72,154 71,156 71,159 69,163 68,166 66,170 64,172 63,174 60,177 56,179 55,180 53,181 51,181 49,182 41,182 40,181 38,181 32,178 29,175 27,174 26,172 24,170 23,168 22,165 21,163 20,160 19,158 18,155 18,151 17,148 17,141 0,141 0,149 1,151 1,157 2,160 3,162 3,165 4,168 5,170 6,173 7,175 8,178 10,182 12,185 13,187 15,189 16,191 18,193 20,194 22,196 28,199 31,200 33,201 36,202 53,202 55,201 57,201 69,195 71,193 73,192 75,190 76,188 78,186 79,184 81,182 82,180 84,178 86,172 87,170 88,167 88,163 90,157 90,133 89,131 89,128 88,126 88,125 87,123 87,121 86,120 86,118 85,117 84,115 83,114 83,112 82,111 81,109 80,108 79,106 77,104 75,103 74,101 72,99 70,98 69,97 70,97 72,96 74,94 76,93 78,89 79,88 80,86 81,83 83,79 84,76 84,73 85,71 85,65 86,62 86,56 85,53 85,50 84,47 84,43 81,34 79,31 78,28 76,25 74,23 72,20 68,17 64,15 61,13 57,12 54,10 50,10 47,9 40,9 31,12 29,13 26,15 24,17 21,19 17,23 11,32 10,35 8,38 7,42 6,45 5,49 5,53 4,56 4,72 18,72 19,72"/>
+										<polygon
+												points="223,63 223,55 222,53 222,48 221,45 220,43 220,40 219,38 218,35 217,33 216,30 214,28 213,25 211,23 210,20 204,14 201,12 197,8 194,6 182,2 178,1 175,0 166,0 161,1 149,4 145,6 142,8 138,11 132,17 130,20 127,23 125,27 123,30 119,38 118,42 116,46 114,54 113,59 110,71 110,75 109,78 109,82 108,86 108,123 109,128 109,133 110,137 112,147 114,151 115,156 117,160 118,164 124,176 127,179 129,182 131,186 134,188 136,191 139,194 145,198 148,199 151,201 154,202 158,203 177,203 180,202 182,201 191,198 193,196 196,194 200,190 203,188 205,186 207,183 209,181 211,178 212,175 216,169 218,163 220,159 222,153 222,149 223,145 223,142 224,138 224,127 207,127 207,140 206,142 206,144 205,146 205,148 204,151 202,155 202,157 200,159 196,167 191,172 189,173 186,176 182,178 179,179 177,180 175,180 172,181 163,181 157,178 154,177 152,176 143,167 141,164 140,162 138,159 137,157 135,154 134,151 133,147 131,141 130,137 129,134 128,130 128,126 127,122 127,118 126,114 126,87 127,83 127,77 128,74 129,70 129,67 130,63 134,51 137,45 139,42 140,39 142,37 144,34 148,30 151,28 153,27 156,26 158,25 161,24 175,24 178,25 180,25 181,26 183,26 187,28 188,29 190,30 193,33 195,34 196,36 197,37 198,39 199,40 199,42 200,43 201,45 202,46 202,48 203,50 203,51 204,53 204,55 205,56 205,60 206,61 206,63 222,63 223,63"/>
+										<polygon
+												points="289,54 289,74 294,74 295,75 297,75 298,76 300,76 306,82 308,86 309,87 314,97 314,100 315,102 315,105 316,107 316,110 317,112 317,118 318,120 318,137 317,139 317,146 316,148 316,151 315,153 315,155 314,157 314,159 313,161 313,162 310,168 309,169 308,171 302,177 300,178 299,179 293,182 291,182 289,183 284,183 282,182 280,182 279,181 277,181 269,173 267,169 266,168 264,165 263,163 263,161 262,159 261,156 260,154 259,151 259,149 258,146 258,140 257,137 257,112 258,109 258,107 259,105 259,103 260,101 260,98 267,84 269,83 270,81 272,80 273,78 277,76 278,75 280,75 282,74 289,74 289,54 282,54 279,55 276,55 273,56 270,58 268,59 265,61 263,62 261,64 259,67 255,71 251,77 250,79 249,82 247,85 244,94 244,98 242,104 242,107 241,110 241,144 242,148 242,152 243,156 244,159 245,163 249,175 251,178 252,180 254,183 256,185 257,188 261,192 263,193 265,195 267,196 269,198 273,200 276,201 278,201 280,202 296,202 300,200 302,200 305,199 307,197 311,195 315,191 316,189 322,183 323,180 325,177 329,165 333,149 333,145 334,140 334,115 333,112 333,106 332,103 332,100 328,88 327,86 325,80 323,77 322,75 320,72 318,70 317,67 311,61 308,60 306,58 303,57 301,56 298,55 295,55 292,54 289,54"/>
+										<polygon
+												points="371,58 371,78 376,68 378,66 380,65 381,63 383,61 395,55 399,55 401,54 404,54 406,55 408,55 416,59 424,67 426,70 427,73 429,76 437,64 441,60 443,59 446,57 450,55 453,55 455,54 463,54 465,55 467,55 470,56 472,58 476,60 480,64 481,66 483,68 484,71 486,74 487,76 487,79 488,82 489,86 489,119 490,124 490,194 489,196 489,198 474,198 474,93 473,92 473,88 472,87 472,85 471,85 471,83 468,80 468,79 467,79 466,78 465,78 465,77 464,77 463,76 462,76 460,75 458,75 456,74 453,74 452,75 450,75 449,76 447,76 444,79 442,80 441,80 440,82 437,85 437,86 436,87 435,89 434,90 434,91 433,92 433,94 432,95 432,96 431,97 431,101 430,102 430,198 415,198 415,95 414,94 414,91 413,90 413,88 412,87 412,86 411,84 411,83 408,80 408,79 407,78 406,78 404,76 402,76 401,75 391,75 389,76 388,76 387,77 385,77 379,83 379,84 376,87 376,89 375,90 375,91 374,92 374,95 373,97 373,99 372,101 372,198 355,198 355,58 370,58 371,58"/>
+									</g>
+								</g>
+								<g transform="matrix(0.098859, 0, 0, 0.1001, 943.11, 18.818)">
+									<g fill-rule="evenodd" stroke-width="63.212" stroke="#7f7f7f" stroke-miterlimit="10"
+											fill="#7f7f7f">
+										<polygon
+												points="218,103 217,101 212,96 208,94 206,92 203,91 201,90 192,87 188,87 185,86 181,85 178,85 174,84 145,84 140,85 136,85 131,86 127,86 117,88 113,89 108,90 104,91 99,92 91,94 87,96 83,97 80,99 76,100 73,102 69,103 60,109 57,110 55,112 52,114 44,122 43,124 40,127 39,129 39,131 38,133 38,141 39,142 41,146 44,149 46,150 48,152 52,154 55,156 57,157 63,159 66,159 70,160 73,161 77,161 80,162 88,162 92,163 109,163 113,162 122,162 127,161 131,160 136,160 141,159 145,158 150,157 154,156 159,155 167,153 171,151 175,150 179,148 182,147 186,145 189,144 192,142 196,140 198,138 201,137 204,135 214,125 215,123 218,120 219,118 219,116 220,114 220,106 219,105 218,103 215,103 214,104 207,104 206,105 203,105 202,104 201,102 199,100 197,99 196,98 192,96 191,96 188,95 186,95 184,94 182,94 179,93 151,93 147,94 139,94 135,95 131,95 123,97 118,97 106,100 103,101 99,102 96,103 92,104 89,105 86,107 77,110 75,112 72,113 70,115 67,116 65,118 61,120 60,122 58,123 57,125 56,126 55,128 54,129 53,131 53,132 52,133 52,136 53,137 53,139 58,144 60,145 61,146 69,150 71,150 74,151 76,151 79,152 81,152 84,153 109,153 112,152 116,152 119,151 123,151 127,150 130,149 134,149 146,146 149,145 153,144 156,144 160,143 163,142 166,140 170,139 173,138 175,137 178,136 181,134 184,133 186,132 188,130 191,129 193,128 194,126 196,125 199,122 200,120 202,119 202,117 203,116 204,114 204,107 203,105 206,105 207,104 214,104 215,103 217,103 218,103"/>
+										<polygon
+												points="85,153 86,152 87,150 88,149 89,147 89,146 90,144 91,143 92,141 93,140 93,138 95,134 95,133 97,129 97,127 98,125 98,123 99,121 99,119 100,117 100,113 101,111 101,107 102,104 102,85 101,81 101,73 100,69 99,66 97,58 95,52 94,48 93,45 91,42 90,39 88,37 87,34 85,31 83,29 82,27 74,19 70,17 67,16 61,13 51,13 45,16 42,17 38,19 30,27 29,29 27,31 25,34 24,37 22,39 21,42 19,45 18,48 17,52 15,58 13,66 12,69 11,73 11,81 10,85 10,101 11,105 11,113 12,117 13,120 15,128 17,134 18,138 19,141 21,144 22,147 24,150 25,152 27,155 29,157 30,159 38,167 42,169 45,170 51,173 64,173 65,172 68,172 69,171 71,171 71,170 73,170 73,169 74,169 76,167 77,167 77,166 78,165 79,165 79,164 80,163 95,163 94,164 93,166 88,171 87,173 85,175 83,176 82,176 79,179 77,180 76,180 74,182 72,182 71,183 70,183 68,184 67,184 66,185 63,185 62,186 50,186 47,185 45,184 39,182 37,180 34,179 32,177 29,175 27,172 20,165 16,159 15,155 13,152 11,148 10,145 8,141 6,133 4,129 3,125 3,121 2,116 1,112 1,107 0,102 0,84 1,79 1,74 2,70 3,65 3,61 4,57 6,53 8,45 10,41 11,38 13,34 15,31 17,27 18,24 23,19 25,16 32,9 35,7 37,6 40,4 43,3 45,2 51,0 63,0 66,1 68,2 74,4 76,6 79,7 81,9 84,11 86,14 93,21 97,27 98,31 100,34 102,38 103,41 105,45 107,53 109,57 110,61 110,65 111,70 112,74 112,79 113,84 113,103 112,105 112,111 111,113 111,117 110,119 110,123 109,125 109,127 108,129 108,131 107,133 107,135 106,137 106,138 104,142 104,144 103,145 103,147 102,149 101,150 101,152 100,153 86,153 85,153"/>
+										<polygon
+												points="266,3 264,3 263,4 261,5 260,6 259,8 257,9 254,15 253,18 252,20 252,23 251,26 251,29 250,32 250,35 249,39 249,57 250,61 250,70 252,78 252,83 253,87 254,92 255,96 257,106 258,110 259,115 261,119 262,123 263,128 265,132 266,136 268,140 270,143 271,147 273,151 275,154 276,157 282,166 283,169 291,177 292,179 294,181 300,184 301,185 310,185 311,184 313,183 314,182 315,180 317,179 320,173 321,170 322,168 322,165 323,162 323,159 324,156 324,153 325,149 325,131 324,127 324,118 322,110 322,105 321,101 320,96 319,92 317,82 316,78 315,73 313,69 312,65 311,60 309,56 308,52 306,48 304,45 303,41 301,37 299,34 298,31 292,22 291,19 283,11 282,9 280,7 274,4 273,3 266,3 266,5 267,5 267,8 268,9 268,11 269,12 269,15 270,16 270,19 271,19 271,21 266,26 265,28 264,29 264,31 263,33 263,35 262,37 262,64 263,67 263,71 264,74 264,81 265,84 266,88 266,91 267,95 267,98 270,110 272,114 273,117 274,121 275,124 277,128 281,140 283,142 285,148 286,150 288,152 292,160 294,161 295,163 298,166 300,167 302,169 303,169 305,170 307,170 311,166 311,165 312,163 313,162 313,160 314,158 314,152 315,150 315,135 314,132 314,126 313,122 313,119 312,116 312,112 311,109 310,105 310,101 309,98 306,86 305,83 304,79 303,76 302,72 296,54 295,52 294,49 293,47 292,44 291,42 289,40 285,32 280,27 279,25 277,24 276,23 275,23 274,22 272,21 271,21 271,19 270,19 270,16 269,15 269,12 268,11 268,9 267,8 267,5 266,5 266,4 266,3"/>
+									</g>
+									<g stroke-width="6" stroke="#7f7f7f" stroke-linecap="round" stroke-linejoin="round" fill="none">
+										<path fill="none" d="M208,105 L215,103 M267,6 L271,19"/>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9,21,30,34" y="0"
+													transform="translate(2240,211)" xml:space="preserve">PWR/</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9,17,21,30" y="0"
+													transform="translate(2038,209)" xml:space="preserve">UNIT</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9,17,26,34" y="0"
+													transform="translate(2241,226)" xml:space="preserve">TEST</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9,17,19,23,30,36" y="0"
+													transform="translate(2010,250)" xml:space="preserve">Switch</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,13,19" y="0"
+													transform="translate(2070,250)" xml:space="preserve">400</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="italic" font-weight="400" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6,15,21,28,34,41,47"
+													y="0" transform="translate(2113,250)" xml:space="preserve">3C17204</text>
+										</g>
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="12">
+											<text stroke="none" fill="#000000" baseline-shift="-75%"
+													x="0,8,15,22,29,33,41,44,51,57,63" y="0" transform="translate(2188,250)"
+													xml:space="preserve">SuperStack</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2000,226)" xml:space="preserve">5</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2032,226)" xml:space="preserve">6</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2064,226)" xml:space="preserve">7</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2096,226)" xml:space="preserve">8</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,11,17" y="0"
+													transform="translate(2125,226)" xml:space="preserve">M2</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9" y="0"
+													transform="translate(2163,226)" xml:space="preserve">P</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9" y="0"
+													transform="translate(2196,226)" xml:space="preserve">S</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2000,191)" xml:space="preserve">1</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2032,191)" xml:space="preserve">2</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2064,191)" xml:space="preserve">3</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,6" y="0"
+													transform="translate(2096,191)" xml:space="preserve">4</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,11,17" y="0"
+													transform="translate(2125,191)" xml:space="preserve">M1</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9" y="0"
+													transform="translate(2163,191)" xml:space="preserve">P</text>
+											<text stroke="none" fill="#000000" baseline-shift="-75%" x="0,9" y="0"
+													transform="translate(2196,191)" xml:space="preserve">S</text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.06462, 0, 0, 0.068738, 976.34, 34.369)">
+									<g stroke-width="96.705" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<g font-family="&#39;S&#39;" font-style="normal" font-size="71">
+											<text stroke="none" fill="#000000" x="0,62" y="0" transform="translate(0,71)"
+													xml:space="preserve"></text>
+										</g>
+									</g>
+								</g>
+								<g transform="matrix(0.46848, 0, 0, 0.47059, -37.947, -28.235)">
+									<g fill-rule="evenodd" stroke-width="13.339" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<g font-family="&#39;Arial&#39;" font-style="normal" font-weight="400" font-size="9">
+											<text stroke="none" fill="#000000" baseline-shift="-66.7%"
+													x="0,7,10,15,20,25,28,33,36,42,47,49,51" y="0" transform="translate(1844,160)"
+													xml:space="preserve">Green = Full</text>
+										</g>
+									</g>
+								</g>
+							</g>
+							<mask id="mfid276" fill-rule="evenodd" fill="white" stroke="none"/>
+						</g>
+					</svg>
+				</switch>
+				<rect v:rectContext="foreign" x="0" y="44.5323" width="125.83" height="12.4441" class="st1"/>
+			</g>
+			<g id="shape1-5" v:mID="1" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M188.74 56.98 L188.74 7.2 L0 7.2 L0 56.98 L188.74 56.98 ZM314.57 56.98 L314.57 7.2 L503.32 7.2 L503.32 56.98
+							 L314.57 56.98 Z" class="st2"/>
+				<path d="M188.74 56.98 L188.74 7.2 L0 7.2 L0 56.98 L188.74 56.98" class="st3"/>
+				<path d="M314.57 56.98 L314.57 7.2 L503.32 7.2 L503.32 56.98 L314.57 56.98" class="st3"/>
+				<path d="M188.74 56.98 L188.74 7.2 L314.57 7.2 L314.57 56.98 L188.74 56.98" class="st3"/>
+			</g>
+		</g>
+	</g>
+</svg>

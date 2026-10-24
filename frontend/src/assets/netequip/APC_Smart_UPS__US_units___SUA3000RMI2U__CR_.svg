@@ -1,0 +1,1491 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 APC_Smart_UPS__US_units___SUA3000RMI2U__CR_.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="7.69055in" height="1.49055in"
+		viewBox="0 0 553.72 107.32" xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#e6e6e6}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Network" v:index="0"/>
+		<g id="group1-1" transform="translate(0,-50.0598)" v:mID="1" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Manufacturer" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(APC)"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Product Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4(SUA3000RMI2U)"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Part Number" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Product Description" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Equipment" v:invis="false" v:ask="false" v:langID="1033" v:cal="0"
+						v:val="VT4(APC Smart-UPS 3000VA USB and Serial RM 2U 230V)"/>
+				<v:cp v:nameU="RackUnits" v:lbl="Rack Units" v:prompt="" v:type="0" v:format="" v:sortKey="Equipment"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="PurchaseDate" v:lbl="Purchase Date" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="InstalledDate" v:lbl="Installed Date" v:prompt="" v:type="5" v:format="ddddd"
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="WarrantyExp" v:lbl="Warranty Exp" v:prompt="" v:type="5" v:format="ddddd" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT0(0):26"/>
+				<v:cp v:nameU="SupportAgreement" v:lbl="Support Agreement" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SupportContactName" v:lbl="Support Contact Name" v:prompt="" v:type="0" v:format=""
+						v:sortKey="Maintenance" v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="ContactPhone" v:lbl="Contact Phone" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Comments" v:lbl="Comments" v:prompt="" v:type="0" v:format="" v:sortKey="Maintenance"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="Maintenance" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Asset Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Serial Number" v:prompt="" v:type="0" v:format="" v:sortKey="Asset"
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Location" v:lbl="Location" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Building" v:lbl="Building" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Room" v:lbl="Room" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Department" v:lbl="Department" v:prompt="" v:type="0" v:format="" v:sortKey="Asset" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="EQID" v:prompt="Equipment ID." v:val="VT4(APC166D)"/>
+				<v:ud v:nameU="DateGenerated" v:prompt="Date Generated." v:val="VT4(8/25/2005)"/>
+				<v:ud v:nameU="visProductLine" v:prompt="Shape Product Line." v:val="VT4(Smart-UPS)"/>
+				<v:ud v:nameU="visEquipType" v:prompt="Equipment Type." v:val="VT4(Power)"/>
+				<v:ud v:nameU="visFMCategory" v:prompt="FM Category." v:val="VT4(Equipment)"/>
+				<v:ud v:nameU="visFMClass" v:prompt="FM Equipment Class." v:val="VT4(FMEquipment)"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+			</v:userDefs>
+			<title>SUA3000RMI2U (CR)</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(204.945,-37.5449)">
+				<title>工作表.2</title>
+				<desc>APC SUA3000RMI2U</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="68.315" cy="162.865" width="76.01" height="17.6036"/>
+				<rect v:rectContext="foreign" x="0" y="82.2898" width="136.63" height="25.0299" class="st1"/>
+				<switch>
+					<foreignObject x="0" y="82.2898" width="136.63" height="25.0299"
+							requiredExtensions="http://schemas.microsoft.com/visio/2003/SVGExtensions/">
+						<v:foreignData v:orgSize="51800" v:data="data:metafile;base64,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
+									jWBNdjnKxLkveL838A16DdYw=="/>
+					</foreignObject>
+					<svg viewBox="0 0 1138.4 208.94" enable-background="new" color-interpolation-filters="sRGB" height="25.0299"
+							preserveAspectRatio="none" width="136.63" x="0" y="82.2898">
+						<defs>
+							<clipPath id="mfid778">
+								<rect id="mfid779" x="0" y="0" width="1138.4" height="208.94"/>
+							</clipPath>
+						</defs>
+						<g clip-path="url(#mfid778)">
+							<mask id="mfid777" fill-rule="evenodd" fill="white" stroke="none"/>
+							<g mask="url(#mfid777)">
+								<g transform="matrix(0.1171, 0, 0, 0.11728, 0, 0)">
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#bfbfbf">
+										<polygon points="9278,2 438,2 438,1778 9278,1778 9278,2"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#666666">
+										<polygon points="2,2 438,2 438,1778 2,1778 2,2"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<polygon
+												points="294,98 294,92 293,85 289,73 286,68 283,62 279,57 271,49 266,45 260,42 255,39 243,35 236,34 101,34 94,35 82,39 77,42 71,45 66,49 58,57 54,62 51,68 48,73 44,85 43,92 43,105 44,112 48,124 51,129 54,135 58,140 66,148 71,152 77,155 82,158 94,162 101,163 236,163 243,162 255,158 260,155 266,152 271,148 279,140 283,135 286,129 289,124 293,112 294,105 294,99 294,98"/>
+										<polygon
+												points="294,1682 294,1676 293,1669 289,1657 286,1652 283,1646 279,1641 271,1633 266,1629 260,1626 255,1623 243,1619 236,1618 101,1618 94,1619 82,1623 77,1626 71,1629 66,1633 58,1641 54,1646 51,1652 48,1657 44,1669 43,1676 43,1689 44,1696 48,1708 51,1713 54,1719 58,1724 66,1732 71,1736 77,1739 82,1742 94,1746 101,1747 236,1747 243,1746 255,1742 260,1739 266,1736 271,1732 279,1724 283,1719 286,1713 289,1708 293,1696 294,1689 294,1683 294,1682"/>
+										<polygon
+												points="294,762 294,756 293,749 289,737 286,732 283,726 279,721 271,713 266,709 260,706 255,703 243,699 236,698 101,698 94,699 82,703 77,706 71,709 66,713 58,721 54,726 51,732 48,737 44,749 43,756 43,769 44,776 48,788 51,793 54,799 58,804 66,812 71,816 77,819 82,822 94,826 101,827 236,827 243,826 255,822 260,819 266,816 271,812 279,804 283,799 286,793 289,788 293,776 294,769 294,763 294,762"/>
+										<polygon
+												points="294,1018 294,1012 293,1005 289,993 286,988 283,982 279,977 271,969 266,965 260,962 255,959 243,955 236,954 101,954 94,955 82,959 77,962 71,965 66,969 58,977 54,982 51,988 48,993 44,1005 43,1012 43,1025 44,1032 48,1044 51,1049 54,1055 58,1060 66,1068 71,1072 77,1075 82,1078 94,1082 101,1083 236,1083 243,1082 255,1078 260,1075 266,1072 271,1068 279,1060 283,1055 286,1049 289,1044 293,1032 294,1025 294,1019 294,1018"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="5" stroke="#000000" stroke-linecap="round"
+											stroke-linejoin="round" fill="#666666">
+										<polygon points="9714,2 9278,2 9278,1778 9714,1778 9714,2"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<polygon
+												points="9674,98 9674,92 9673,85 9669,73 9666,68 9663,62 9659,57 9651,49 9646,45 9640,42 9635,39 9623,35 9616,34 9481,34 9474,35 9462,39 9457,42 9451,45 9446,49 9438,57 9434,62 9431,68 9428,73 9424,85 9423,92 9423,105 9424,112 9428,124 9431,129 9434,135 9438,140 9446,148 9451,152 9457,155 9462,158 9474,162 9481,163 9616,163 9623,162 9635,158 9640,155 9646,152 9651,148 9659,140 9663,135 9666,129 9669,124 9673,112 9674,105 9674,99 9674,98"/>
+										<polygon
+												points="9674,1682 9674,1676 9673,1669 9669,1657 9666,1652 9663,1646 9659,1641 9651,1633 9646,1629 9640,1626 9635,1623 9623,1619 9616,1618 9481,1618 9474,1619 9462,1623 9457,1626 9451,1629 9446,1633 9438,1641 9434,1646 9431,1652 9428,1657 9424,1669 9423,1676 9423,1689 9424,1696 9428,1708 9431,1713 9434,1719 9438,1724 9446,1732 9451,1736 9457,1739 9462,1742 9474,1746 9481,1747 9616,1747 9623,1746 9635,1742 9640,1739 9646,1736 9651,1732 9659,1724 9663,1719 9666,1713 9669,1708 9673,1696 9674,1689 9674,1683 9674,1682"/>
+										<polygon
+												points="9674,762 9674,756 9673,749 9669,737 9666,732 9663,726 9659,721 9651,713 9646,709 9640,706 9635,703 9623,699 9616,698 9481,698 9474,699 9462,703 9457,706 9451,709 9446,713 9438,721 9434,726 9431,732 9428,737 9424,749 9423,756 9423,769 9424,776 9428,788 9431,793 9434,799 9438,804 9446,812 9451,816 9457,819 9462,822 9474,826 9481,827 9616,827 9623,826 9635,822 9640,819 9646,816 9651,812 9659,804 9663,799 9666,793 9669,788 9673,776 9674,769 9674,763 9674,762"/>
+										<polygon
+												points="9674,1018 9674,1012 9673,1005 9669,993 9666,988 9663,982 9659,977 9651,969 9646,965 9640,962 9635,959 9623,955 9616,954 9481,954 9474,955 9462,959 9457,962 9451,965 9446,969 9438,977 9434,982 9431,988 9428,993 9424,1005 9423,1012 9423,1025 9424,1032 9428,1044 9431,1049 9434,1055 9438,1060 9446,1068 9451,1072 9457,1075 9462,1078 9474,1082 9481,1083 9616,1083 9623,1082 9635,1078 9640,1075 9646,1072 9651,1068 9659,1060 9663,1055 9666,1049 9669,1044 9673,1032 9674,1025 9674,1019 9674,1018"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<path fill="none" d="M5208,1712 L5208,64"/>
+									</g>
+									<g stroke-width="53.364" stroke="#ffffff" stroke-miterlimit="10" fill="none">
+										<path fill="none" d="M5192,1712 L5192,64"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4945.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4945.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4792" cy="1401.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4792" cy="1401.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4638.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4638.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4484.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4484.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4331" cy="1401.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4331" cy="1401.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4176.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4176.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="5025.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="5025.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4872" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4872" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4719" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4719" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4564.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4564.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4411" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4411" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4256.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4256.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4945.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4945.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4792" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4792" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4638.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4638.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4484.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4484.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4331" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4331" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3753" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3753" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3593.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3593.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3435.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3435.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3276.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3276.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3117.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3117.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2958.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2958.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2800.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2800.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2641.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2641.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2482.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2482.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3672.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3672.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3518.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3518.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3364.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3364.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3210.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3210.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3055.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3055.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2902.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2902.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2756" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2756" cy="1267" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2601.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2601.5" cy="1267" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3455" cy="1401.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3455" cy="1401.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3300.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3300.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3146.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3146.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2992.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2992.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2838.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2838.5" cy="1401.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1213" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1213" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1053.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1053.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="895.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="895.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="736.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="736.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="577.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="577.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1848" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1848" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1689" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1689" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1531" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1531" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1372" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1372" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1206" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1206" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1024" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1024" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="842" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="842" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="660" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="660" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1935" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1935" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1752" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1752" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1570" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1570" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#cccccc" stroke-miterlimit="10" fill="none">
+										<polyline points="3400,0 3400,848 4960,848" fill="none"/>
+									</g>
+									<g stroke-width="53.364" stroke="#7f7f7f" stroke-miterlimit="10" fill="none">
+										<polyline points="4960,848 4960,16" fill="none"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="1432,1264 560,1264 560,1520 1432,1520 1432,1264"/>
+										<ellipse cx="2117" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2117" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2299" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2299" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2481" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2481" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2663" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2663" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2845" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2845" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3027" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3027" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="1388" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="1388" cy="979.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4681" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4681" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4523" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4523" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4365" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4365" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4207.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4207.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4049.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4049.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3891.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3891.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3733.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3733.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3575.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3575.5" cy="686" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4839" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4839" cy="686" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4735" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4735" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4580.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4580.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4427" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4427" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4272.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4272.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4120" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4120" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3971.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3971.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3818" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3818" cy="523" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3663.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3663.5" cy="523" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4681" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4681" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4523" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4523" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4365" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4365" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4207.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4207.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4049.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4049.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3891.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3891.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3733.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3733.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3575.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3575.5" cy="361" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4839" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4839" cy="361" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4735" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4735" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4580.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4580.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4427" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4427" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4272.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4272.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="4120" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="4120" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3971.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3971.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3818" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3818" cy="198" rx="53.5" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="3663.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="3663.5" cy="198" rx="53" ry="53.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2007" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2007" cy="1125.5" rx="53.5" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2165.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2165.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="2323.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="2323.5" cy="1125.5" rx="53" ry="53"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="53.364" stroke="#333333" stroke-miterlimit="10"
+											fill="#333333">
+										<polygon points="8872,56 6560,56 6560,1720 8872,1720 8872,56"/>
+									</g>
+									<g stroke-width="53.364" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline points="6560,868 6560,908 8872,908 8872,868" fill="none"/>
+									</g>
+									<g stroke-width="53.364" stroke="#666666" stroke-miterlimit="10" fill="none">
+										<polyline points="8872,868 6560,868" fill="none"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 1051, 179)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 1051, 20.082)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 615.24, 179)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 615.24, 20.082)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 588.04, 51.568)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.29987, 0, 0, 0.30072, 427.31, 162.09)">
+									<g fill-rule="evenodd" stroke-width="20.839" stroke="#000000" stroke-miterlimit="10"
+											fill="#ff0000">
+										<ellipse cx="22.5" cy="22.5" rx="22" ry="22"/>
+									</g>
+									<g stroke-width="20.839" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="22.5" cy="22.5" rx="22" ry="22"/>
+									</g>
+								</g>
+								<g transform="matrix(0.29987, 0, 0, 0.30072, 285.47, 162.09)">
+									<g fill-rule="evenodd" stroke-width="20.839" stroke="#000000" stroke-miterlimit="10"
+											fill="#00ff00">
+										<ellipse cx="22.5" cy="22.5" rx="22" ry="22"/>
+									</g>
+									<g stroke-width="20.839" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="22.5" cy="22.5" rx="22" ry="22"/>
+									</g>
+								</g>
+								<g transform="matrix(0.29987, 0, 0, 0.30072, 265.68, 162.09)">
+									<g fill-rule="evenodd" stroke-width="20.839" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffff00">
+										<ellipse cx="22.5" cy="22.5" rx="22" ry="22"/>
+									</g>
+									<g stroke-width="20.839" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="22.5" cy="22.5" rx="22" ry="22"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 455, 136.11)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.24728, 0, 0, 0.24792, 378.1, 51.568)">
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g stroke-width="25.271" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="33" cy="33" rx="32.5" ry="32.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="25.271" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.1266, 0, 0, 0.12598, 106.85, 150.29)">
+									<g fill-rule="evenodd" stroke-width="49.361" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#bfbfbf">
+										<polygon
+												points="468,15 468,12 467,9 465,7 464,5 461,3 459,1 456,0 12,0 9,1 1,9 0,12 0,191 1,194 3,196 5,199 7,200 9,202 12,203 456,203 459,202 461,200 464,199 465,196 467,194 468,191 468,188 468,15"/>
+									</g>
+								</g>
+								<g transform="matrix(0.097708, 0, 0, 0.10034, 118.03, 152.21)">
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#bfbfbf">
+										<polygon
+												points="333,0 337,0 339,1 343,1 344,2 348,4 350,4 353,7 355,8 356,9 358,10 359,12 363,16 370,30 370,32 371,34 371,37 372,39 372,47 371,49 371,51 370,54 370,58 369,61 368,66 367,70 365,80 364,86 363,91 361,97 357,121 355,127 354,132 353,138 351,148 350,152 349,157 348,160 348,164 347,167 347,169 346,171 346,172 345,175 345,178 344,181 343,183 342,186 340,188 339,190 337,193 336,195 330,201 328,202 324,206 320,208 317,210 311,213 308,214 306,215 304,215 302,216 300,216 298,217 295,217 293,218 79,218 77,217 74,217 72,216 70,216 68,215 66,215 64,214 61,213 55,210 52,208 48,206 44,202 42,201 36,195 35,193 33,190 32,188 30,186 29,183 28,181 27,178 27,175 26,172 26,171 25,169 25,167 24,164 24,160 23,157 22,152 21,148 19,138 18,132 17,127 15,121 11,97 9,91 8,86 7,80 5,70 4,66 3,61 2,58 2,54 1,51 1,49 0,47 0,39 1,37 1,34 2,32 2,30 9,16 13,12 14,10 16,9 17,8 19,7 22,4 24,4 28,2 29,1 33,1 35,0 332,0 333,0"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="322,10 328,10 329,11 331,11 333,12 335,12 336,13 338,14 339,15 341,16 342,17 344,18 349,23 350,25 353,28 354,30 354,32 355,33 357,37 357,39 358,41 358,43 359,45 359,53 358,55 358,57 357,59 357,63 356,66 353,78 349,98 348,104 347,109 345,114 344,120 340,140 337,152 336,155 336,159 335,161 335,163 334,165 334,166 333,169 333,171 332,174 331,176 330,179 329,181 327,183 326,185 324,187 323,189 321,191 319,192 315,196 313,197 312,198 309,199 307,201 301,204 299,204 295,206 293,206 291,207 287,207 285,208 87,208 85,207 81,207 79,206 77,206 73,204 71,204 65,201 63,199 57,196 53,192 51,191 49,189 48,187 46,185 45,183 43,181 42,179 41,176 40,174 39,171 39,169 38,166 38,165 37,163 37,161 36,159 36,155 35,152 32,140 28,120 27,114 26,109 24,104 23,98 19,78 16,66 15,63 15,59 14,57 14,55 13,53 13,45 14,43 14,41 15,39 15,37 17,33 18,32 18,30 19,28 22,25 23,23 28,18 30,17 31,16 33,15 34,14 36,13 37,12 39,12 41,11 43,11 44,10 321,10 322,10"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="57" cy="74" rx="13.5" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="57" cy="74" rx="13.5" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="119" cy="74" rx="13.5" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="119" cy="74" rx="13.5" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="180.5" cy="74" rx="13" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="180.5" cy="74" rx="13" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="242.5" cy="74" rx="13" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="242.5" cy="74" rx="13" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="304.5" cy="74" rx="13" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="304.5" cy="74" rx="13" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="93.5" cy="136" rx="13" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="93.5" cy="136" rx="13" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="153.5" cy="136" rx="13" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="153.5" cy="136" rx="13" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="215" cy="136" rx="13.5" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="215" cy="136" rx="13.5" ry="13.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="63.956" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="274.5" cy="136" rx="13" ry="13.5"/>
+									</g>
+									<g stroke-width="63.956" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="274.5" cy="136" rx="13" ry="13.5"/>
+									</g>
+								</g>
+								<g transform="matrix(0.13274, 0, 0, 0.14093, 109.65, 158.83)">
+									<g fill-rule="evenodd" stroke-width="47.076" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="58,51 58,17 29,0 0,17 0,51 29,68 58,51"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="47.076" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="37,48 45,34 37,20 21,20 13,34 21,48 37,48"/>
+									</g>
+								</g>
+								<g transform="matrix(0.13274, 0, 0, 0.14093, 155.04, 158.83)">
+									<g fill-rule="evenodd" stroke-width="47.076" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#efefef">
+										<polygon points="58,51 58,17 29,0 0,17 0,51 29,68 58,51"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="47.076" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="37,48 45,34 37,20 21,20 13,34 21,48 37,48"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 777.8, 14.044)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.27575, 0, 0, 0.2214, 640.56, 25.461)">
+									<g fill-rule="evenodd" stroke-width="22.662" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="416,29 415,23 414,18 411,13 408,9 403,5 398,2 393,1 387,0 29,0 23,1 18,2 13,5 5,13 2,18 1,23 0,29 0,249 1,255 2,260 5,265 9,270 13,273 18,276 23,277 29,278 387,278 393,277 398,276 408,270 414,260 415,255 416,249 416,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.13536, 0, 0, 0.13554, 661.93, 32.394)">
+									<g fill-rule="evenodd" stroke-width="46.165" stroke="#161616" stroke-miterlimit="10"
+											fill="#333333">
+										<polygon
+												points="531,37 531,33 530,30 529,26 528,23 526,20 525,17 522,14 520,11 517,9 514,6 511,5 508,3 505,2 501,1 498,0 33,0 30,1 26,2 23,3 20,5 17,6 14,9 11,11 9,14 6,17 5,20 3,23 2,26 1,30 0,33 0,322 1,325 2,329 3,332 5,335 6,338 9,341 11,344 14,346 17,349 20,350 23,352 26,353 30,354 33,355 498,355 501,354 505,353 508,352 511,350 514,349 517,346 520,344 522,341 525,338 526,335 528,332 529,329 530,325 531,322 531,318 531,37"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="46.165" stroke="none" fill="#000000">
+										<polygon points="214,81 214,126 319,126 319,81 214,81"/>
+										<polygon points="76,227 76,272 181,272 181,227 76,227"/>
+										<polygon points="350,227 350,272 455,272 455,227 350,227"/>
+									</g>
+								</g>
+								<g transform="matrix(0.1952, 0, 0, 0.19569, 642.78, 49.315)">
+									<g fill-rule="evenodd" stroke-width="32.014" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="32.5" cy="32.5" rx="32" ry="32"/>
+									</g>
+									<g stroke-width="32.014" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="32.5" cy="32.5" rx="32" ry="32"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="32.014" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.1952, 0, 0, 0.19569, 737.85, 49.315)">
+									<g fill-rule="evenodd" stroke-width="32.014" stroke="#000000" stroke-miterlimit="10"
+											fill="#e5e5e5">
+										<ellipse cx="32.5" cy="32.5" rx="32" ry="32"/>
+									</g>
+									<g stroke-width="32.014" stroke="#0a0a0a" stroke-miterlimit="10" fill="none">
+										<ellipse cx="32.5" cy="32.5" rx="32" ry="32"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="32.014" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="29,29 29,7 41,7 41,29 63,29 63,41 41,41 41,63 29,63 29,41 7,41 7,29 29,29"/>
+									</g>
+								</g>
+								<g transform="matrix(0.6488, 0, 0, 0.43361, 645.56, 124.88)">
+									<g fill-rule="evenodd" stroke-width="9.6316" stroke="#000000" stroke-miterlimit="10"
+											fill="#333333">
+										<polygon points="128,0 0,0 0,128 128,128 128,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11713, 0, 0, 0.11742, 66.528, 15.029)">
+									<g stroke-width="53.353" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<polyline points="2594,0 0,0 0,762 2594,762 2594,0" fill="none"/>
+									</g>
+								</g>
+								<g transform="matrix(0.13536, 0, 0, 0.13554, 651.23, 129.17)">
+									<g fill-rule="evenodd" stroke-width="46.165" stroke="#161616" stroke-miterlimit="10"
+											fill="#333333">
+										<polygon
+												points="531,37 531,33 530,30 529,26 528,23 526,20 525,17 522,14 520,11 517,9 514,6 511,5 508,3 505,2 501,1 498,0 33,0 30,1 26,2 23,3 20,5 17,6 14,9 11,11 9,14 6,17 5,20 3,23 2,26 1,30 0,33 0,322 1,325 2,329 3,332 5,335 6,338 9,341 11,344 14,346 17,349 20,350 23,352 26,353 30,354 33,355 498,355 501,354 505,353 508,352 511,350 514,349 517,346 520,344 522,341 525,338 526,335 528,332 529,329 530,325 531,322 531,318 531,37"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="46.165" stroke="none" fill="#ffffff">
+										<polygon points="214,81 214,126 319,126 319,81 214,81"/>
+										<polygon points="76,227 76,272 181,272 181,227 76,227"/>
+										<polygon points="350,227 350,272 455,272 455,227 350,227"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 842.37, 13.591)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 907.1, 13.591)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 971.68, 13.591)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 777.8, 112.35)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 842.37, 112.35)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 907.1, 112.35)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.14984, 0, 0, 0.15101, 971.68, 111.75)">
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="353,530 359,530 361,529 363,529 365,528 367,528 368,527 372,525 373,524 377,522 378,521 379,519 381,518 382,517 383,515 384,514 386,510 387,509 390,503 390,501 391,499 391,497 392,495 392,34 391,32 391,30 390,28 390,26 388,22 387,21 386,19 385,18 384,16 383,15 382,13 381,12 379,11 378,9 377,8 373,6 372,5 370,5 368,4 367,3 365,3 363,2 361,2 359,1 352,1 351,0 130,0 129,2 127,3 114,16 110,21 83,48 77,55 53,79 47,86 20,113 16,118 3,131 1,132 0,134 0,388 2,390 3,392 6,394 17,405 21,410 32,421 37,427 69,459 75,466 100,491 105,497 116,508 120,513 131,524 134,526 135,528 137,530 352,530 353,530"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="306,450 310,450 311,449 314,449 315,448 317,448 318,447 319,447 321,445 322,445 328,439 328,438 330,436 330,434 331,433 331,432 332,431 332,428 333,426 333,103 332,102 332,99 331,98 331,96 330,95 330,94 328,92 328,91 321,84 320,84 318,82 315,82 314,81 311,81 310,80 150,80 144,86 142,89 139,91 136,95 132,98 129,102 125,105 121,109 117,114 109,122 105,127 100,131 92,139 88,144 84,148 80,151 77,155 73,158 70,162 67,164 65,167 59,173 59,351 78,370 81,374 103,396 107,401 133,427 136,431 155,450 305,450 306,450"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="41.706" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#0a0a0a">
+										<polygon points="92,241 92,279 177,279 177,241 92,241"/>
+										<polygon points="216,358 216,396 301,396 301,358 216,358"/>
+										<polygon points="216,124 216,162 301,162 301,124 216,124"/>
+									</g>
+								</g>
+								<g transform="matrix(0.079725, 0, 0, 0.079589, 66.092, 148.91)">
+									<g fill-rule="evenodd" stroke-width="78.382" stroke="#0a0a0a" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon points="474,0 0,0 0,358 474,358 474,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.11622, 0, 0, 0.11585, 69.847, 151.19)">
+									<g fill-rule="evenodd" stroke-width="53.77" stroke="#161616" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon
+												points="0,0 0,153 64,153 64,189 90,189 90,225 166,225 166,189 192,189 192,153 256,153 256,0 0,0"/>
+									</g>
+								</g>
+								<g transform="matrix(0.10431, 0, 0, 0.1054, 173.78, 160.62)">
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#007f00">
+										<polygon points="0,0 0,154 263,154 263,0 0,0"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="22,34 39,45 22,57 22,139 68,139 68,57 51,45 68,34 22,34"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<ellipse cx="40.5" cy="91" rx="3" ry="2.5"/>
+									</g>
+									<g stroke-width="59.909" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="40.5" cy="91" rx="3" ry="2.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="81,34 98,45 81,57 81,139 127,139 127,57 110,45 127,34 81,34"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<ellipse cx="100" cy="91" rx="2.5" ry="2.5"/>
+									</g>
+									<g stroke-width="59.909" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="100" cy="91" rx="2.5" ry="2.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="140,34 157,45 140,57 140,139 186,139 186,57 169,45 186,34 140,34"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<ellipse cx="159" cy="91" rx="2.5" ry="2.5"/>
+									</g>
+									<g stroke-width="59.909" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="159" cy="91" rx="2.5" ry="2.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<polygon points="199,34 216,45 199,57 199,139 245,139 245,57 228,45 245,34 199,34"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="59.909" stroke="#000000" stroke-miterlimit="10"
+											fill="#ffffff">
+										<ellipse cx="218" cy="91" rx="2.5" ry="2.5"/>
+									</g>
+									<g stroke-width="59.909" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="218" cy="91" rx="2.5" ry="2.5"/>
+									</g>
+								</g>
+								<g transform="matrix(0.15701, 0, 0, 0.15436, 735.59, 131.05)">
+									<g fill-rule="evenodd" stroke-width="39.8" stroke="#000000" stroke-miterlimit="10"
+											fill="#494949">
+										<polygon
+												points="29,144 27,142 26,140 24,138 23,136 21,133 20,131 18,129 16,125 14,123 13,120 10,114 9,111 6,105 5,102 4,100 4,98 3,95 3,93 2,91 2,88 1,86 1,81 0,79 0,64 1,61 1,56 2,54 2,51 3,49 3,46 4,44 4,41 5,39 6,36 9,30 10,27 14,19 16,17 18,13 20,11 21,9 23,7 24,5 29,0 155,0 160,5 161,7 163,9 164,11 166,13 169,19 171,21 174,27 175,30 177,34 177,36 178,39 179,41 180,44 180,46 181,49 181,51 182,54 182,59 183,61 183,81 182,84 182,88 181,91 181,93 180,95 180,98 178,102 177,105 177,107 175,111 174,114 171,120 169,123 166,129 164,131 163,133 161,136 160,138 158,140 157,142 155,144 30,144 29,144"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="39.8" stroke="#000000" stroke-miterlimit="10"
+											fill="#7f7f7f">
+										<ellipse cx="86.5" cy="69" rx="43" ry="43.5"/>
+									</g>
+									<g stroke-width="39.8" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="86.5" cy="69" rx="43" ry="43.5"/>
+									</g>
+									<g fill-rule="evenodd" stroke-width="39.8" stroke="#000000" stroke-miterlimit="10"
+											fill="#000000">
+										<ellipse cx="87" cy="68.5" rx="40.5" ry="40"/>
+									</g>
+									<g stroke-width="39.8" stroke="#000000" stroke-miterlimit="10" fill="none">
+										<ellipse cx="87" cy="68.5" rx="40.5" ry="40"/>
+									</g>
+									<g stroke-width="39.8" stroke="#f7f7f7" stroke-miterlimit="10" fill="none">
+										<polyline
+												points="155,0 160,5 161,7 163,9 164,11 166,13 169,19 171,21 174,27 175,30 177,34 177,36 178,39 179,41 180,44 180,46 181,49 181,51 182,54 182,59 183,61 183,81 182,84 182,88 181,91 181,93 180,95 180,98 178,102 177,105 177,107 175,111 174,114 171,120 169,123 166,129 164,131 163,133 161,136 160,138 158,140 157,142 155,144 30,144 29,144"
+												fill="none"/>
+									</g>
+								</g>
+							</g>
+							<mask id="mfid780" fill-rule="evenodd" fill="white" stroke="none"/>
+						</g>
+					</svg>
+				</switch>
+				<rect v:rectContext="foreign" x="0" y="82.2898" width="136.63" height="25.0299" class="st1"/>
+			</g>
+			<g id="shape1-5" v:mID="1" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M204.94 107.32 L204.94 7.2 L0 7.2 L0 107.32 L204.94 107.32 ZM341.57 107.32 L341.57 7.2 L546.52 7.2 L546.52
+							 107.32 L341.57 107.32 Z" class="st2"/>
+				<path d="M204.94 107.32 L204.94 7.2 L0 7.2 L0 107.32 L204.94 107.32" class="st3"/>
+				<path d="M341.57 107.32 L341.57 7.2 L546.52 7.2 L546.52 107.32 L341.57 107.32" class="st3"/>
+				<path d="M204.94 107.32 L204.94 7.2 L341.57 7.2 L341.57 107.32 L204.94 107.32" class="st3"/>
+			</g>
+		</g>
+	</g>
+</svg>

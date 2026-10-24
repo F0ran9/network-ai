@@ -36,3 +36,8 @@ uploads/
 # OS
 Thumbs.db
 desktop.ini
+
+# 大体积中间产物
+backend/venv_broken_py38/
+tools/vss_converted/
+tools/generated_icons/

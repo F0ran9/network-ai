@@ -114,6 +114,17 @@ export const deviceCategories = [
     ]
   },
   {
+    name: '出口与流量设备',
+    expanded: true,
+    models: [
+      { type: 'lb', category: 'lb', role: 'router', model: 'BIGIP-VE', label: '负载均衡器', vendor: 'Generic', hostname: 'LB' },
+      { type: 'lb', category: 'lb', role: 'router', model: 'AD-1000', label: '深信服 AD 应用交付', vendor: 'Sangfor', hostname: 'LB' },
+      { type: 'sdwan', category: 'sdwan', role: 'router', model: 'SDWAN-Edge', label: 'SDWAN 路由器', vendor: 'Generic', hostname: 'SDWAN' },
+      { type: 'behavior', category: 'behavior', role: 'security', model: 'AC-1000-BM', label: '上网行为管理', vendor: 'Generic', hostname: 'BM' },
+      { type: 'behavior', category: 'behavior', role: 'security', model: 'AC-6000-BM', label: '深信服 AC-6000 行为管理', vendor: 'Sangfor', hostname: 'BM' },
+    ]
+  },
+  {
     name: '常用图标',
     expanded: false,
     models: [

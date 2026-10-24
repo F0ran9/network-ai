@@ -8,6 +8,76 @@ from typing import Optional, Dict, List, Set
 KB_DIR = Path(__file__).parent / "knowledge_base"
 COMMANDS_DIR = KB_DIR / "commands"
 
+# ---- 生成告警机制 ----
+# 生成过程中发现的"不可信输出"(厂商回退/语法缺键/模板缺失)统一记录到这里,
+# 并以注释行形式注入到对应设备的配置里, 让用户在 UI 上直接看到。
+_GEN_WARNINGS: Dict[str, List[str]] = {}  # node_key -> [warning, ...]
+
+
+def _warn(node_key: str, msg: str) -> None:
+    """记录一条针对某设备的生成告警."""
+    _GEN_WARNINGS.setdefault(node_key, []).append(msg)
+
+
+def _warn_lines(node_key: str, comment_char: str = "!") -> list:
+    """把该设备积累的告警转成配置注释行 (放配置开头, 最显眼)."""
+    warns = _GEN_WARNINGS.get(node_key) or []
+    if not warns:
+        return []
+    out = [f"{comment_char} ===== 生成告警: 本配置含 {len(warns)} 处不可信内容, 请人工核对 ====="]
+    for w in warns:
+        out.append(f"{comment_char} WARNING: {w}")
+    out.append(f"{comment_char} ============================================")
+    return out
+
+
+def _comment_char(vendor_key: str) -> str:
+    """不同厂商 CLI 的注释/无害行前缀."""
+    return "#" if vendor_key in ("Huawei", "H3C", "Maipu", "Ruijie", "ZTE", "Fiberhome", "Raisecom", "Dcn", "Inspur", "Boda", "Hikvision", "Tplink", "Dptecn") else "!"
+
+
+def _fmt(template: str, ctx: dict) -> Optional[str]:
+    """安全格式化: 模板占位符与上下文完全匹配才返回结果, 否则 None (由调用方决定如何告警)."""
+    try:
+        return template.format(**ctx)
+    except (KeyError, ValueError):
+        return None
+
+
+def _vlan_ctx(v: int, gw: str, mask: str, prefix: int) -> dict:
+    """构造 VLAN 相关模板的完整格式化上下文.
+    覆盖各家语法表可能用到的全部占位符: {vlan} {vlan_name} {ip} {mask} {prefix}
+    {net} {pool_name} {gw} {dns} {start} {end} {server_ip} {vlans}"""
+    return {
+        "vlan": v, "vlan_name": f"VLAN{v}",
+        "ip": gw, "mask": mask, "prefix": prefix,
+        "net": _mask_to_net(gw, mask), "pool_name": f"vlan{v}",
+        "gw": gw, "dns": gw, "start": gw, "end": gw, "server_ip": gw,
+        "vlans": str(v),
+    }
+
+
+def _mask_to_net(ip: str, mask: str) -> str:
+    """由 IP + 掩码推出网段地址, 如 192.168.10.1/24 -> 192.168.10.0"""
+    try:
+        import ipaddress
+        iface = ipaddress.ip_interface(f"{ip}/{_mask_to_prefix(mask)}")
+        return str(iface.network.network_address)
+    except ValueError:
+        return ip
+
+
+def _mask_to_prefix(mask: str) -> int:
+    """255.255.255.0 -> 24; 兼容 '24' 形式."""
+    mask = str(mask).strip()
+    if mask.isdigit():
+        return int(mask)
+    try:
+        import ipaddress
+        return bin(int(ipaddress.IPv4Address(mask))).count("1")
+    except ValueError:
+        return 24
+
 # ---- Loaders ----
 
 def load_index():
@@ -1603,16 +1673,19 @@ def _normalize_vendor_name(name: str) -> str:
     return name.strip().title()
 
 
-def _resolve_vendor_key(base_vendor: str, node: dict) -> tuple:
+def _resolve_vendor_key(base_vendor: str, node: dict, node_key: str = "") -> tuple:
     """Resolve the correct _VENDOR_SYNTAX key for a node, considering role.
 
     Args:
         base_vendor: The vendor name from the node's vendor field or global param.
         node: The topology node dict (has 'role' and/or 'category').
+        node_key: Device key, used to attach generation warnings.
 
     Returns:
         (resolved_key, syntax_dict) tuple. Falls back to base vendor if no
-        role-specific variant exists, then to 'Huawei' as ultimate fallback.
+        role-specific variant exists. If the base vendor has NO syntax table
+        either, falls back to 'Huawei' AND records a loud warning — the
+        generated config uses the wrong vendor's syntax and must be reviewed.
     """
     base_vendor = _normalize_vendor_name(base_vendor)
     node_cat = _node_category(node)
@@ -1633,7 +1706,9 @@ def _resolve_vendor_key(base_vendor: str, node: dict) -> tuple:
     if base_vendor in _VENDOR_SYNTAX:
         return base_vendor, _VENDOR_SYNTAX[base_vendor]
 
-    # ultimate fallback
+    # ultimate fallback — NOT silent anymore: 产出的是华为语法, 必须让用户知道
+    _warn(node_key, f"厂商 '{base_vendor}' 没有语法模板, 已回退为 Huawei 语法生成! "
+                    f"该设备配置可能完全不适用于真实设备, 请人工重写或先在 KB 中补充该厂商语法。")
     return "Huawei", _VENDOR_SYNTAX["Huawei"]
 
 
@@ -2114,46 +2189,45 @@ def _generate_switch_config(
     svi_subnet_prefix = 24
 
     if is_l3_switch and non_default_vlans:
+        cc = _comment_char(vendor_key)
         for v in sorted(non_default_vlans):
             gw = f"192.168.{v}.1"
             subnet_mask = "255.255.255.0"
+            prefix = svi_subnet_prefix
+            ctx = _vlan_ctx(v, gw, subnet_mask, prefix)
             lines.append(f"! --- VLAN {v} gateway ---")
 
             # SVI interface
             if syntax.get("mgmt_intf"):
-                try:
-                    lines.append(syntax["mgmt_intf"].format(vlan=v))
-                except (KeyError, ValueError):
-                    pass
+                s = _fmt(syntax["mgmt_intf"], ctx)
+                if s is not None:
+                    lines.append(s)
+                else:
+                    lines.append(cc + f" WARNING: 厂商 {vendor_key} mgmt_intf 模板占位符与上下文不匹配, VLAN {v} 的 SVI 接口未生成!")
+                    _warn(node_key, f"mgmt_intf 模板占位符不匹配, VLAN {v} SVI 接口行缺失")
             if syntax.get("mgmt_ip"):
-                try:
-                    lines.append(syntax["mgmt_ip"].format(ip=gw, mask=subnet_mask))
-                except (KeyError, ValueError):
-                    pass
+                s = _fmt(syntax["mgmt_ip"], ctx)
+                if s is not None:
+                    lines.append(s)
+                else:
+                    lines.append(cc + f" WARNING: 厂商 {vendor_key} mgmt_ip 模板占位符与上下文不匹配, VLAN {v} 的网关 IP 未配置!")
+                    _warn(node_key, f"mgmt_ip 模板占位符不匹配, VLAN {v} 网关 IP 行缺失")
 
             # DHCP pool for this VLAN
             if syntax.get("dhcp_pool") and syntax.get("dhcp_enable"):
-                pool_name = f"vlan{v}"
                 try:
-                    lines.append(syntax["dhcp_pool"].format(pool_name=pool_name, vlan=v))
+                    lines.append(syntax["dhcp_pool"].format(**ctx))
                 except (KeyError, ValueError):
-                    pass
-                if syntax.get("dhcp_gateway"):
-                    try:
-                        lines.append(syntax["dhcp_gateway"].format(gw=gw, vlan=v))
-                    except (KeyError, ValueError):
-                        pass
-                if syntax.get("dhcp_dns"):
-                    try:
-                        lines.append(syntax["dhcp_dns"].format(dns=gw, vlan=v))
-                    except (KeyError, ValueError):
-                        pass
-                # DHCP excluded address (gateway itself)
-                if syntax.get("dhcp_excluded") and v != 1:
-                    try:
-                        lines.append(syntax["dhcp_excluded"].format(start=gw, end=gw))
-                    except (KeyError, ValueError):
-                        pass
+                    lines.append(cc + f" WARNING: 厂商 {vendor_key} dhcp_pool 模板占位符不匹配, VLAN {v} 的 DHCP 地址池未生成!")
+                    _warn(node_key, f"dhcp_pool 模板占位符不匹配, VLAN {v} DHCP 地址池缺失")
+                for key, desc in (("dhcp_gateway", "DHCP 网关"), ("dhcp_dns", "DHCP DNS"),
+                                  ("dhcp_excluded", "网关地址排除")):
+                    if syntax.get(key):
+                        try:
+                            lines.append(syntax[key].format(**ctx))
+                        except (KeyError, ValueError):
+                            lines.append(cc + f" WARNING: 厂商 {vendor_key} {key} 模板占位符不匹配, VLAN {v} {desc}未配置!")
+                            _warn(node_key, f"{key} 模板占位符不匹配, VLAN {v} {desc}行缺失")
 
     # --- Eth-Trunk / Link Aggregation ---
     # Collect bonded links and generate Eth-Trunk config blocks
@@ -2750,6 +2824,9 @@ def generate_config_from_kb(topology: dict, vendor: str, global_settings: dict =
     links = topology.get("links", [])
     all_vlans = _collect_topology_vlans(topology)
 
+    # 每次生成前清空上一轮的告警
+    _GEN_WARNINGS.clear()
+
     # Build device -> links map for interface config generation
     device_links = {}
     for link_data in links:
@@ -2771,7 +2848,7 @@ def generate_config_from_kb(topology: dict, vendor: str, global_settings: dict =
 
         # Determine base vendor: node-level override takes priority
         node_vendor = node.get("vendor") or vendor
-        vendor_key, syntax = _resolve_vendor_key(node_vendor, node)
+        vendor_key, syntax = _resolve_vendor_key(node_vendor, node, node_key)
 
         # ---- Endpoint: placeholder ----
         if node_cat == "endpoint":
@@ -2799,5 +2876,11 @@ def generate_config_from_kb(topology: dict, vendor: str, global_settings: dict =
             node_key, node, hostname, vendor_key, syntax,
             device_links, all_vlans, global_settings, nodes, vrrp_pairs,
         )
+
+    # 生成完毕: 把该设备的告警以注释行注入配置开头 (生成过程中已逐条 _warn)
+    for dev_key, cfg_lines in configs.items():
+        if isinstance(cfg_lines, list) and _GEN_WARNINGS.get(dev_key):
+            cc = "!" if not cfg_lines or not str(cfg_lines[0]).startswith("#") else "#"
+            configs[dev_key] = _warn_lines(dev_key, cc) + list(cfg_lines)
 
     return configs

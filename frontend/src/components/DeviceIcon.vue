@@ -1,39 +1,45 @@
 <template>
   <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-    <!-- Router -->
+    <!-- 路由器: NetEquip 实物图 -->
     <template v-if="type === 'router'">
-      <rect x="2" y="8" width="32" height="20" rx="4" fill="#4FC3F7" stroke="#0277BD" stroke-width="1.5"/>
-      <rect x="6" y="12" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="13" y="12" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="20" y="12" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="27" y="12" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="6" y="17" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="13" y="17" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="20" y="17" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <rect x="27" y="17" width="5" height="2.5" fill="#37474F" rx="0.5"/>
-      <circle cx="8" cy="23" r="1.5" fill="#4CAF50"/>
-      <circle cx="14" cy="23" r="1.5" fill="#4CAF50"/>
-      <circle cx="20" cy="23" r="1.5" fill="#FFC107"/>
-      <circle cx="26" cy="23" r="1.5" fill="#4CAF50"/>
+      <foreignObject width="36" height="36"><img :src="images.router" class="real-img"></foreignObject>
     </template>
-    <!-- Switch -->
+    <!-- 交换机: NetEquip 实物图 -->
     <template v-else-if="type === 'switch'">
-      <rect x="1" y="7" width="34" height="22" rx="3" fill="#546E7A" stroke="#263238" stroke-width="1.5"/>
-      <rect x="5" y="11" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="10" y="11" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="15" y="11" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="20" y="11" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="25" y="11" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="30" y="11" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="5" y="16" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="10" y="16" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="15" y="16" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="20" y="16" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="25" y="16" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <rect x="30" y="16" width="3.5" height="2" fill="#B0BEC5" rx="0.5"/>
-      <circle cx="12" cy="23" r="1.5" fill="#4CAF50"/>
-      <circle cx="18" cy="23" r="1.5" fill="#4CAF50"/>
-      <circle cx="24" cy="23" r="1.5" fill="#FFC107"/>
+      <foreignObject width="36" height="36"><img :src="images.switch" class="real-img"></foreignObject>
+    </template>
+    <!-- 防火墙: NetEquip 实物图 -->
+    <template v-else-if="type === 'firewall'">
+      <foreignObject width="36" height="36"><img :src="images.firewall" class="real-img"></foreignObject>
+    </template>
+    <!-- 无线AP: NetEquip 实物图 -->
+    <template v-else-if="type === 'ap'">
+      <foreignObject width="36" height="36"><img :src="images.ap" class="real-img"></foreignObject>
+    </template>
+    <!-- 服务器: NetEquip 实物图 -->
+    <template v-else-if="type === 'server'">
+      <foreignObject width="36" height="36"><img :src="images.server" class="real-img"></foreignObject>
+    </template>
+    <!-- 负载均衡: AI 生成实物图 -->
+    <template v-else-if="type === 'lb'">
+      <foreignObject width="36" height="36"><img :src="images.lb" class="real-img"></foreignObject>
+    </template>
+    <!-- SDWAN 路由器: AI 生成实物图 -->
+    <template v-else-if="type === 'sdwan'">
+      <foreignObject width="36" height="36"><img :src="images.sdwan" class="real-img"></foreignObject>
+    </template>
+    <!-- 上网行为管理: AI 生成实物图 -->
+    <template v-else-if="type === 'behavior'">
+      <foreignObject width="36" height="36"><img :src="images.behavior" class="real-img"></foreignObject>
+    </template>
+    <!-- 云 / Internet: 真云形 -->
+    <template v-else-if="type === 'cloud'">
+      <path d="M 9.5 27
+               A 5.5 5.5 0 0 1 8.2 16.2
+               A 8.5 8.5 0 0 1 24.5 13
+               A 6.5 6.5 0 0 1 27 27
+               Z"
+            fill="#E3F2FD" stroke="#1565C0" stroke-width="1.6" stroke-linejoin="round"/>
     </template>
     <!-- PC -->
     <template v-else-if="type === 'pc'">
@@ -54,29 +60,19 @@
       <rect x="8" y="29" width="8" height="1.5" rx="0.5" fill="#757575"/>
       <rect x="18" y="29" width="8" height="1.5" rx="0.5" fill="#757575"/>
     </template>
-    <!-- Firewall -->
-    <template v-else-if="type === 'firewall'">
-      <rect x="2" y="7" width="32" height="22" rx="4" fill="#FF7043" stroke="#BF360C" stroke-width="1.5"/>
-      <rect x="8" y="13" width="20" height="3" rx="1" fill="#BF360C"/>
-      <circle cx="12" cy="23" r="1.5" fill="#4CAF50"/>
-      <circle cx="18" cy="23" r="1.5" fill="#FFC107"/>
-      <circle cx="24" cy="23" r="1.5" fill="#4CAF50"/>
-    </template>
-    <!-- AP (Wireless Access Point) -->
-    <template v-else-if="type === 'ap'">
-      <rect x="8" y="18" width="20" height="15" rx="6" fill="#ECEFF1" stroke="#546E7A" stroke-width="1.5"/>
-      <path d="M11 14 Q18 7 25 14" fill="none" stroke="#1565C0" stroke-width="1.5"/>
-      <path d="M14 11 Q18 7 22 11" fill="none" stroke="#1565C0" stroke-width="1.5"/>
-      <circle cx="18" cy="8" r="1.5" fill="#1565C0"/>
-    </template>
-    <!-- AC (Wireless Controller) -->
+    <!-- 无线控制器AC: eNSP 风格紫色机架 + 双排箭头 -->
     <template v-else-if="type === 'ac'">
-      <rect x="2" y="8" width="32" height="20" rx="4" fill="#7E57C2" stroke="#4A148C" stroke-width="1.5"/>
-      <circle cx="9" cy="21" r="1.5" fill="#4CAF50"/>
-      <circle cx="15" cy="21" r="1.5" fill="#4CAF50"/>
-      <circle cx="21" cy="21" r="1.5" fill="#4CAF50"/>
-      <circle cx="27" cy="21" r="1.5" fill="#FFC107"/>
-      <rect x="8" y="12" width="20" height="3" rx="1" fill="#4A148C"/>
+      <rect x="1" y="8" width="34" height="20" rx="3" fill="#7E57C2" stroke="#4A148C" stroke-width="1.5"/>
+      <g fill="#FFFFFF">
+        <rect x="4.5" y="12.6" width="4.6" height="1.8"/><polygon points="9.1,11.6 11.5,13.5 9.1,15.4"/>
+        <rect x="12.8" y="12.6" width="4.6" height="1.8"/><polygon points="17.4,11.6 19.8,13.5 17.4,15.4"/>
+        <rect x="21.1" y="12.6" width="4.6" height="1.8"/><polygon points="25.7,11.6 28.1,13.5 25.7,15.4"/>
+        <rect x="15.2" y="18.6" width="4.6" height="1.8"/><polygon points="15.2,16.6 12.8,18.5 15.2,20.4"/>
+        <rect x="23.5" y="18.6" width="4.6" height="1.8"/><polygon points="23.5,16.6 21.1,18.5 23.5,20.4"/>
+      </g>
+      <circle cx="4.5" cy="24.6" r="1.1" fill="#4CAF50"/>
+      <circle cx="8" cy="24.6" r="1.1" fill="#4CAF50"/>
+      <circle cx="31" cy="24.6" r="1.1" fill="#FFC107"/>
     </template>
     <!-- Laptop -->
     <template v-else-if="type === 'laptop'">
@@ -90,7 +86,7 @@
       <rect x="10" y="7" width="16" height="18" rx="2" fill="#E0E0E0" stroke="#BDBDBD" stroke-width="0.5"/>
       <circle cx="18" cy="28" r="2" fill="#78909C"/>
     </template>
-    <!-- Camera (Dome) -->
+    <!-- Camera -->
     <template v-else-if="type === 'camera'">
       <rect x="4" y="14" width="28" height="18" rx="2" fill="#ECEFF1" stroke="#37474F" stroke-width="1.5"/>
       <path d="M6 14 Q18 2 30 14" fill="#B0BEC5" stroke="#546E7A" stroke-width="1.5"/>
@@ -99,7 +95,7 @@
       <circle cx="18" cy="19" r="1.5" fill="#42A5F5"/>
       <rect x="4" y="12" width="3" height="4" fill="#546E7A" rx="0.5"/>
     </template>
-    <!-- NVR (Network Video Recorder) -->
+    <!-- NVR -->
     <template v-else-if="type === 'nvr'">
       <rect x="2" y="4" width="32" height="28" rx="3" fill="#37474F" stroke="#212121" stroke-width="1.5"/>
       <rect x="6" y="8" width="24" height="4" rx="1" fill="#616161"/>
@@ -110,23 +106,17 @@
       <circle cx="26" cy="24" r="1" fill="#4CAF50"/>
       <rect x="12" y="28" width="12" height="2" rx="1" fill="#757575"/>
     </template>
-    <!-- Dumb Switch (Unmanaged) -->
+    <!-- 傻瓜交换机: 同交换机画风, 浅色 -->
     <template v-else-if="type === 'dumb-switch'">
-      <rect x="1" y="7" width="34" height="22" rx="3" fill="#78909C" stroke="#455A64" stroke-width="1.5"/>
-      <rect x="5" y="11" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="10" y="11" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="15" y="11" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="20" y="11" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="25" y="11" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="30" y="11" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="5" y="16" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="10" y="16" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="15" y="16" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="20" y="16" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="25" y="16" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="30" y="16" width="3" height="2" fill="#CFD8DC" rx="0.5"/>
-      <rect x="4" y="22" width="28" height="4" rx="1" fill="#455A64"/>
-      <text x="18" y="26" text-anchor="middle" fill="#CFD8DC" font-size="4" font-family="sans-serif">UNMANAGED</text>
+      <rect x="1" y="8" width="34" height="20" rx="3" fill="#78909C" stroke="#455A64" stroke-width="1.5"/>
+      <g fill="#CFD8DC">
+        <rect x="4.5" y="12.6" width="4.6" height="1.8"/><polygon points="9.1,11.6 11.5,13.5 9.1,15.4"/>
+        <rect x="12.8" y="12.6" width="4.6" height="1.8"/><polygon points="17.4,11.6 19.8,13.5 17.4,15.4"/>
+        <rect x="21.1" y="12.6" width="4.6" height="1.8"/><polygon points="25.7,11.6 28.1,13.5 25.7,15.4"/>
+        <rect x="15.2" y="18.6" width="4.6" height="1.8"/><polygon points="15.2,16.6 12.8,18.5 15.2,20.4"/>
+        <rect x="23.5" y="18.6" width="4.6" height="1.8"/><polygon points="23.5,16.6 21.1,18.5 23.5,20.4"/>
+      </g>
+      <text x="18" y="26" text-anchor="middle" fill="#ECEFF1" font-size="4.5" font-family="sans-serif">UNMANAGED</text>
     </template>
     <!-- Printer -->
     <template v-else-if="type === 'printer'">
@@ -135,22 +125,13 @@
       <rect x="10" y="12" width="16" height="5" fill="#FAFAFA"/>
       <rect x="2" y="24" width="32" height="4" rx="1.5" fill="#78909C"/>
       <rect x="20" y="30" width="8" height="3" rx="1" fill="#546E7A"/>
-      <rect x="24" y="20" width="2" height="4" fill="#546E7A"/>
-      <rect x="12" y="20" width="12" height="2" rx="1" fill="#ECEFF1" stroke="#BDBDBD" stroke-width="0.5"/>
     </template>
-    <!-- IPS (Intrusion Prevention System) -->
+    <!-- IPS: 紫色机架 + 盾形元素 -->
     <template v-else-if="type === 'ips'">
-      <rect x="2" y="7" width="32" height="22" rx="4" fill="#AB47BC" stroke="#6A1B9A" stroke-width="1.5"/>
-      <rect x="8" y="11" width="20" height="2.5" rx="0.5" fill="#6A1B9A"/>
-      <rect x="8" y="15" width="20" height="2.5" rx="0.5" fill="#6A1B9A"/>
-      <circle cx="12" cy="23" r="1.5" fill="#4CAF50"/>
-      <circle cx="18" cy="23" r="1.5" fill="#FFC107"/>
-      <circle cx="24" cy="23" r="1.5" fill="#4CAF50"/>
-    </template>
-    <!-- Cloud -->
-    <template v-else-if="type === 'cloud'">
-      <rect x="3" y="10" width="30" height="22" rx="12" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
-      <rect x="10" y="6" width="16" height="12" rx="6" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+      <rect x="1" y="8" width="34" height="20" rx="3" fill="#8E24AA" stroke="#4A148C" stroke-width="1.5"/>
+      <path d="M18 11 L24 13.5 L24 18.5 Q24 23 18 25.5 Q12 23 12 18.5 L12 13.5 Z"
+            fill="#F3E5F5" stroke="#4A148C" stroke-width="1"/>
+      <path d="M15 18.5 L17.3 21 L21.5 15.5" fill="none" stroke="#8E24AA" stroke-width="1.8"/>
     </template>
     <!-- Default fallback -->
     <template v-else>
@@ -160,7 +141,29 @@
 </template>
 
 <script setup>
+import routerImg from '../assets/netequip/icons/router.png'
+import switchImg from '../assets/netequip/icons/switch-core.png'
+import firewallImg from '../assets/netequip/icons/firewall.png'
+import apImg from '../assets/netequip/icons/ap.png'
+import serverImg from '../assets/netequip/icons/server.png'
+import lbImg from '../assets/netequip/icons/lb.png'
+import sdwanImg from '../assets/netequip/icons/sdwan.png'
+import behaviorImg from '../assets/netequip/icons/behavior.png'
+
+const images = { router: routerImg, switch: switchImg, firewall: firewallImg, ap: apImg, server: serverImg, lb: lbImg, sdwan: sdwanImg, behavior: behaviorImg }
+
 defineProps({
   type: { type: String, required: true }
 })
 </script>
+
+<style scoped>
+.real-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 3px;
+}
+</style>

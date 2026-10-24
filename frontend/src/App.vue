@@ -1,27 +1,49 @@
 <template>
   <div id="app-container">
-    <el-header>
-      <h1>网络拓扑配置生成器</h1>
+    <!-- 登录门: 未认证时只渲染登录页 -->
+    <LoginView v-if="!authed" @login="authed = true" />
+    <template v-else>
+    <el-header class="app-header">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="13.5" width="19" height="7" rx="1.5"/>
+            <circle cx="6.5" cy="17" r="1" fill="currentColor" stroke="none"/>
+            <circle cx="10" cy="17" r="1" fill="currentColor" stroke="none"/>
+            <path d="M12 13.5v-3M6 13.5V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5.5M12 10.5h.01"/>
+            <rect x="9" y="3" width="6" height="3" rx="1"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>网络拓扑配置生成器</h1>
+          <span class="brand-sub">TOPO · CONFIG · DEPLOY</span>
+        </div>
+        <span class="status-led"><span class="led"></span>READY</span>
+      </div>
       <div class="controls">
-        <el-button size="small" :icon="Download" @click="topoEditor?.exportTopologyFile()" title="保存拓扑">保存</el-button>
-        <el-button size="small" :icon="Upload" @click="triggerImport" title="加载拓扑">加载</el-button>
-        <el-dropdown @command="exportImage" trigger="click">
-          <el-button size="small" :icon="Camera" title="导出拓扑图为图片">导出图片</el-button>
+        <el-dropdown @command="fileMenuCmd" trigger="click">
+          <el-button size="small" :icon="FolderOpened" title="保存 / 加载 / 导出图片 / 清空">
+            文件<el-icon class="el-icon--right"><ArrowDown /></el-icon>
+          </el-button>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item command="png">PNG 高清</el-dropdown-item>
-              <el-dropdown-item command="jpeg">JPEG</el-dropdown-item>
-              <el-dropdown-item command="svg">SVG 矢量</el-dropdown-item>
+              <el-dropdown-item command="save" :icon="Download">保存拓扑</el-dropdown-item>
+              <el-dropdown-item command="load" :icon="Upload">加载拓扑</el-dropdown-item>
+              <el-dropdown-item command="png" :icon="Camera" divided>导出图片 PNG</el-dropdown-item>
+              <el-dropdown-item command="jpeg" :icon="Camera">导出图片 JPEG</el-dropdown-item>
+              <el-dropdown-item command="svg" :icon="Camera">导出图片 SVG</el-dropdown-item>
+              <el-dropdown-item command="clear" :icon="Delete" divided class="menu-danger">清空画布</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
         <input ref="fileInput" type="file" accept=".json" style="display:none" @change="onFileImport" />
-        <el-button size="small" :icon="PictureFilled" @click="triggerImageImport" title="从拓扑图导入">导入拓扑图</el-button>
+        <el-button size="small" :icon="PictureFilled" @click="triggerImageImport" title="从拓扑图导入（AI 识图）">导入拓扑图</el-button>
         <input ref="imageFileInput" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp" style="display:none" @change="onImageImport" />
-        <el-button size="small" :icon="Delete" type="danger" @click="confirmClear" title="清空画布">清空</el-button>
-        <el-button size="small" :icon="Setting" @click="globalSettingsDialog.visible = true" title="全局设置">全局设置</el-button>
+        <el-divider direction="vertical" />
+        <el-button size="small" :icon="Setting" @click="globalSettingsDialog.visible = true" title="全局设置">设置</el-button>
+        <el-button size="small" :icon="Key" @click="aiConfigVisible = true" title="AI 接口配置">AI 设置</el-button>
         <el-dropdown @command="applyTemplateCmd" trigger="click">
-          <el-button size="small" type="warning" title="从模板新建拓扑">新建模板</el-button>
+          <el-button size="small" :icon="Files" title="从模板新建拓扑">模板<el-icon class="el-icon--right"><ArrowDown /></el-icon></el-button>
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item
@@ -33,22 +55,22 @@
           </template>
         </el-dropdown>
         <el-button size="small" :icon="isDark ? Sunny : Moon" @click="toggleDarkMode" :title="isDark ? '切换日间模式' : '切换夜间模式'" />
-        <el-button size="small" :loading="layoutLoading" :disabled="layoutLoading" @click="doAutoLayout" title="自动排列设备">自动布局</el-button>
+        <el-button size="small" :loading="layoutLoading" :disabled="layoutLoading" @click="doAutoLayout" title="自动排列设备">布局</el-button>
         <el-divider direction="vertical" />
-        <el-select v-model="selectedVendor" placeholder="选择厂商">
+        <el-select v-model="selectedVendor" placeholder="厂商" style="width: 112px">
           <el-option v-for="v in vendors" :key="v" :label="v" :value="v" />
         </el-select>
-        <el-button type="primary" :loading="loading" :disabled="loading" @click="generateAllConfigs">
-          {{ loading ? '正在生成...' : '一键生成全部配置' }}
+        <el-button class="btn-accent" size="small" :loading="loading" :disabled="loading" @click="generateAllConfigs" title="按画布拓扑生成全部设备配置">
+          {{ loading ? '生成中...' : '一键生成' }}
         </el-button>
-        <el-button type="success" :loading="loading" :disabled="loading" @click="generateAllConfigs(true)">
-          {{ loading ? '正在生成...' : '自动规划子网并生成' }}
+        <el-button size="small" :loading="loading" :disabled="loading" @click="generateAllConfigs(true)" title="自动划分子网 / VLAN / DHCP 后生成">
+          {{ loading ? '生成中...' : '自动规划生成' }}
         </el-button>
       </div>
     </el-header>
     <el-container style="flex:1; overflow:hidden;">
       <!-- eNSP-style categorized sidebar -->
-      <el-aside width="240px" class="device-sidebar">
+      <el-aside :width="leftCollapsed ? '0px' : '240px'" class="device-sidebar" :class="{ collapsed: leftCollapsed }">
         <div class="sidebar-header">
           <el-input
             v-model="searchText"
@@ -81,6 +103,11 @@
         </el-collapse>
       </el-aside>
 
+      <!-- 左侧面板折叠手柄 -->
+      <div class="panel-toggle" @click="leftCollapsed = !leftCollapsed" :title="leftCollapsed ? '展开设备面板' : '收起设备面板'">
+        <el-icon :size="14"><DArrowRight v-if="leftCollapsed" /><DArrowLeft v-else /></el-icon>
+      </div>
+
       <!-- Canvas -->
       <el-main style="padding:0;">
         <TopologyEditor
@@ -91,8 +118,13 @@
         />
       </el-main>
 
+      <!-- 右侧面板折叠手柄 -->
+      <div class="panel-toggle" @click="rightCollapsed = !rightCollapsed" :title="rightCollapsed ? '展开配置面板' : '收起配置面板'">
+        <el-icon :size="14"><DArrowLeft v-if="rightCollapsed" /><DArrowRight v-else /></el-icon>
+      </div>
+
       <!-- Right sidebar with tabs -->
-      <el-aside width="420px" class="config-panel-aside">
+      <el-aside :width="rightCollapsed ? '0px' : '420px'" class="config-panel-aside" :class="{ collapsed: rightCollapsed }">
         <el-tabs v-model="activeTab" class="sidebar-tabs" stretch>
           <el-tab-pane label="配置" name="config">
             <div class="tab-content config-tab">
@@ -127,6 +159,9 @@
     <!-- Loading Overlay -->
     <LoadingOverlay :visible="analyzing" :status="analysisStatus" />
 
+    <!-- AI 配置对话框 -->
+    <AIConfigDialog v-model="aiConfigVisible" />
+
     <!-- CLI Terminal (bottom panel) -->
     <DeviceCli
       :device="cliDevice"
@@ -146,12 +181,13 @@
 
     <!-- Global Settings Dialog -->
     <GlobalSettingsDialog ref="globalSettingsDialog" />
+    </template>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera } from '@element-plus/icons-vue'
+import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight } from '@element-plus/icons-vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import axios from 'axios'
 import TopologyEditor from './components/TopologyEditor.vue'
@@ -164,6 +200,8 @@ import DeviceIcon from './components/DeviceIcon.vue'
 import LoadingOverlay from './components/LoadingOverlay.vue'
 import DeviceCli from './components/DeviceCli.vue'
 import GlobalSettingsDialog from './components/GlobalSettingsDialog.vue'
+import LoginView from './components/LoginView.vue'
+import AIConfigDialog from './components/AIConfigDialog.vue'
 import { deviceCategories } from './topology/deviceDefinitions.js'
 import { autoAssignSubnets } from './topology/subnetPlanner.js'
 import { validateTopology } from './topology/topologyValidator.js'
@@ -176,6 +214,9 @@ const currentConfigs = ref({})
 const currentTopology = ref({})
 const loading = ref(false)
 const activeTab = ref('config')
+// 左右面板折叠状态
+const leftCollapsed = ref(false)
+const rightCollapsed = ref(false)
 const selectedDevice = ref(null)
 const searchText = ref('')
 const fileInput = ref(null)
@@ -186,10 +227,14 @@ const subnetPlan = ref(null)  // { vlanId: { subnet, gateway, dhcpStart, dhcpEnd
 const topologyWarnings = ref([])
 const generatedConfigsRef = ref({})  // snapshot of last generated configs for diff
 
-// Image analysis state
+// Image analysis state (DeepSeek 原生视觉, 与配置生成共用同一把 key)
 const analyzing = ref(false)
 const analysisStatus = ref('')
 const analysisResult = ref(null)  // {extracted_topology, analysis_report, configs}
+
+// ---- 平台鉴权 / AI 设置 ----
+const authed = ref(!!localStorage.getItem('tct-token'))
+const aiConfigVisible = ref(false)
 
 // CLI terminal state
 const cliVisible = ref(false)
@@ -350,6 +395,14 @@ function exportImage(format) {
   topoEditor.value?.exportToImage(format)
 }
 
+// 文件下拉菜单: 保存 / 加载 / 导出图片 / 清空
+function fileMenuCmd(cmd) {
+  if (cmd === 'save') topoEditor.value?.exportTopologyFile()
+  else if (cmd === 'load') triggerImport()
+  else if (cmd === 'clear') confirmClear()
+  else if (['png', 'jpeg', 'svg'].includes(cmd)) exportImage(cmd)
+}
+
 function onFileImport(ev) {
   const file = ev.target.files?.[0]
   if (!file) return
@@ -362,7 +415,7 @@ function onFileImport(ev) {
   ev.target.value = ''
 }
 
-// ---- Image topology import ----
+// ---- Image topology import (DeepSeek 原生视觉) ----
 function triggerImageImport() {
   imageFileInput.value?.click()
 }
@@ -371,13 +424,11 @@ async function onImageImport(ev) {
   const file = ev.target.files?.[0]
   if (!file) return
 
-  // Validate type
   const allowed = ['image/jpeg', 'image/png', 'image/bmp', 'image/webp']
   if (!allowed.includes(file.type)) {
     ElMessage.error('仅支持 JPG、PNG、BMP、WebP 格式的图片')
     return
   }
-  // Validate size
   if (file.size > 20 * 1024 * 1024) {
     ElMessage.error('图片大小不能超过 20MB')
     return
@@ -392,10 +443,10 @@ async function onImageImport(ev) {
     formData.append('vendor', selectedVendor.value)
     formData.append('generate_configs', 'true')
 
-    analysisStatus.value = 'AI 正在分析拓扑结构（约需 10-30 秒）...'
+    analysisStatus.value = 'DeepSeek 正在识别拓扑结构（约需 30-60 秒）...'
     const res = await axios.post('/api/analyze/topology-image', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
-      timeout: 300000,
+      timeout: 360000,
     })
 
     if (res.data.status === 'success') {
@@ -404,16 +455,13 @@ async function onImageImport(ev) {
         analysis_report: res.data.analysis_report,
         configs: res.data.configs || {},
       }
-      // Populate canvas
       analysisStatus.value = '正在绘制拓扑图...'
       topoEditor.value?.importTopologyFromAnalysis(res.data.extracted_topology)
 
-      // Store topology and configs
       currentTopology.value = res.data.extracted_topology
       currentConfigs.value = res.data.configs || {}
       try { localStorage.setItem('topo-configs', JSON.stringify(res.data.configs || {})) } catch (_) {}
 
-      // Switch to analysis tab
       activeTab.value = 'analysis'
 
       if (res.data.warnings?.length) {
@@ -543,61 +591,275 @@ async function generateAllConfigs(autoPlanSubnets = false) {
 <style>
 html, body { margin: 0; padding: 0; height: 100%; }
 #app { height: 100%; }
-#app-container { height: 100vh; display: flex; flex-direction: column; }
-.el-header {
-  background: #fff; padding: 10px 20px;
-  display: flex; justify-content: space-between; align-items: center;
-  border-bottom: 1px solid #dcdfe6; flex-shrink: 0;
+#app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--tct-bg);
 }
-.controls { display: flex; gap: 10px; align-items: center; }
+
+/* ============ 机柜头部：恒定深色，双主题下的记忆点 ============ */
+.app-header {
+  background: var(--tct-rack-bg);
+  padding: 0 20px;
+  height: 56px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--tct-rack-line);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 5;
+}
+/* 顶部的"面板螺丝"细节：四角定位孔 */
+.app-header::before,
+.app-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(148, 187, 208, 0.22);
+  transform: translateY(-50%);
+}
+.app-header::before { left: 8px; }
+.app-header::after { right: 8px; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--tct-accent);
+  background: rgba(240, 167, 46, 0.10);
+  border: 1px solid rgba(240, 167, 46, 0.28);
+  border-radius: var(--tct-radius);
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.brand-text h1 {
+  margin: 0;
+  font-family: var(--tct-mono);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--tct-rack-ink);
+  white-space: nowrap;
+}
+.brand-sub {
+  font-family: var(--tct-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--tct-rack-muted);
+  white-space: nowrap;
+}
+
+/* 运行状态灯：呼吸绿点， industrial 状态语义 */
+.status-led {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 14px;
+  padding: 3px 10px;
+  border: 1px solid var(--tct-rack-line);
+  border-radius: 999px;
+  font-family: var(--tct-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--tct-rack-muted);
+  white-space: nowrap;
+}
+.status-led .led {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tct-ok);
+  box-shadow: 0 0 6px var(--tct-ok);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .status-led .led { animation: led-breathe 2.4s ease-in-out infinite; }
+}
+@keyframes led-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+/* ============ 控制区：强制单行, 窄屏收副标题 ============ */
+.controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  min-width: 0;
+}
+.controls .el-button { flex-shrink: 0; }
+@media (max-width: 1660px) {
+  .brand-sub, .status-led { display: none; }
+}
+@media (max-width: 1360px) {
+  .brand-text h1 { font-size: 13px; }
+  .brand-logo { display: none; }
+}
+/* 控件分组发丝分隔线 */
+.controls .el-divider--vertical {
+  height: 20px;
+  border-color: rgba(148, 187, 208, 0.22);
+  margin: 0 2px;
+}
+/* 下拉菜单危险项（清空画布） */
+.menu-danger { color: var(--tct-danger); }
+/* 深色头部里的次级按钮统一"暗面板键"质感 */
+.app-header .el-button:not(.el-button--primary):not(.el-button--warning):not(.el-button--danger):not(.el-button--success) {
+  background: rgba(148, 187, 208, 0.07);
+  border-color: rgba(148, 187, 208, 0.24);
+  color: var(--tct-rack-ink);
+}
+.app-header .el-button:not(.el-button--primary):not(.el-button--warning):not(.el-button--danger):not(.el-button--success):hover {
+  background: rgba(148, 187, 208, 0.16);
+  border-color: rgba(148, 187, 208, 0.4);
+}
+/* 头部厂商选择器融入机柜面板 */
+.app-header .el-select {
+  --el-fill-color-blank: rgba(148, 187, 208, 0.07);
+}
+.app-header .el-select .el-select__wrapper {
+  background: rgba(148, 187, 208, 0.07);
+  box-shadow: 0 0 0 1px rgba(148, 187, 208, 0.24) inset;
+  color: var(--tct-rack-ink);
+  min-height: 26px;
+}
+/* 兼容旧版 el-select（基于 el-input 的渲染结构） */
+.app-header .el-select .el-input__wrapper {
+  background: rgba(148, 187, 208, 0.07);
+  box-shadow: 0 0 0 1px rgba(148, 187, 208, 0.24) inset;
+  color: var(--tct-rack-ink);
+}
+.app-header .el-select .el-input__inner { color: var(--tct-rack-ink); }
+.app-header .el-select .el-select__wrapper.is-hovering,
+.app-header .el-select .el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px var(--tct-brand) inset;
+}
+.app-header .el-select .el-select__placeholder { color: var(--tct-rack-muted); }
+
+/* 琥珀强调：只给"一键生成"这一个关键动作 */
+.btn-accent {
+  --el-button-bg-color: var(--tct-accent);
+  --el-button-border-color: var(--tct-accent);
+  --el-button-hover-bg-color: var(--tct-accent-strong);
+  --el-button-hover-border-color: var(--tct-accent-strong);
+  --el-button-active-bg-color: var(--tct-accent-strong);
+  color: #17130a !important;
+  font-weight: 700;
+}
 </style>
 
 <style scoped>
+/* ============ 左侧设备栏 ============ */
 .device-sidebar {
-  background: #f5f7fa;
+  background: var(--tct-surface);
   overflow-y: auto;
-  border-right: 1px solid #e4e7ed;
+  border-right: 1px solid var(--tct-border);
+  transition: width .25s ease;
+}
+.device-sidebar.collapsed {
+  overflow: hidden;
+  border-right: none;
+  min-width: 0;
+}
+/* 左右面板折叠手柄 (贴在画布两侧的细条) */
+.panel-toggle {
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--tct-text-secondary, #909399);
+  background: var(--tct-panel);
+  border-right: 1px solid var(--tct-border);
+  transition: background .2s, color .2s;
+  flex-shrink: 0;
+}
+.panel-toggle:last-of-type {
+  border-right: none;
+  border-left: 1px solid var(--tct-border);
+}
+.panel-toggle:hover {
+  background: var(--tct-surface);
+  color: var(--el-color-primary);
 }
 .sidebar-header {
-  padding: 8px;
-  border-bottom: 1px solid #e4e7ed;
+  padding: 10px;
+  border-bottom: 1px solid var(--tct-border);
+  background: var(--tct-panel);
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 .category-title {
+  font-family: var(--tct-mono);
   font-weight: 600;
-  font-size: 13px;
-  color: #303133;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tct-muted);
 }
+/* 设备卡：发丝边框 + 悬停左侧琥珀指示条 */
 .device-card {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 10px;
-  margin: 2px 4px;
+  padding: 6px 10px 6px 12px;
+  margin: 2px 6px;
   cursor: grab;
   user-select: none;
   border: 1px solid transparent;
-  border-radius: 6px;
-  transition: background 0.15s, border-color 0.15s;
+  border-left: 2px solid transparent;
+  border-radius: var(--tct-radius);
+  transition: background var(--tct-dur-fast) ease-out,
+              border-color var(--tct-dur-fast) ease-out,
+              transform var(--tct-dur-fast) ease-out;
 }
 .device-card:hover {
-  background: #e8f0fe;
-  border-color: #90CAF9;
+  background: var(--tct-brand-soft);
+  border-color: var(--tct-border);
+  border-left-color: var(--tct-accent);
+  transform: translateX(2px);
 }
 .device-card:active {
   cursor: grabbing;
-  background: #BBDEFB;
+  background: var(--tct-brand-soft);
+  transform: translateX(2px) scale(0.99);
 }
 .device-model {
-  font-size: 12px;
-  color: #333;
+  font-size: var(--tct-fs-sm);
+  color: var(--tct-ink);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
 }
+
+/* ============ 右侧面板 ============ */
 .config-panel-aside {
-  background: #f0f2f5;
+  background: var(--tct-panel);
   display: flex;
   flex-direction: column;
-  border-left: 1px solid #e4e7ed;
+  border-left: 1px solid var(--tct-border);
   overflow: hidden;
+  transition: width .25s ease;
+}
+.config-panel-aside.collapsed {
+  border-left: none;
+  min-width: 0;
 }
 .sidebar-tabs {
   flex: 1;
@@ -608,10 +870,30 @@ html, body { margin: 0; padding: 0; height: 100%; }
 .sidebar-tabs :deep(.el-tabs__header) {
   margin: 0;
   flex-shrink: 0;
+  background: var(--tct-surface);
+  border-bottom: 1px solid var(--tct-border);
+  padding: 0 8px;
+}
+/* 页签文字用等宽小字距，工业标签牌质感 */
+.sidebar-tabs :deep(.el-tabs__item) {
+  font-family: var(--tct-mono);
+  font-size: var(--tct-fs-sm);
+  letter-spacing: 0.06em;
+  color: var(--tct-muted);
+  height: 40px;
+  line-height: 40px;
+}
+.sidebar-tabs :deep(.el-tabs__item.is-active) {
+  color: var(--tct-brand);
+  font-weight: 700;
+}
+.sidebar-tabs :deep(.el-tabs__active-bar) {
+  height: 2px;
 }
 .sidebar-tabs :deep(.el-tabs__content) {
   flex: 1;
   overflow: hidden;
+  background: var(--tct-panel);
 }
 .sidebar-tabs :deep(.el-tab-pane) {
   height: 100%;
@@ -622,16 +904,5 @@ html, body { margin: 0; padding: 0; height: 100%; }
   overflow-y: auto;
   padding: 8px 10px;
 }
-.config-tab {
-  padding: 0;
-}
-.kb-tab {
-  padding: 0;
-}
-.chat-tab {
-  padding: 0;
-}
-.analysis-tab {
-  padding: 0;
-}
+.config-tab, .kb-tab, .chat-tab, .analysis-tab { padding: 0; }
 </style>
