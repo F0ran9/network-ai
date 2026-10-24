@@ -1,5 +1,6 @@
 import os
 import json
+import datetime
 from dotenv import load_dotenv
 load_dotenv()  # 必须在导入 openai 之前加载 .env
 
@@ -19,8 +20,9 @@ from kb_engine import (
     generate_config_from_kb as kb_generate, validate_cli_command,
 )
 from vision_analyzer import analyze_topology_image
-from device_connector import push_config, run_ping_tests, collect_state
+from device_connector import push_config, run_ping_tests, collect_state, BACKUP_DIR
 import network_scanner
+import audit as audit_log
 
 app = FastAPI(title="Network Config Generator")
 
@@ -37,11 +39,23 @@ app.add_middleware(
 # ============================================================
 import time
 import secrets
-from fastapi import Header
+from fastapi import Header, Request
 
 ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 SESSION_TTL = 7 * 24 * 3600
 _sessions: dict = {}  # token -> 过期时间戳
+
+# 登录防爆破: 连续失败 5 次锁定 10 分钟 (内存态, 重启即清零)
+LOGIN_MAX_FAILS = 5
+LOGIN_LOCK_SECONDS = 600
+_login_fails: dict = {}  # client_ip -> [fail_count, locked_until_ts]
+
+
+def _client_ip(request) -> str:
+    try:
+        return request.client.host if request.client else "unknown"
+    except Exception:
+        return "unknown"
 
 
 def _ensure_password() -> str:
@@ -86,11 +100,28 @@ class LoginRequest(BaseModel):
 
 
 @app.post("/api/auth/login")
-async def api_auth_login(request: LoginRequest):
+async def api_auth_login(request: LoginRequest, req: Request = None):
+    ip = _client_ip(req)
+    now = time.time()
+    fails, locked_until = _login_fails.get(ip, [0, 0])
+    if locked_until > now:
+        wait = int(locked_until - now)
+        audit_log.audit("login", result="fail", host=ip, detail=f"锁定中, 拒绝尝试 (剩余 {wait}s)")
+        raise HTTPException(429, detail=f"失败次数过多, 已锁定 {wait} 秒, 请稍后再试")
     if not secrets.compare_digest(request.password or "", _ensure_password()):
-        raise HTTPException(status_code=401, detail="密码错误")
+        fails += 1
+        detail = f"密码错误 (第 {fails} 次)"
+        if fails >= LOGIN_MAX_FAILS:
+            _login_fails[ip] = [0, now + LOGIN_LOCK_SECONDS]
+            detail += f" — 连续失败 {LOGIN_MAX_FAILS} 次, 锁定 {LOGIN_LOCK_SECONDS // 60} 分钟"
+        else:
+            _login_fails[ip] = [fails, 0]
+        audit_log.audit("login", result="fail", host=ip, detail=detail)
+        raise HTTPException(401, detail=detail)
+    _login_fails.pop(ip, None)
     token = secrets.token_urlsafe(32)
-    _sessions[token] = time.time() + SESSION_TTL
+    _sessions[token] = now + SESSION_TTL
+    audit_log.audit("login", result="success", host=ip)
     return {"token": token, "expires_in": SESSION_TTL}
 
 
@@ -110,6 +141,7 @@ async def api_auth_change_password(request: ChangePasswordRequest):
     if len(new_pw) > 128:
         raise HTTPException(status_code=400, detail="新密码过长")
     _update_env_file("APP_PASSWORD", new_pw)
+    audit_log.audit("change-password", result="success")
     return {"ok": True, "message": "密码已更新, 下次登录使用新密码"}
 
 
@@ -423,10 +455,18 @@ async def api_device_push(request: DevicePushRequest):
             commands=request.commands, dry_run=request.dryRun,
             backup=request.backup, port=request.port,
         )
+        audit_log.audit("push", result="dry-run" if request.dryRun else "success",
+                        host=request.host, device_type=request.deviceType,
+                        command_count=result.get("command_count"),
+                        backup_file=result.get("backup_file"))
         return {"status": "success", "data": result}
     except ValueError as e:
+        audit_log.audit("push", result="fail", host=request.host,
+                        device_type=request.deviceType, detail=str(e))
         raise HTTPException(400, detail=str(e))
     except Exception as e:
+        audit_log.audit("push", result="fail", host=request.host,
+                        device_type=request.deviceType, detail=str(e))
         raise HTTPException(500, detail=f"设备连接/下发失败: {e}")
 
 @app.post("/api/device/ping-tests")
@@ -439,10 +479,18 @@ async def api_device_ping_tests(request: PingTestRequest):
             source=request.source, targets=request.targets,
             count=request.count, port=request.port,
         )
+        audit_log.audit("ping-test",
+                        result="success" if result["all_pass"] else "fail",
+                        host=request.host, device_type=request.deviceType,
+                        detail=f"{result['passed']}/{result['total']} 通过")
         return {"status": "success", "data": result}
     except ValueError as e:
+        audit_log.audit("ping-test", result="fail", host=request.host,
+                        device_type=request.deviceType, detail=str(e))
         raise HTTPException(400, detail=str(e))
     except Exception as e:
+        audit_log.audit("ping-test", result="fail", host=request.host,
+                        device_type=request.deviceType, detail=str(e))
         raise HTTPException(500, detail=f"设备连接/测试失败: {e}")
 
 @app.post("/api/device/state")
@@ -453,11 +501,149 @@ async def api_device_state(request: DeviceStateRequest):
             collect_state, host=request.host, device_type=request.deviceType,
             username=request.username, password=request.password, port=request.port,
         )
+        audit_log.audit("state", host=request.host, device_type=request.deviceType)
         return {"status": "success", "data": result}
     except ValueError as e:
         raise HTTPException(400, detail=str(e))
     except Exception as e:
         raise HTTPException(500, detail=f"设备连接失败: {e}")
+
+
+# ---- 备份回滚 ----
+@app.get("/api/device/backups")
+async def api_device_backups(host: str = ""):
+    """列出配置备份 (按时间倒序). host 可选, 过滤指定设备的备份."""
+    if not BACKUP_DIR.exists():
+        return {"status": "success", "data": []}
+    prefix = host.replace(".", "_") + "_" if host.strip() else ""
+    items = []
+    for p in BACKUP_DIR.glob("*.cfg"):
+        if prefix and not p.name.startswith(prefix):
+            continue
+        st = p.stat()
+        items.append({
+            "file": p.name,
+            "time": datetime.datetime.fromtimestamp(st.st_mtime).strftime("%Y-%m-%d %H:%M:%S"),
+            "size": st.st_size,
+        })
+    items.sort(key=lambda x: x["time"], reverse=True)
+    return {"status": "success", "data": items[:200]}
+
+
+class RollbackRequest(BaseModel):
+    host: str
+    deviceType: str
+    username: str
+    password: str
+    backupFile: str           # 仅允许文件名 (不含路径), 必须位于 device_backups 目录
+    dryRun: bool = True
+    port: int = 22
+
+
+@app.post("/api/device/rollback")
+async def api_device_rollback(request: RollbackRequest):
+    """把指定备份文件的内容推回设备 (回滚). 回滚前同样会先备份当前配置."""
+    name = os.path.basename(request.backupFile.strip())
+    if not name.endswith(".cfg") or name.startswith("state_"):
+        raise HTTPException(400, detail="非法的备份文件名")
+    path = BACKUP_DIR / name
+    if not path.exists():
+        raise HTTPException(404, detail=f"备份文件不存在: {name}")
+    commands = [l for l in path.read_text(encoding="utf-8").splitlines()]
+    if not commands:
+        raise HTTPException(400, detail="备份文件为空, 无法回滚")
+    try:
+        result = await _run_blocking(
+            push_config, host=request.host, device_type=request.deviceType,
+            username=request.username, password=request.password,
+            commands=commands, dry_run=request.dryRun,
+            backup=True, port=request.port,
+        )
+        audit_log.audit("rollback", result="dry-run" if request.dryRun else "success",
+                        host=request.host, device_type=request.deviceType,
+                        detail=f"回滚自 {name}", command_count=result.get("command_count"),
+                        backup_file=result.get("backup_file"))
+        return {"status": "success", "data": result}
+    except Exception as e:
+        audit_log.audit("rollback", result="fail", host=request.host,
+                        device_type=request.deviceType, detail=f"{name}: {e}")
+        raise HTTPException(500, detail=f"回滚失败: {e}")
+
+
+# ---- 批量下发 (SSE 逐台推送进度) ----
+class BatchDevice(BaseModel):
+    name: str
+    host: str
+    deviceType: str
+    commands: list
+
+
+class BatchPushRequest(BaseModel):
+    devices: list[BatchDevice] = []
+    username: str
+    password: str
+    dryRun: bool = True
+    backup: bool = True
+    port: int = 22
+    stopOnError: bool = False
+
+
+@app.post("/api/device/push-batch")
+async def api_device_push_batch(request: BatchPushRequest):
+    """批量顺序下发: 逐台连接推送, SSE 实时回传每台结果. 单台失败默认跳过继续."""
+    devices = request.devices or []
+    if not devices:
+        raise HTTPException(400, detail="未选择任何设备")
+    import json as _json
+
+    async def gen():
+        results = []
+        ok = fail = 0
+        for i, d in enumerate(devices):
+            label = f"({i + 1}/{len(devices)})"
+            yield f"data: {_json.dumps({'type': 'progress', 'message': f'{label} {d.name} ({d.host}) 开始…'}, ensure_ascii=False)}\n\n"
+            rec = {"name": d.name, "host": d.host, "status": "fail", "message": ""}
+            try:
+                r = await _run_blocking(
+                    push_config, host=d.host, device_type=d.deviceType,
+                    username=request.username, password=request.password,
+                    commands=d.commands, dry_run=request.dryRun,
+                    backup=request.backup, port=request.port,
+                )
+                rec.update({"status": "dry-run" if request.dryRun else "success",
+                            "message": f"{r.get('command_count', 0)} 条命令"
+                                       + (f", 备份: {r['backup_file']}" if r.get("backup_file") else ""),
+                            "commandCount": r.get("command_count")})
+                if request.dryRun:
+                    rec["commands"] = r.get("commands", [])
+                ok += 1
+                audit_log.audit("push-batch", result="dry-run" if request.dryRun else "success",
+                                host=d.host, device_type=d.deviceType,
+                                detail=f"批量 #{i + 1} {d.name}", command_count=r.get("command_count"))
+            except Exception as e:
+                rec["message"] = str(e)[:200]
+                fail += 1
+                audit_log.audit("push-batch", result="fail", host=d.host,
+                                device_type=d.deviceType, detail=f"批量 #{i + 1} {d.name}: {e}")
+            results.append(rec)
+            yield f"data: {_json.dumps({'type': 'device', 'data': rec, 'index': i}, ensure_ascii=False)}\n\n"
+            if rec["status"] == "fail" and request.stopOnError:
+                yield f"data: {_json.dumps({'type': 'progress', 'message': f'⛔ {d.name} 失败, 已按设置中止后续设备'}, ensure_ascii=False)}\n\n"
+                break
+        skipped = len(devices) - len(results)
+        summary = {"total": len(devices), "done": len(results),
+                   "ok": ok, "fail": fail, "skipped": max(skipped, 0)}
+        yield f"data: {_json.dumps({'type': 'result', 'data': summary}, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(gen(), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+
+
+# ---- 审计日志查询 ----
+@app.get("/api/audit")
+async def api_audit(limit: int = 100):
+    """最近 limit 条平台操作审计记录 (新→旧)."""
+    return {"status": "success", "data": audit_log.recent(min(max(limit, 1), 500))}
 
 
 # ============================================================
@@ -478,6 +664,9 @@ async def api_discover_stream(request: DiscoverRequest):
     """SSE 流式网络发现: 逐台设备推送进度, 结束推送完整拓扑+诊断."""
     if not request.demo and not request.seedIp.strip():
         raise HTTPException(400, detail="请填写种子设备 IP")
+    if not request.demo:
+        audit_log.audit("discover", host=request.seedIp, device_type=request.vendor,
+                        detail=f"LLDP/CDP 扫描, 跳数 {request.maxDepth}")
 
     async def gen():
         import queue as _q

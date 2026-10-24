@@ -41,3 +41,7 @@ desktop.ini
 backend/venv_broken_py38/
 tools/vss_converted/
 tools/generated_icons/
+
+# 运行时数据 (真机配置备份 / 审计日志)
+backend/device_backups/
+backend/audit.log

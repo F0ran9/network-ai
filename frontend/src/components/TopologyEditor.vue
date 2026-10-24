@@ -319,6 +319,7 @@ function getTopologyData() {
       model: n.model,
       role: n.role,
       category: n.category,
+      mgmtIp: n.mgmtIp || '',
       description: `${n.model || n.label} (${roleDesc})`,
       vendor: n.vendor || 'Huawei',
     }
