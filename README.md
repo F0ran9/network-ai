@@ -20,6 +20,10 @@
 
 ![全局设置](docs/screenshots/settings.png)
 
+**真机下发与连通性验收** — dry-run 预览 / 真实下发（自动备份），并从设备源地址 ping 验证业务网段真实可达：
+
+![真机下发](docs/screenshots/device-deploy.png)
+
 **网络自动发现** — SSH+LLDP/CDP 扫描现网，扫描完成后按层级渲染拓扑预览图（含设备类别配色 / 管理 IP / SSH 失败标记），确认后一键生成拓扑与诊断报告：
 
 ![网络自动发现](docs/screenshots/network-discover.png)
@@ -52,6 +56,12 @@
 - **导出格式** — 单文件 .txt / 每设备独立 .cfg / Zip 压缩包（含 topology.json）
 - **CLI 终端** — 内置设备命令行模拟器，可直接在设备上执行命令并回写配置
 
+### 真机下发与验收
+- **配置下发** — 通过 SSH（netmiko）将生成的配置推送到真实设备，支持华为/H3C/思科/锐捷；默认 **dry-run 预览**模式（只连接并回显将执行的命令，不改动设备），真实下发前强制二次确认
+- **自动备份** — 每次下发前自动备份设备当前配置到服务器 `backups` 目录，可随时回溯
+- **连通性验收** — 下发完成后可从设备指定源地址（VLANIF/管理口）ping 一组业务目标（DHCP 服务器、网关等），输出 PASS/FAIL 验收表格——验证的是业务网段真实可达，全绿才算"真的通"
+- **命令过滤** — 自动剔除注释行、告警横幅等无效行，仅下发有效配置命令
+
 ### 辅助功能
 - **知识库** — 多厂商命令参考手册
 - **AI 助手** — 基于拓扑上下文的智能问答
@@ -76,6 +86,8 @@ topology-config-tool/
 │   ├── kb_engine.py            # 多厂商知识库模板引擎（23 厂商命令语法）
 │   ├── config_generator.py     # AI 配置生成（DeepSeek API）
 │   ├── vision_analyzer.py      # 拓扑图视觉分析（Qwen-VL / DashScope）
+│   ├── network_scanner.py      # 网络自动发现（SSH+LLDP/CDP BFS 递归扫描）
+│   ├── device_connector.py     # 真机连接器（netmiko 多厂商 SSH 下发/备份/ping 验收）
 │   ├── chat.py                 # AI 对话
 │   ├── prompts.py              # Prompt 模板
 │   ├── knowledge_base/         # 厂商命令模板库（20 个 JSON）
@@ -84,7 +96,7 @@ topology-config-tool/
 │   ├── src/
 │   │   ├── App.vue             # 主应用（布局、工具栏、状态管理）
 │   │   ├── main.js             # Vue 入口
-│   │   ├── components/         # 11 个核心组件
+│   │   ├── components/         # 15 个核心组件（编辑器/发现/下发/识图/AI 等）
 │   │   ├── topology/           # 拓扑逻辑（设备定义、连线规则、模板工厂等）
 │   │   └── utils/              # 工具函数（diff 算法等）
 │   ├── package.json
@@ -185,15 +197,22 @@ cd frontend && npm run dev
 ### 工具栏说明
 | 按钮 | 功能 |
 |------|------|
-| 保存 | 导出拓扑为 JSON 文件 |
-| 加载 | 从 JSON 文件导入拓扑 |
-| 导出图片 | 导出画布为 PNG / JPEG / SVG |
-| 导入拓扑图 | 从图片 AI 识别拓扑结构 |
-| 清空 | 清空画布 |
-| 全局设置 | NTP、SNMP、AAA 等全局参数 |
-| 新建模板 | 从预设模板快速创建拓扑 |
-| 自动布局 | 自动排列设备位置 |
-| 暗色模式 | 切换日间/夜间主题 |
+| 文件 | 下拉菜单：保存拓扑 / 加载拓扑 / 导出图片 PNG·JPEG·SVG / 清空画布 |
+| 导入拓扑图 | 从拓扑图片 AI 识别生成拓扑 |
+| 网络发现 | SSH+LLDP/CDP 扫描现网，自动生成拓扑预览与诊断报告 |
+| 设置 | 全局参数（NTP、SNMP、AAA、登录密码等） |
+| AI 设置 | 配置 AI 对话/识图模型接口 |
+| 模板 | 从预设拓扑模板快速创建 |
+| 布局 | 一键自动排列设备（层次化布局） |
+| 厂商 | 选择目标厂商后一键生成配置 |
+| 一键生成 / 自动规划生成 | 按画布拓扑生成全部设备配置（后者先自动划分子网/VLAN/DHCP） |
+
+### 配置下发流程（真机操作）
+1. 生成配置后，在右侧配置面板点击【下发到设备】
+2. 选择目标设备、填写管理 IP 与 SSH 账号（密码仅本次会话使用，不保存）
+3. 保持 **dry-run 预览**开启，点击"连接并预览"确认将执行的命令——此时不会改动设备
+4. 关闭 dry-run，二次确认后真实下发（下发前自动备份设备当前配置）
+5. 切到【连通性验收】标签，填源地址与目标列表，跑 ping 验收——全绿才算"真的通"
 
 ### 右键菜单
 - **设备**：打开命令行、编辑属性、复制设备、导出配置、删除
@@ -206,12 +225,17 @@ cd frontend && npm run dev
 |------|------|------|
 | POST | `/api/auth/login` | 平台登录，返回会话 token |
 | POST | `/api/auth/change-password` | 修改平台登录密码（需登录） |
-| GET | `/api/settings` | 获取全局设置 |
-| POST | `/api/generate` | 生成设备配置 |
+| GET / POST | `/api/settings` | 获取 / 保存全局设置 |
+| POST | `/api/settings/test` | 测试 AI 接口连通性 |
+| POST | `/api/generate` | 生成设备配置（AI） |
 | POST | `/api/generate/kb` | 纯知识库生成配置（不使用 AI） |
 | POST | `/api/analyze/topology-image` | 拓扑图视觉分析 |
 | POST | `/api/discover/stream` | 网络自动发现（SSE 进度流，LLDP/CDP 递归扫描） |
-| POST | `/api/chat` | AI 助手对话 |
+| POST | `/api/device/push` | 真机配置下发（netmiko SSH，支持 dry-run 与自动备份） |
+| POST | `/api/device/ping-tests` | 连通性验收（从设备源地址 ping 多目标） |
+| POST | `/api/device/state` | 采集设备运行状态 |
+| GET | `/api/kb/*` | 知识库检索（厂商/分类/命令） |
+| POST | `/api/chat/stream` | AI 助手对话（SSE 流式） |
 
 ## 支持的配置命令类型
 
