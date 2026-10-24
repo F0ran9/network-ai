@@ -343,12 +343,55 @@ const filteredCommands = computed(() =>
   ),
 )
 
+// ---- CLI 语法预检 (下发前按厂商语系校验, error 阻断 / warn 提示) ----
+async function precheckCommands(commands) {
+  const clean = (commands || []).filter((c) => c && c.trim() && !c.trim().startsWith(('!', '#')))
+  if (!clean.length) return { errors: [], warns: [] }
+  try {
+    const resp = await fetch('/api/cli/validate-batch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...authHeaders() },
+      body: JSON.stringify({ vendor: deviceType.value, commands: clean }),
+    })
+    if (!resp.ok) return { errors: [], warns: [] } // 预检服务不可用时不阻塞下发
+    const data = await resp.json()
+    return {
+      errors: (data.data || []).filter((r) => r.level === 'error'),
+      warns: (data.data || []).filter((r) => r.level === 'warn'),
+    }
+  } catch (_) {
+    return { errors: [], warns: [] }
+  }
+}
+
+async function gateByPrecheck(errors, warns, scopeLabel) {
+  if (errors.length) {
+    const list = errors.slice(0, 8)
+      .map((e) => `• ${String(e.command).trim().slice(0, 42)} — ${e.message}`)
+      .join('\n')
+    try {
+      await ElMessageBox.confirm(
+        `语法预检发现 ${errors.length} 条与厂商语法不符的命令${scopeLabel}:\n${list}`
+        + `\n\n常见原因: 设备类型选错 / 混入了其他厂商的配置。建议核对后再下发。`,
+        'CLI 语法预检未通过',
+        { type: 'warning', confirmButtonText: '仍要下发', cancelButtonText: '取消下发', customStyle: { whiteSpace: 'pre-wrap' } },
+      )
+      return true
+    } catch (_) { return false }
+  }
+  if (warns.length) ElMessage.info(`CLI 预检: ${warns.length} 条命令知识库未收录, 已放行请人工确认`)
+  return true
+}
+
 // ---- 单台下发 ----
 const dryRun = ref(true)
 const pushing = ref(false)
 const pushResult = ref(null)
 
 async function doPush() {
+  // CLI 语法预检: error 需二次确认, warn 仅提示
+  const pre = await precheckCommands(filteredCommands.value)
+  if (!await gateByPrecheck(pre.errors, pre.warns, ` (设备 ${formatDeviceName(device.value) || host.value})`)) return
   if (!dryRun.value) {
     try {
       await ElMessageBox.confirm(
@@ -498,6 +541,10 @@ async function startBatch() {
     ElMessage.warning('所选设备均未填写管理 IP (可在设备属性中维护)')
     return
   }
+  // 批量 CLI 预检: 合并全部命令一次校验
+  const allCmds = devices.flatMap((d) => d.commands)
+  const pre = await precheckCommands(allCmds)
+  if (!await gateByPrecheck(pre.errors, pre.warns, ` (批量 ${devices.length} 台)`)) return
   if (!batchDryRun.value) {
     try {
       await ElMessageBox.confirm(

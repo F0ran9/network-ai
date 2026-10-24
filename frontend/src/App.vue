@@ -32,6 +32,7 @@
               <el-dropdown-item command="png" :icon="Camera" divided>导出图片 PNG</el-dropdown-item>
               <el-dropdown-item command="jpeg" :icon="Camera">导出图片 JPEG</el-dropdown-item>
               <el-dropdown-item command="svg" :icon="Camera">导出图片 SVG</el-dropdown-item>
+              <el-dropdown-item command="plan" :icon="Document" divided title="生成含拓扑/命令/回退/验收的 Word 割接方案">导出割接方案</el-dropdown-item>
               <el-dropdown-item command="clear" :icon="Delete" divided class="menu-danger">清空画布</el-dropdown-item>
             </el-dropdown-menu>
           </template>
@@ -191,7 +192,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight, Connection } from '@element-plus/icons-vue'
+import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight, Connection, Document } from '@element-plus/icons-vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import axios from 'axios'
 import TopologyEditor from './components/TopologyEditor.vue'
@@ -401,12 +402,80 @@ function exportImage(format) {
   topoEditor.value?.exportToImage(format)
 }
 
-// 文件下拉菜单: 保存 / 加载 / 导出图片 / 清空
+// 文件下拉菜单: 保存 / 加载 / 导出图片 / 割接方案 / 清空
 function fileMenuCmd(cmd) {
   if (cmd === 'save') topoEditor.value?.exportTopologyFile()
   else if (cmd === 'load') triggerImport()
   else if (cmd === 'clear') confirmClear()
   else if (['png', 'jpeg', 'svg'].includes(cmd)) exportImage(cmd)
+  else if (cmd === 'plan') exportChangePlan()
+}
+
+// 导出《网络变更割接方案》Word: 拓扑图 + 设备清单 + 变更命令 + 回退 + 验收
+const exportingPlan = ref(false)
+async function exportChangePlan() {
+  const topoData = topoEditor.value?.getTopologyData()
+  if (!topoData || !topoData.nodes || !Object.keys(topoData.nodes).length) {
+    ElMessage.warning('画布为空, 请先绘制或导入拓扑')
+    return
+  }
+  const configs = currentConfigs.value && Object.keys(currentConfigs.value).length
+    ? currentConfigs.value
+    : JSON.parse(localStorage.getItem('topo-configs') || '{}')
+
+  // 拓扑截图 (白底 PNG, 自适应缩放)
+  let topologyPng = ''
+  const diagram = window.__topoDiagram
+  if (diagram) {
+    const db = diagram.documentBounds
+    topologyPng = diagram.makeImageData({
+      scale: Math.min(1.5, 1800 / Math.max(db.width, db.height, 1)),
+      background: 'white',
+    })
+  }
+
+  // 设备清单 (画布节点 + 配置命令)
+  const devices = Object.entries(topoData.nodes).map(([key, n]) => ({
+    name: n.label || key,
+    role: n.role || '',
+    host: n.mgmtIp || '',
+    commands: configs[key] || [],
+  }))
+
+  // 验收清单: 有管理 IP 的变更设备两两 ping (控制总量, 超出部分平台弹窗内执行)
+  const accRows = []
+  const sources = devices.filter((d) => d.host)
+  outer: for (const s of sources) {
+    const targets = []
+    for (const t of sources) {
+      if (t === s) continue
+      targets.push({ name: t.name, ip: t.host })
+      if (accRows.length + targets.length > 80) break outer
+    }
+    accRows.push({ source: s.name, sourceIp: s.host, targets })
+  }
+
+  exportingPlan.value = true
+  try {
+    const resp = await axios.post('/api/export/change-plan', {
+      projectName: '网络变更割接',
+      vendor: selectedVendor.value || '',
+      topologyPng,
+      devices,
+      acceptance: accRows,
+    }, { responseType: 'blob' })
+    const url = URL.createObjectURL(resp.data)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `割接方案_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.docx`
+    a.click()
+    URL.revokeObjectURL(url)
+    ElMessage.success('割接方案已导出 (含拓扑图/设备清单/变更命令/回退与验收方案)')
+  } catch (err) {
+    ElMessage.error('导出失败: ' + (err.response?.data?.detail || err.message))
+  } finally {
+    exportingPlan.value = false
+  }
 }
 
 function onFileImport(ev) {
@@ -592,7 +661,11 @@ async function generateAllConfigs(autoPlanSubnets = false) {
     generatedConfigsRef.value = JSON.parse(JSON.stringify(res.data.config))
     const count = Object.keys(res.data.config || {}).length
     saveConfigHistory(res.data.config)
-    ElMessage.success(`配置生成完成，共 ${count} 台设备`)
+    if (res.data.fallback) {
+      ElMessage.warning(`AI 接口不可用 (可能离线/未配置密钥), 已自动降级为本地知识库生成, 共 ${count} 台设备`)
+    } else {
+      ElMessage.success(`配置生成完成，共 ${count} 台设备`)
+    }
     activeTab.value = 'config'
   } catch (err) {
     ElMessage.error('生成失败：' + (err.response?.data?.detail || err.message))

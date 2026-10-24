@@ -5,24 +5,28 @@ from dotenv import load_dotenv
 load_dotenv()  # 必须在导入 openai 之前加载 .env
 
 import asyncio
+import base64
+import urllib.parse
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, Response
 from pydantic import BaseModel
 import uvicorn
 
+import config_generator
 from config_generator import generate_config
 import llm_client
 from prompts import CHAT_SYSTEM_PROMPT, VENDOR_STYLES
 from kb_engine import (
     search as kb_search, list_vendors, get_vendor_categories, get_category_commands,
-    generate_config_from_kb as kb_generate, validate_cli_command,
+    generate_config_from_kb as kb_generate, validate_cli_command, validate_cli_batch,
 )
 from vision_analyzer import analyze_topology_image
 from device_connector import push_config, run_ping_tests, collect_state, BACKUP_DIR
 import network_scanner
 import audit as audit_log
+from change_plan import build_change_plan
 
 app = FastAPI(title="Network Config Generator")
 
@@ -288,7 +292,8 @@ class ChatRequest(BaseModel):
 async def api_generate(request: TopologyRequest):
     try:
         config = generate_config(request.topology, request.vendor, global_settings=request.globalSettings)
-        return {"status": "success", "config": config}
+        return {"status": "success", "config": config,
+                "fallback": bool(config_generator.last_run_fallback)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -410,6 +415,67 @@ async def api_cli_validate(request: CliValidateRequest):
         # 校验器出错时不能假装命令有效 — 明确返回"无法校验"
         return {"valid": False, "response": "", "suggested_fix": None,
                 "help_text": f"校验器内部错误, 本次无法校验该命令: {e}"}
+
+
+class CliValidateBatchRequest(BaseModel):
+    vendor: str
+    commands: list
+
+
+@app.post("/api/cli/validate-batch")
+async def api_cli_validate_batch(request: CliValidateBatchRequest):
+    """下发前批量 CLI 预检: 按厂商语系逐条分类 ok/error/warn."""
+    try:
+        results = validate_cli_batch(request.commands, request.vendor)
+        return {"status": "success", "data": results}
+    except Exception as e:
+        raise HTTPException(500, detail=f"预检失败: {e}")
+
+
+# ---- 割接方案导出 ----
+class PlanDevice(BaseModel):
+    name: str = ""
+    role: str = ""
+    host: str = ""
+    commands: list = []
+
+
+class PlanAcceptanceSource(BaseModel):
+    source: str = ""
+    sourceIp: str = ""
+    targets: list = []  # [{name, ip}]
+
+
+class ChangePlanRequest(BaseModel):
+    projectName: str = ""
+    vendor: str = ""
+    operator: str = ""
+    reviewer: str = ""
+    topologyPng: str = ""   # data URL, 可为空
+    devices: list = []      # [PlanDevice...]
+    acceptance: list = []   # [PlanAcceptanceSource...]
+
+
+@app.post("/api/export/change-plan")
+async def api_export_change_plan(request: ChangePlanRequest):
+    """生成《网络变更割接方案》.docx (含拓扑图/设备清单/命令明细/回退/验收/签字栏)."""
+    try:
+        data = request.model_dump()
+        png_bytes = None
+        if data.get("topologyPng"):
+            try:
+                png_bytes = base64.b64decode(data["topologyPng"].split(",", 1)[1])
+            except Exception:
+                png_bytes = None
+        docx_bytes = build_change_plan(data, topology_png=png_bytes)
+        filename = urllib.parse.quote(f"割接方案_{datetime.datetime.now().strftime('%Y%m%d_%H%M')}.docx")
+        return Response(
+            content=docx_bytes,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            headers={"Content-Disposition": f"attachment; filename*=UTF-8''{filename}"},
+        )
+    except Exception as e:
+        raise HTTPException(500, detail=f"割接方案生成失败: {e}")
 
 # ---- Device Connection (真机下发/验收) ----
 class DevicePushRequest(BaseModel):

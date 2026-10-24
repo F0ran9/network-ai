@@ -31,6 +31,10 @@ def _ai_generate(topology_json: dict, vendor: str) -> dict:
         content = '\n'.join(lines[1:-1])
     return json.loads(content)
 
+# 最近一次 generate_config 是否因 AI 不可用而降级到了知识库 (供 API 层透传给前端提示)
+last_run_fallback = False
+
+
 def generate_config(topology_json: dict, vendor: str, use_ai_fallback: bool = True, global_settings: dict = None) -> dict:
     """Generate configurations. Tries KB template engine first, falls back to AI.
 
@@ -41,6 +45,8 @@ def generate_config(topology_json: dict, vendor: str, use_ai_fallback: bool = Tr
         global_settings: Optional dict with ntpServers, snmpCommunity, adminUser, adminPassword, domainName, dnsServers
     """
     # Step 1: Try KB template engine (works offline)
+    global last_run_fallback
+    last_run_fallback = False
     kb_configs = generate_config_from_kb(topology_json, vendor, global_settings)
 
     # If KB produces configs for ALL devices, return directly
@@ -59,7 +65,8 @@ def generate_config(topology_json: dict, vendor: str, use_ai_fallback: bool = Tr
                     merged[key] = cmds
             return merged
         except Exception:
-            # If AI fails, return whatever KB produced
+            # If AI fails (no API key / offline), return whatever KB produced
+            last_run_fallback = True
             if kb_configs:
                 return kb_configs
             raise

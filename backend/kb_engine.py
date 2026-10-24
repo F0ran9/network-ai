@@ -343,6 +343,40 @@ def validate_cli_command(command: str, vendor: str, mode: str = "user") -> dict:
         "help_text": f"未找到 '{first_word}' 的文档。输入 ? 查看可用命令。",
     }
 
+
+def validate_cli_batch(commands, vendor: str) -> list:
+    """下发前批量 CLI 预检 (面向配置模式命令列表).
+
+    逐条返回 {command, level, message}:
+      ok    — 首词属于该厂商语系, 通过
+      error — 首词明确属于另一厂商语系 (如华为设备上敲 switchport), 应阻断
+      warn  — 知识库未收录, 无法判定, 提示人工确认
+    """
+    style = _vendor_style(vendor)
+    other = "cisco_like" if style == "huawei_like" else "huawei_like"
+    allowed = set(_CLI_MODE_COMMANDS["system"].get(style, [])) | \
+        set(_CLI_MODE_COMMANDS["interface"].get(style, [])) | {"system-view", "end"}
+    other_words = set(_CLI_MODE_COMMANDS["user"].get(other, [])) | \
+        set(_CLI_MODE_COMMANDS["system"].get(other, [])) | \
+        set(_CLI_MODE_COMMANDS["interface"].get(other, []))
+    other_label = "思科/锐捷系" if style == "huawei_like" else "华为/H3C 系"
+
+    results = []
+    for raw in commands or []:
+        cmd = (raw or "").strip()
+        if not cmd or cmd.startswith(("!", "#")) or "WARNING" in cmd:
+            continue
+        first = cmd.split()[0].lower()
+        if first in allowed:
+            results.append({"command": raw, "level": "ok", "message": ""})
+        elif first in other_words:
+            results.append({"command": raw, "level": "error",
+                            "message": f"\"{first}\" 是{other_label}命令, 与所选厂商语法不符"})
+        else:
+            results.append({"command": raw, "level": "warn",
+                            "message": "知识库未收录该命令首词, 请人工确认"})
+    return results
+
 # Vendor-specific syntax templates for common operations.
 # Each vendor has ~40 template keys covering basic L2, advanced switching,
 # routing, high-availability, and security features.
