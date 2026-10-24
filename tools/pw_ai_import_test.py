@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 """端到端: 上传原始拓扑图 -> AI 识图 -> 应用到画布 -> 打印节点/链路 -> 截图 + 导出 PNG。"""
+import re
+import os
 import json
 import time
 from playwright.sync_api import sync_playwright
 
 URL = 'http://127.0.0.1:5732'
-PASSWORD = 'U46e2ci16_MO'
+PASSWORD = (os.environ.get('TCT_PASSWORD')
+    or (re.search(r'APP_PASSWORD=(.+)', open(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend', '.env'),
+        encoding='utf-8').read()).group(1).strip() if os.path.exists(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend', '.env')) else ''))
 IMG = r'C:/Users/Lenovo/.workbuddy/clipboard-images/clipboard-2026-10-24T05-57-19-957Z-bf4f5d92.jpg'
 OUT_PNG = r'D:/network-ai/topology-config-tool/tools/pw_ai_import_export.png'
 OUT_CANVAS = r'D:/network-ai/topology-config-tool/tools/pw_ai_import_canvas.png'

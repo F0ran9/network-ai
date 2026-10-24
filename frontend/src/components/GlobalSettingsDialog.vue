@@ -32,6 +32,22 @@
         <el-input v-model="form.adminPassword" type="password" show-password placeholder="管理员密码" />
       </el-form-item>
 
+      <el-divider content-position="left">平台登录密码</el-divider>
+
+      <el-form-item label="原密码">
+        <el-input v-model="pwForm.oldPassword" type="password" show-password placeholder="当前登录密码" />
+      </el-form-item>
+      <el-form-item label="新密码">
+        <el-input v-model="pwForm.newPassword" type="password" show-password placeholder="至少 8 位" />
+      </el-form-item>
+      <el-form-item label="确认新密码">
+        <el-input v-model="pwForm.confirm" type="password" show-password placeholder="再次输入新密码" />
+      </el-form-item>
+      <el-form-item label=" ">
+        <el-button type="warning" plain :loading="pwLoading" @click="changePassword">修改平台密码</el-button>
+        <div class="form-tip">修改后下次登录使用新密码，当前会话不受影响</div>
+      </el-form-item>
+
       <el-divider content-position="left">DNS 设置</el-divider>
 
       <el-form-item label="域名">
@@ -55,8 +71,44 @@
 <script setup>
 import { ref, reactive, watch } from 'vue'
 import { ElMessage } from 'element-plus'
+import axios from 'axios'
 
 const STORAGE_KEY = 'topo-global-settings'
+
+// 平台登录密码修改 (独立于全局参数保存流程)
+const pwForm = reactive({ oldPassword: '', newPassword: '', confirm: '' })
+const pwLoading = ref(false)
+
+async function changePassword() {
+  if (pwLoading.value) return
+  if (!pwForm.oldPassword || !pwForm.newPassword) {
+    ElMessage.warning('请填写原密码和新密码')
+    return
+  }
+  if (pwForm.newPassword !== pwForm.confirm) {
+    ElMessage.warning('两次输入的新密码不一致')
+    return
+  }
+  if (pwForm.newPassword.length < 8) {
+    ElMessage.warning('新密码至少 8 位')
+    return
+  }
+  pwLoading.value = true
+  try {
+    await axios.post('/api/auth/change-password', {
+      old_password: pwForm.oldPassword,
+      new_password: pwForm.newPassword,
+    })
+    ElMessage.success('平台密码已修改，下次登录使用新密码')
+    pwForm.oldPassword = ''
+    pwForm.newPassword = ''
+    pwForm.confirm = ''
+  } catch (err) {
+    ElMessage.error(err.response?.data?.detail || '修改失败，请稍后再试')
+  } finally {
+    pwLoading.value = false
+  }
+}
 
 const defaults = {
   managementVlan: 99,

@@ -47,7 +47,7 @@
         </el-button>
       </form>
 
-      <p class="login-hint" v-if="hintShown">初始密码见后端 .env 的 APP_PASSWORD，可在登录后于"AI 设置"中修改平台配置</p>
+      <p class="login-hint" v-if="hintShown">首次启动自动生成随机密码，见后端启动日志或 backend/.env 的 APP_PASSWORD；登录后可在【设置 → 全局参数设置 → 平台登录密码】中修改</p>
     </div>
 
     <footer class="login-footer">

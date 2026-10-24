@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 """Playwright 实测: 登录平台 -> 模拟左侧设备拖放到画布 -> 截图验证节点是否有图标。"""
+import re
+import os
 import sys
 import time
 from playwright.sync_api import sync_playwright
 
 URL = 'http://127.0.0.1:5732'
-PASSWORD = 'U46e2ci16_MO'
+PASSWORD = (os.environ.get('TCT_PASSWORD')
+    or (re.search(r'APP_PASSWORD=(.+)', open(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend', '.env'),
+        encoding='utf-8').read()).group(1).strip() if os.path.exists(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend', '.env')) else ''))
 SHOT_DIR = r'D:/network-ai/topology-config-tool/tools'
 
 

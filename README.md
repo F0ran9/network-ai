@@ -2,15 +2,38 @@
 
 拖拽式网络拓扑设计与多厂商设备配置一键生成工具。支持 23 家主流网络设备厂商，覆盖交换机、路由器、防火墙的 CLI 配置自动生成。
 
+## 界面预览
+
+**拓扑编辑器** — eNSP 风格实物图标、IP 旁标、链路属性标注、可折叠双面板：
+
+![拓扑编辑器](docs/screenshots/editor.png)
+
+**登录页**（首次启动自动生成随机密码）：
+
+![登录页](docs/screenshots/login.png)
+
+**设备属性编辑** — 单击设备即可编辑型号、厂商、管理 IP、资产信息等 15 项属性：
+
+![设备属性](docs/screenshots/device-properties.png)
+
+**全局设置** — NTP/SNMP/AAA/DNS 参数与平台登录密码修改：
+
+![全局设置](docs/screenshots/settings.png)
+
+**AI 助手** — 基于当前拓扑上下文的智能问答：
+
+![AI 助手](docs/screenshots/ai-assistant.png)
+
 ## 功能特性
 
 ### 拓扑设计
 - **拖拽绘制** — 从设备工具箱拖拽设备到画布，端口连线自动匹配
 - **模板系统** — 内置中小型三层架构、园区网、等保合规、Spine-Leaf 等 5 种拓扑模板
-- **拓扑图导入** — 支持从拓扑图片（JPG/PNG/BMP/WebP）AI 识别并自动生成拓扑
-- **拓扑图导出** — 支持导出为 PNG 高清、JPEG、SVG 矢量图
-- **自动布局** — 一键自动排列设备，采用层次化布局算法
+- **拓扑图导入** — 支持从拓扑图片（JPG/PNG/BMP/WebP）AI 识别并自动生成拓扑，自动识别设备类型、管理 IP、链路属性与业务分区
+- **拓扑图导出** — 支持导出为 PNG 高清、JPEG、SVG 矢量图，自动合成图例卡片
+- **自动布局** — 一键自动排列设备，采用层次化布局算法，自动生成安全域分区框
 - **导入/导出** — 拓扑文件 JSON 格式导入导出，支持版本管理
+- **可折叠面板** — 左侧设备库、右侧配置面板均可一键收起/展开
 
 ### 配置生成
 - **多厂商支持** — Huawei、Cisco、H3C、Juniper、Arista、HPE、Ruijie、ZTE、Extreme、Dell、Sonic、Maipu、Hikvision、Tplink、Fiberhome、Dptecn、Inspur、Boda、Raisecom、Dcn、NSFocus、Sangfor、QiAnXin
@@ -28,7 +51,16 @@
 - **知识库** — 多厂商命令参考手册
 - **AI 助手** — 基于拓扑上下文的智能问答
 - **分析报告** — 拓扑校验告警与安全建议
+- **设备台账** — 每台设备 15 项属性（型号/厂商/管理 IP/序列号/位置/维护人等）可视化编辑
 - **暗色模式** — 支持日间/夜间主题切换，偏好持久化
+
+## 登录与密码
+
+平台采用**单密码登录**，所有 `/api` 接口需要会话 token：
+
+- **首次启动**：若 `backend/.env` 中没有 `APP_PASSWORD`，后端自动生成 12 位随机密码，**打印在后端启动日志中**并写入 `backend/.env`
+- **修改密码**：登录后打开【设置 → 全局参数设置 → 平台登录密码】，输入原密码与新密码即可（新密码至少 8 位，写回 `.env`，当前会话不受影响）
+- 代码中不保存任何硬编码密码；`.env` 已被 `.gitignore` 排除，不会提交到仓库
 
 ## 技术架构
 
@@ -134,6 +166,8 @@ cd frontend && npm run dev
 
 浏览器打开 `http://localhost:5732`
 
+> **首次启动的登录密码**在后端启动日志中打印（形如 `首次启动已生成随机登录密码: xxx`），也可查看 `backend/.env` 中的 `APP_PASSWORD`；登录后可在【设置 → 全局参数设置】中修改。
+
 ## 使用指南
 
 ### 基本流程
@@ -165,6 +199,9 @@ cd frontend && npm run dev
 
 | 方法 | 路径 | 说明 |
 |------|------|------|
+| POST | `/api/auth/login` | 平台登录，返回会话 token |
+| POST | `/api/auth/change-password` | 修改平台登录密码（需登录） |
+| GET | `/api/settings` | 获取全局设置 |
 | POST | `/api/generate` | 生成设备配置 |
 | POST | `/api/generate/kb` | 纯知识库生成配置（不使用 AI） |
 | POST | `/api/analyze/topology-image` | 拓扑图视觉分析 |

@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 """验证左右面板可折叠/展开"""
+import re
+import os
 import asyncio
 from playwright.async_api import async_playwright
 
 URL = "http://127.0.0.1:5732"
-PASSWORD = "U46e2ci16_MO"
+PASSWORD = (os.environ.get('TCT_PASSWORD')
+    or (re.search(r'APP_PASSWORD=(.+)', open(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend', '.env'),
+        encoding='utf-8').read()).group(1).strip() if os.path.exists(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'backend', '.env')) else ''))
 
 async def main():
     async with async_playwright() as p:

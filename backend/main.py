@@ -55,6 +55,7 @@ def _ensure_password() -> str:
     except OSError:
         pass
     os.environ["APP_PASSWORD"] = pw
+    print(f"\n{'=' * 62}\n  首次启动已生成随机登录密码: {pw}\n  已保存到 {ENV_FILE}\n  登录平台后可在【设置 → 全局参数设置 → 平台登录密码】中修改\n{'=' * 62}\n", flush=True)
     return pw
 
 
@@ -90,6 +91,25 @@ async def api_auth_login(request: LoginRequest):
     token = secrets.token_urlsafe(32)
     _sessions[token] = time.time() + SESSION_TTL
     return {"token": token, "expires_in": SESSION_TTL}
+
+
+class ChangePasswordRequest(BaseModel):
+    old_password: str
+    new_password: str
+
+
+@app.post("/api/auth/change-password")
+async def api_auth_change_password(request: ChangePasswordRequest):
+    """修改平台登录密码: 校验原密码后写回 .env, 已登录会话保持有效."""
+    if not secrets.compare_digest(request.old_password or "", _ensure_password()):
+        raise HTTPException(status_code=401, detail="原密码错误")
+    new_pw = (request.new_password or "").strip()
+    if len(new_pw) < 8:
+        raise HTTPException(status_code=400, detail="新密码至少 8 位")
+    if len(new_pw) > 128:
+        raise HTTPException(status_code=400, detail="新密码过长")
+    _update_env_file("APP_PASSWORD", new_pw)
+    return {"ok": True, "message": "密码已更新, 下次登录使用新密码"}
 
 
 @app.middleware("http")
