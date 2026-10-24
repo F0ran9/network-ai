@@ -38,6 +38,7 @@
         </el-dropdown>
         <input ref="fileInput" type="file" accept=".json" style="display:none" @change="onFileImport" />
         <el-button size="small" :icon="PictureFilled" @click="triggerImageImport" title="从拓扑图导入（AI 识图）">导入拓扑图</el-button>
+        <el-button size="small" :icon="Connection" @click="discoverDialog?.open()" title="SSH+LLDP/CDP 扫描现网生成拓扑与诊断">网络发现</el-button>
         <input ref="imageFileInput" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp" style="display:none" @change="onImageImport" />
         <el-divider direction="vertical" />
         <el-button size="small" :icon="Setting" @click="globalSettingsDialog.visible = true" title="全局设置">设置</el-button>
@@ -162,6 +163,9 @@
     <!-- AI 配置对话框 -->
     <AIConfigDialog v-model="aiConfigVisible" />
 
+    <!-- 网络自动发现对话框 -->
+    <NetworkDiscoverDialog ref="discoverDialog" @apply="onDiscoverApply" />
+
     <!-- CLI Terminal (bottom panel) -->
     <DeviceCli
       :device="cliDevice"
@@ -187,7 +191,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight } from '@element-plus/icons-vue'
+import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight, Connection } from '@element-plus/icons-vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import axios from 'axios'
 import TopologyEditor from './components/TopologyEditor.vue'
@@ -202,6 +206,7 @@ import DeviceCli from './components/DeviceCli.vue'
 import GlobalSettingsDialog from './components/GlobalSettingsDialog.vue'
 import LoginView from './components/LoginView.vue'
 import AIConfigDialog from './components/AIConfigDialog.vue'
+import NetworkDiscoverDialog from './components/NetworkDiscoverDialog.vue'
 import { deviceCategories } from './topology/deviceDefinitions.js'
 import { autoAssignSubnets } from './topology/subnetPlanner.js'
 import { validateTopology } from './topology/topologyValidator.js'
@@ -242,6 +247,7 @@ const cliDevice = ref(null)
 
 // Global settings dialog
 const globalSettingsDialog = ref(null)
+const discoverDialog = ref(null)
 
 // Auto-layout
 const layoutLoading = ref(false)
@@ -488,6 +494,14 @@ function applyExtractedTopology() {
     activeTab.value = 'config'
     ElMessage.success('拓扑已应用到画布，可在画布上编辑调整')
   }
+}
+
+// 网络自动发现: 应用扫描出的拓扑到画布
+function onDiscoverApply(topology) {
+  if (!topology?.nodes) return
+  topoEditor.value?.importTopologyFromAnalysis(topology)
+  currentTopology.value = topology
+  activeTab.value = 'config'
 }
 
 function focusDevice(deviceKey) {

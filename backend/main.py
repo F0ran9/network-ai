@@ -20,6 +20,7 @@ from kb_engine import (
 )
 from vision_analyzer import analyze_topology_image
 from device_connector import push_config, run_ping_tests, collect_state
+import network_scanner
 
 app = FastAPI(title="Network Config Generator")
 
@@ -457,6 +458,63 @@ async def api_device_state(request: DeviceStateRequest):
         raise HTTPException(400, detail=str(e))
     except Exception as e:
         raise HTTPException(500, detail=f"设备连接失败: {e}")
+
+
+# ============================================================
+# 网络自动发现: SSH+LLDP/CDP 递归扫描 -> 拓扑 + 诊断报告
+# ============================================================
+class DiscoverRequest(BaseModel):
+    seedIp: str
+    username: str
+    password: str
+    vendor: str = "huawei"      # huawei | h3c | cisco | ruijie
+    sshPort: int = 22
+    maxDepth: int = 3
+    demo: bool = False          # 演示模式: 返回固定示例数据
+
+
+@app.post("/api/discover/stream")
+async def api_discover_stream(request: DiscoverRequest):
+    """SSE 流式网络发现: 逐台设备推送进度, 结束推送完整拓扑+诊断."""
+    if not request.demo and not request.seedIp.strip():
+        raise HTTPException(400, detail="请填写种子设备 IP")
+
+    async def gen():
+        import queue as _q
+        q: _q.Queue = _q.Queue()
+
+        def progress(msg: str):
+            q.put(msg)
+
+        def work():
+            try:
+                if request.demo:
+                    data = network_scanner.demo_scan(progress)
+                else:
+                    data = network_scanner.discover_network(
+                        request.seedIp.strip(), request.username, request.password,
+                        vendor=request.vendor, max_depth=request.maxDepth,
+                        ssh_port=request.sshPort, progress=progress)
+                q.put(("result", data))
+            except Exception as e:
+                q.put(("error", str(e)))
+
+        import threading
+        threading.Thread(target=work, daemon=True).start()
+
+        import json as _json
+        while True:
+            item = await asyncio.get_event_loop().run_in_executor(None, q.get)
+            if isinstance(item, tuple):
+                kind, payload = item
+                yield f"data: {_json.dumps({'type': kind, 'data': payload}, ensure_ascii=False)}\n\n"
+                if kind in ("result", "error"):
+                    break
+            else:
+                yield f"data: {_json.dumps({'type': 'progress', 'message': item}, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(gen(), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 # 开发模式：如果存在前端构建，直接服务静态文件
 if os.path.exists("../frontend/dist"):

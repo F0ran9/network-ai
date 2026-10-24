@@ -20,6 +20,10 @@
 
 ![全局设置](docs/screenshots/settings.png)
 
+**网络自动发现** — SSH+LLDP/CDP 扫描现网，自动生成拓扑与诊断报告：
+
+![网络自动发现](docs/screenshots/network-discover.png)
+
 **AI 助手** — 基于当前拓扑上下文的智能问答：
 
 ![AI 助手](docs/screenshots/ai-assistant.png)
@@ -27,6 +31,7 @@
 ## 功能特性
 
 ### 拓扑设计
+- **网络自动发现** — 填入种子设备 SSH 账号，通过 LLDP/CDP 邻居表 BFS 递归扫描整网（华为/H3C/思科/锐捷），自动生成拓扑图 + 诊断报告（SSH 不可达 / 单链路风险 / 命名冲突 / LLDP 配置缺陷等），一键应用到画布
 - **拖拽绘制** — 从设备工具箱拖拽设备到画布，端口连线自动匹配
 - **模板系统** — 内置中小型三层架构、园区网、等保合规、Spine-Leaf 等 5 种拓扑模板
 - **拓扑图导入** — 支持从拓扑图片（JPG/PNG/BMP/WebP）AI 识别并自动生成拓扑，自动识别设备类型、管理 IP、链路属性与业务分区
@@ -205,6 +210,7 @@ cd frontend && npm run dev
 | POST | `/api/generate` | 生成设备配置 |
 | POST | `/api/generate/kb` | 纯知识库生成配置（不使用 AI） |
 | POST | `/api/analyze/topology-image` | 拓扑图视觉分析 |
+| POST | `/api/discover/stream` | 网络自动发现（SSE 进度流，LLDP/CDP 递归扫描） |
 | POST | `/api/chat` | AI 助手对话 |
 
 ## 支持的配置命令类型
