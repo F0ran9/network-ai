@@ -1,6 +1,6 @@
 # 网络拓扑配置生成器
 
-拖拽式网络拓扑设计与多厂商设备配置一键生成工具。支持 23 家主流网络设备厂商，覆盖交换机、路由器、防火墙的 CLI 配置自动生成。
+拖拽式网络拓扑设计与多厂商设备配置一键生成工具，覆盖**设计 → 生成 → 割接下发 → 验收 → 报告**完整闭环。支持 23 家主流网络设备厂商，覆盖交换机、路由器、防火墙的 CLI 配置自动生成。
 
 ## 界面预览
 
@@ -58,8 +58,15 @@
 
 ### 真机下发与验收
 - **配置下发** — 通过 SSH（netmiko）将生成的配置推送到真实设备，支持华为/H3C/思科/锐捷；默认 **dry-run 预览**模式（只连接并回显将执行的命令，不改动设备），真实下发前强制二次确认
-- **自动备份** — 每次下发前自动备份设备当前配置到服务器 `backups` 目录，可随时回溯
+- **CLI 语系预检** — 下发前按厂商 CLI 语法校验命令批次，跨厂商命令自动拦截（ok/error/warn 三级分类），避免误下发
+- **批量下发** — 多设备队列式批量推送（SSE 实时进度），适合整网割接场景
+- **自动备份与回滚** — 每次下发前自动备份设备当前配置，支持选择历史版本一键回滚；任意两个备份版本可**逐行 diff 配置漂移对比**（新增/删除高亮）
+- **Console 初始化** — 新设备 SSH 不可达时，按厂商生成 Console 口初始化命令（主机名/管理地址/SSH/AAA/LLDP/网关/保存），Console 配好即可进入自动发现与远程管理闭环
 - **连通性验收** — 下发完成后可从设备指定源地址（VLANIF/管理口）ping 一组业务目标（DHCP 服务器、网关等），输出 PASS/FAIL 验收表格——验证的是业务网段真实可达，全绿才算"真的通"
+- **验收报告导出** — 验收结果一键导出 **Markdown / Word / PDF** 三种格式，直接归档交付
+- **割接方案导出** — 一键生成《割接方案》文档（概述/拓扑图/设备清单/命令明细/回退方案/验收项/签字页七章结构），支持 **Word / PDF / Markdown** 三种格式
+- **操作审计** — 所有下发/回滚/验收操作记录 JSON Lines 审计日志，平台内可查
+- **登录防爆破** — 同源连续 5 次密码失败自动锁定 10 分钟
 - **命令过滤** — 自动剔除注释行、告警横幅等无效行，仅下发有效配置命令
 
 ### 辅助功能
@@ -88,6 +95,10 @@ topology-config-tool/
 │   ├── vision_analyzer.py      # 拓扑图视觉分析（Qwen-VL / DashScope）
 │   ├── network_scanner.py      # 网络自动发现（SSH+LLDP/CDP BFS 递归扫描）
 │   ├── device_connector.py     # 真机连接器（netmiko 多厂商 SSH 下发/备份/ping 验收）
+│   ├── console_init.py         # Console 初始化命令模板（华为/H3C/思科/锐捷）
+│   ├── change_plan.py          # 割接方案文档生成（python-docx 七章结构）
+│   ├── report_export.py        # 验收报告/割接方案导出（MD/DOCX/PDF）
+│   ├── audit.py                # 操作审计日志（JSON Lines）
 │   ├── chat.py                 # AI 对话
 │   ├── prompts.py              # Prompt 模板
 │   ├── knowledge_base/         # 厂商命令模板库（20 个 JSON）
@@ -232,6 +243,14 @@ cd frontend && npm run dev
 | POST | `/api/analyze/topology-image` | 拓扑图视觉分析 |
 | POST | `/api/discover/stream` | 网络自动发现（SSE 进度流，LLDP/CDP 递归扫描） |
 | POST | `/api/device/push` | 真机配置下发（netmiko SSH，支持 dry-run 与自动备份） |
+| POST | `/api/device/push-batch` | 批量下发（SSE 实时进度） |
+| POST | `/api/device/backups/diff` | 两个备份版本配置漂移对比 |
+| GET | `/api/device/backups` | 查询设备历史备份版本 |
+| POST | `/api/device/rollback` | 回滚到指定备份版本 |
+| GET | `/api/audit` | 查询操作审计日志 |
+| POST | `/api/console-init` | 生成 Console 初始化命令（四厂商） |
+| POST | `/api/export/acceptance-report` | 导出验收报告（format=md/docx/pdf） |
+| POST | `/api/export/change-plan` | 导出割接方案（format=md/docx/pdf） |
 | POST | `/api/device/ping-tests` | 连通性验收（从设备源地址 ping 多目标） |
 | POST | `/api/device/state` | 采集设备运行状态 |
 | GET | `/api/kb/*` | 知识库检索（厂商/分类/命令） |
