@@ -32,7 +32,9 @@
               <el-dropdown-item command="png" :icon="Camera" divided>导出图片 PNG</el-dropdown-item>
               <el-dropdown-item command="jpeg" :icon="Camera">导出图片 JPEG</el-dropdown-item>
               <el-dropdown-item command="svg" :icon="Camera">导出图片 SVG</el-dropdown-item>
-              <el-dropdown-item command="plan" :icon="Document" divided title="生成含拓扑/命令/回退/验收的 Word 割接方案">导出割接方案</el-dropdown-item>
+              <el-dropdown-item command="plan-docx" :icon="Document" divided title="含拓扑图/设备清单/命令明细/回退与验收">导出割接方案 (Word)</el-dropdown-item>
+              <el-dropdown-item command="plan-pdf" :icon="Document">导出割接方案 (PDF)</el-dropdown-item>
+              <el-dropdown-item command="plan-md" :icon="Document">导出割接方案 (Markdown)</el-dropdown-item>
               <el-dropdown-item command="clear" :icon="Delete" divided class="menu-danger">清空画布</el-dropdown-item>
             </el-dropdown-menu>
           </template>
@@ -408,12 +410,12 @@ function fileMenuCmd(cmd) {
   else if (cmd === 'load') triggerImport()
   else if (cmd === 'clear') confirmClear()
   else if (['png', 'jpeg', 'svg'].includes(cmd)) exportImage(cmd)
-  else if (cmd === 'plan') exportChangePlan()
+  else if (cmd.startsWith('plan-')) exportChangePlan(cmd.replace('plan-', ''))
 }
 
-// 导出《网络变更割接方案》Word: 拓扑图 + 设备清单 + 变更命令 + 回退 + 验收
+// 导出《网络变更割接方案》(docx/md/pdf): 拓扑图 + 设备清单 + 变更命令 + 回退 + 验收
 const exportingPlan = ref(false)
-async function exportChangePlan() {
+async function exportChangePlan(format = 'docx') {
   const topoData = topoEditor.value?.getTopologyData()
   if (!topoData || !topoData.nodes || !Object.keys(topoData.nodes).length) {
     ElMessage.warning('画布为空, 请先绘制或导入拓扑')
@@ -458,19 +460,20 @@ async function exportChangePlan() {
   exportingPlan.value = true
   try {
     const resp = await axios.post('/api/export/change-plan', {
+      format,
       projectName: '网络变更割接',
       vendor: selectedVendor.value || '',
-      topologyPng,
+      topologyPng: format === 'md' ? '' : topologyPng,
       devices,
       acceptance: accRows,
     }, { responseType: 'blob' })
     const url = URL.createObjectURL(resp.data)
     const a = document.createElement('a')
     a.href = url
-    a.download = `割接方案_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.docx`
+    a.download = `割接方案_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.${format}`
     a.click()
     URL.revokeObjectURL(url)
-    ElMessage.success('割接方案已导出 (含拓扑图/设备清单/变更命令/回退与验收方案)')
+    ElMessage.success(`割接方案 (${format.toUpperCase()}) 已导出`)
   } catch (err) {
     ElMessage.error('导出失败: ' + (err.response?.data?.detail || err.message))
   } finally {

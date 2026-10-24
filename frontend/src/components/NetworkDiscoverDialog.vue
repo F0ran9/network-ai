@@ -84,14 +84,30 @@
       <div class="diag-list">
         <div v-for="(d, i) in result.diagnostics" :key="i" class="diag-item" :class="d.level">
           <span class="diag-badge">{{ d.level === 'error' ? '严重' : d.level === 'warning' ? '警告' : '提示' }}</span>
-          <div>
+          <div style="flex:1">
             <b>{{ d.device }}</b>
             <span class="diag-ip" v-if="d.ip && d.ip !== '-'">（{{ d.ip }}）</span>
             <div class="diag-msg">{{ d.message }}</div>
           </div>
+          <el-button v-if="d.level === 'error' && d.ip && d.ip !== '-'"
+            size="small" type="warning" plain @click="openConsoleInit(d)">
+            Console 初始化
+          </el-button>
         </div>
       </div>
     </template>
+
+    <!-- Console 初始化命令弹窗 -->
+    <el-dialog v-model="consoleInitVisible" title="Console 初始化命令" width="640px" append-to-body>
+      <el-alert :title="consoleInitMsg" type="info" :closable="false" show-icon style="margin-bottom:10px" />
+      <div class="scan-log console-code">
+        <div v-for="(c, i) in consoleInitCmds" :key="i" class="log-line">{{ c }}</div>
+      </div>
+      <template #footer>
+        <el-button @click="consoleInitVisible = false">关闭</el-button>
+        <el-button type="primary" @click="copyConsoleInit">复制全部命令</el-button>
+      </template>
+    </el-dialog>
 
     <template #footer>
       <el-button @click="visible = false">关闭</el-button>
@@ -260,6 +276,44 @@ function applyToCanvas() {
   ElMessage.success(`已应用 ${result.value.stats.devices} 台设备 / ${result.value.stats.links} 条链路到画布`)
 }
 
+// ---- Console 初始化命令 (SSH 不可达设备的兜底) ----
+const consoleInitVisible = ref(false)
+const consoleInitCmds = ref([])
+const consoleInitMsg = ref('')
+
+async function openConsoleInit(diag) {
+  try {
+    const resp = await fetch('/api/console-init', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('tct-token') || ''}`,
+      },
+      body: JSON.stringify({
+        vendor: form.vendor || 'huawei',
+        hostname: diag.device || '',
+        mgmtIp: diag.ip && diag.ip !== '-' ? diag.ip : '',
+      }),
+    })
+    const data = await resp.json()
+    if (!resp.ok) throw new Error(data.detail || `HTTP ${resp.status}`)
+    consoleInitCmds.value = data.commands || []
+    consoleInitMsg.value = data.message || ''
+    consoleInitVisible.value = true
+  } catch (e) {
+    ElMessage.error(`初始化命令生成失败: ${e.message}`)
+  }
+}
+
+async function copyConsoleInit() {
+  try {
+    await navigator.clipboard.writeText(consoleInitCmds.value.join('\n'))
+    ElMessage.success('已复制到剪贴板')
+  } catch (_) {
+    ElMessage.warning('复制失败, 请手动选择复制')
+  }
+}
+
 function open() {
   visible.value = true
 }
@@ -303,6 +357,7 @@ defineExpose({ visible, open })
 .diag-item.info .diag-badge { background: #409eff; }
 .diag-ip { color: #909399; font-family: Consolas, monospace; font-size: 12px; }
 .diag-msg { color: #606266; margin-top: 2px; }
+.console-code { max-height: 360px; }
 .topo-preview {
   background: #f7fafc; border: 1px solid #e4eaf0; border-radius: 8px;
   padding: 6px 8px 2px;

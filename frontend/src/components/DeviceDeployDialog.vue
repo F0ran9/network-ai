@@ -202,6 +202,12 @@
             :closable="false"
             show-icon
           />
+          <div class="push-bar" style="margin-top:10px">
+            <span class="form-tip">导出验收报告 (贴工单/归档):</span>
+            <el-button size="small" @click="exportReport('md')">Markdown</el-button>
+            <el-button size="small" @click="exportReport('docx')">Word</el-button>
+            <el-button size="small" @click="exportReport('pdf')">PDF</el-button>
+          </div>
           <el-table :data="testResult.results" size="small" style="margin-top:8px">
             <el-table-column prop="name" label="目标" min-width="140" />
             <el-table-column prop="ip" label="IP" min-width="120" />
@@ -231,6 +237,41 @@
             <el-button type="warning" :loading="rbRunning" :disabled="!rbSelected || !host" @click="doRollback">
               {{ rbDryRun ? '预览回滚' : '确认回滚' }}
             </el-button>
+          </div>
+        </div>
+
+        <!-- 配置漂移对比: 选两份备份做 diff -->
+        <div class="push-bar" style="border-style:solid; background:#f6f9fb">
+          <span style="font-size:12.5px; font-weight:600; color:#455a64">配置漂移核查</span>
+          <el-select v-model="diffA" size="small" placeholder="基线版本" style="width:230px" clearable>
+            <el-option v-for="b in backups" :key="b.file" :label="b.time" :value="b.file" />
+          </el-select>
+          <el-select v-model="diffB" size="small" placeholder="对比版本" style="width:230px" clearable>
+            <el-option v-for="b in backups" :key="b.file" :label="b.time" :value="b.file" />
+          </el-select>
+          <el-button size="small" type="primary" plain :loading="diffLoading"
+            :disabled="!diffA || !diffB || diffA === diffB" @click="doDiff">
+            对比差异
+          </el-button>
+          <span v-if="diffA === diffB" class="form-tip" style="color:#f56c6c">请选择两份不同的备份</span>
+        </div>
+
+        <div v-if="diffResult" class="diff-box">
+          <div class="diff-head">
+            <el-tag size="small" type="success">新增 {{ diffResult.added }} 行</el-tag>
+            <el-tag size="small" type="danger">删除 {{ diffResult.removed }} 行</el-tag>
+            <span class="form-tip">{{ diffResult.removed || diffResult.added
+              ? '绿=后一版本新增, 红=后一版本没有 (疑似人工改动或变更残留)'
+              : '两份备份配置完全一致, 无漂移 ✓' }}</span>
+          </div>
+          <div class="diff-body">
+            <div v-for="(l, i) in diffResult.lines.slice(0, 400)" :key="i"
+              class="diff-line" :class="l.type">
+              <span class="diff-mark">{{ l.type === 'add' ? '+' : l.type === 'del' ? '-' : ' ' }}</span>{{ l.text }}
+            </div>
+            <div v-if="diffResult.lines.length > 400" class="form-tip" style="padding:6px">
+              (差异行数过多, 仅显示前 400 行, 请缩小对比范围)
+            </div>
           </div>
         </div>
 
@@ -607,6 +648,45 @@ async function startBatch() {
   }
 }
 
+// ---- 验收报告导出 (md / docx / pdf) ----
+const REPORT_META = { md: 'Markdown', docx: 'Word', pdf: 'PDF' }
+async function exportReport(format) {
+  if (!testResult.value) return
+  try {
+    const resp = await fetch('/api/export/acceptance-report', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...authHeaders() },
+      body: JSON.stringify({
+        format,
+        projectName: '网络变更验收',
+        host: host.value,
+        deviceType: deviceType.value,
+        source: source.value,
+        operator: username.value || '-',
+        time: new Date().toLocaleString('zh-CN', { hour12: false }),
+        allPass: testResult.value.all_pass,
+        passed: testResult.value.passed,
+        total: testResult.value.total,
+        results: testResult.value.results || [],
+      }),
+    })
+    if (!resp.ok) {
+      const e = await resp.json().catch(() => ({}))
+      throw new Error(e.detail || `HTTP ${resp.status}`)
+    }
+    const blob = await resp.blob()
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `验收报告_${host.value}_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.${format}`
+    a.click()
+    URL.revokeObjectURL(url)
+    ElMessage.success(`验收报告 (${REPORT_META[format]}) 已导出`)
+  } catch (e) {
+    ElMessage.error(`报告导出失败: ${e.message}`)
+  }
+}
+
 // ---- 备份回滚 ----
 const backups = ref([])
 const backupsLoading = ref(false)
@@ -631,8 +711,32 @@ async function loadBackups() {
   }
 }
 
-async function doRollback() {
-  if (!rbDryRun.value) {
+// ---- 配置漂移对比 ----
+const diffA = ref('')
+const diffB = ref('')
+const diffLoading = ref(false)
+const diffResult = ref(null)
+
+async function doDiff() {
+  diffLoading.value = true
+  try {
+    const q = `host=${encodeURIComponent(host.value.trim())}&a=${encodeURIComponent(diffA.value)}&b=${encodeURIComponent(diffB.value)}`
+    const resp = await fetch(`/api/device/backups/diff?${q}`, { headers: authHeaders() })
+    const data = await resp.json()
+    if (!resp.ok) throw new Error(data.detail || `HTTP ${resp.status}`)
+    diffResult.value = data.data
+  } catch (e) {
+    ElMessage.error(`对比失败: ${e.message}`)
+  } finally {
+    diffLoading.value = false
+  }
+}
+
+// 切换设备/刷新备份列表时清空对比状态
+watch(host, () => { diffA.value = ''; diffB.value = ''; diffResult.value = null })
+watch(backups, () => { diffResult.value = null })
+
+async function doRollback() {  if (!rbDryRun.value) {
     try {
       await ElMessageBox.confirm(
         `将把设备 ${host.value} 的配置回滚到 ${rbSelected.value}!\n回滚前会先备份当前配置。确认继续?`,
@@ -778,4 +882,20 @@ watch(activeTab, (t) => { if (t === 'audit') loadAudit() })
   flex-wrap: wrap;
 }
 .push-actions { margin-left: auto; display: flex; gap: 8px; align-items: center; }
+
+/* ---- 配置漂移对比 ---- */
+.diff-box { margin-top: 10px; border: 1px solid #e4e7ed; border-radius: 8px; overflow: hidden; }
+.diff-head {
+  display: flex; gap: 10px; align-items: center;
+  padding: 8px 12px; background: #f6f9fb; border-bottom: 1px solid #e4e7ed;
+}
+.diff-body {
+  max-height: 300px; overflow-y: auto;
+  font-family: Consolas, 'Courier New', monospace; font-size: 12px; line-height: 1.7;
+  background: #fff;
+}
+.diff-line { padding: 0 12px; white-space: pre-wrap; word-break: break-all; }
+.diff-line.add { background: #e8f7ee; color: #1a7f37; }
+.diff-line.del { background: #fdeeee; color: #c0392b; text-decoration: line-through; text-decoration-thickness: 1px; }
+.diff-mark { display: inline-block; width: 14px; color: #909399; user-select: none; }
 </style>

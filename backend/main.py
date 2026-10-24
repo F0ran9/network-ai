@@ -27,6 +27,9 @@ from device_connector import push_config, run_ping_tests, collect_state, BACKUP_
 import network_scanner
 import audit as audit_log
 from change_plan import build_change_plan
+from report_export import (build_acceptance_report_md, build_acceptance_report_docx,
+                           build_acceptance_report_pdf, build_change_plan_md, build_change_plan_pdf)
+from console_init import build_console_init
 
 app = FastAPI(title="Network Config Generator")
 
@@ -451,14 +454,26 @@ class ChangePlanRequest(BaseModel):
     vendor: str = ""
     operator: str = ""
     reviewer: str = ""
+    format: str = "docx"    # docx / md / pdf
     topologyPng: str = ""   # data URL, 可为空
     devices: list = []      # [PlanDevice...]
     acceptance: list = []   # [PlanAcceptanceSource...]
 
 
+PLAN_MEDIA = {
+    "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "pdf": "application/pdf",
+    "md": "text/markdown",
+}
+PLAN_EXT = {"docx": ".docx", "pdf": ".pdf", "md": ".md"}
+
+
 @app.post("/api/export/change-plan")
 async def api_export_change_plan(request: ChangePlanRequest):
-    """生成《网络变更割接方案》.docx (含拓扑图/设备清单/命令明细/回退/验收/签字栏)."""
+    """生成《网络变更割接方案》, 支持 docx / md / pdf."""
+    fmt = (request.format or "docx").lower()
+    if fmt not in PLAN_MEDIA:
+        raise HTTPException(400, detail=f"不支持的格式: {fmt} (可选 docx/md/pdf)")
     try:
         data = request.model_dump()
         png_bytes = None
@@ -467,15 +482,132 @@ async def api_export_change_plan(request: ChangePlanRequest):
                 png_bytes = base64.b64decode(data["topologyPng"].split(",", 1)[1])
             except Exception:
                 png_bytes = None
-        docx_bytes = build_change_plan(data, topology_png=png_bytes)
-        filename = urllib.parse.quote(f"割接方案_{datetime.datetime.now().strftime('%Y%m%d_%H%M')}.docx")
+
+        if fmt == "docx":
+            content = build_change_plan(data, topology_png=png_bytes)
+        elif fmt == "pdf":
+            content = build_change_plan_pdf(data, topology_png=png_bytes)
+        else:
+            content = build_change_plan_md(data).encode("utf-8")
+
+        filename = urllib.parse.quote(
+            f"割接方案_{datetime.datetime.now().strftime('%Y%m%d_%H%M')}{PLAN_EXT[fmt]}")
         return Response(
-            content=docx_bytes,
-            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            content=content,
+            media_type=PLAN_MEDIA[fmt],
+            headers={"Content-Disposition": f"attachment; filename*=UTF-8''{filename}"},
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(500, detail=f"割接方案生成失败: {e}")
+
+
+# ---- 验收报告导出 (md / docx / pdf) ----
+class AcceptanceReportRequest(BaseModel):
+    format: str = "docx"
+    projectName: str = ""
+    host: str = ""
+    deviceType: str = ""
+    source: str = ""
+    operator: str = ""
+    time: str = ""
+    allPass: bool = False
+    passed: int = 0
+    total: int = 0
+    results: list = []  # [{name, ip, pass, detail}]
+
+
+REPORT_MEDIA = {
+    "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "pdf": "application/pdf",
+    "md": "text/markdown",
+}
+REPORT_EXT = {"docx": ".docx", "pdf": ".pdf", "md": ".md"}
+REPORT_BUILDERS = {"docx": build_acceptance_report_docx,
+                   "pdf": build_acceptance_report_pdf,
+                   "md": lambda d: build_acceptance_report_md(d).encode("utf-8")}
+
+
+@app.post("/api/export/acceptance-report")
+async def api_export_acceptance_report(request: AcceptanceReportRequest):
+    """连通性验收报告导出, 支持 docx / md / pdf."""
+    fmt = (request.format or "docx").lower()
+    if fmt not in REPORT_MEDIA:
+        raise HTTPException(400, detail=f"不支持的格式: {fmt} (可选 docx/md/pdf)")
+    try:
+        content = REPORT_BUILDERS[fmt](request.model_dump())
+        filename = urllib.parse.quote(
+            f"验收报告_{request.host or 'device'}_{datetime.datetime.now().strftime('%Y%m%d_%H%M')}{REPORT_EXT[fmt]}")
+        return Response(
+            content=content,
+            media_type=REPORT_MEDIA[fmt],
             headers={"Content-Disposition": f"attachment; filename*=UTF-8''{filename}"},
         )
     except Exception as e:
-        raise HTTPException(500, detail=f"割接方案生成失败: {e}")
+        raise HTTPException(500, detail=f"验收报告生成失败: {e}")
+
+
+# ---- Console 初始化命令 (SSH 不可达设备的兜底) ----
+class ConsoleInitRequest(BaseModel):
+    vendor: str
+    hostname: str = ""
+    mgmtIp: str = ""
+    mgmtMask: str = "255.255.255.0"
+    gw: str = ""
+    username: str = "netadmin"
+    password: str = ""
+
+
+@app.post("/api/console-init")
+async def api_console_init(request: ConsoleInitRequest):
+    """为 SSH 不可达的新设备生成 Console 初始化命令 (管理地址/SSH/LLDP/账号/网关)."""
+    return build_console_init(request.vendor, request.hostname, request.mgmtIp,
+                              request.mgmtMask, request.gw, request.username, request.password)
+
+
+# ---- 备份两两 diff (配置漂移核查) ----
+def _read_backup_file(name: str) -> str:
+    n = os.path.basename((name or "").strip())
+    if not n.endswith(".cfg") or n.startswith("state_"):
+        raise HTTPException(400, detail=f"非法的备份文件名: {name}")
+    path = BACKUP_DIR / n
+    if not path.exists():
+        raise HTTPException(404, detail=f"备份文件不存在: {n}")
+    return path.read_text(encoding="utf-8", errors="replace")
+
+
+@app.get("/api/device/backups/diff")
+async def api_backups_diff(host: str = "", a: str = "", b: str = ""):
+    """对比同一设备的两份备份, 返回逐行差异 (same/add/del) 供前端高亮."""
+    import difflib
+    if not a or not b:
+        raise HTTPException(400, detail="请提供要对比的两份备份文件 (a 与 b)")
+    la = _read_backup_file(a).splitlines()
+    lb = _read_backup_file(b).splitlines()
+    lines = []
+    for d in difflib.SequenceMatcher(None, la, lb, autojunk=False).get_opcodes():
+        tag, i1, i2, j1, j2 = d
+        if tag == "equal":
+            for l in la[i1:i2]:
+                lines.append({"type": "same", "text": l})
+        elif tag == "delete":
+            for l in la[i1:i2]:
+                lines.append({"type": "del", "text": l})
+        elif tag == "insert":
+            for l in lb[j1:j2]:
+                lines.append({"type": "add", "text": l})
+        else:  # replace: 旧删新增成对展示
+            for l in la[i1:i2]:
+                lines.append({"type": "del", "text": l})
+            for l in lb[j1:j2]:
+                lines.append({"type": "add", "text": l})
+    return {"status": "success", "data": {
+        "a": a, "b": b,
+        "added": sum(1 for l in lines if l["type"] == "add"),
+        "removed": sum(1 for l in lines if l["type"] == "del"),
+        "lines": lines,
+    }}
 
 # ---- Device Connection (真机下发/验收) ----
 class DevicePushRequest(BaseModel):
