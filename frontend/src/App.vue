@@ -45,6 +45,7 @@
         <input ref="imageFileInput" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp" style="display:none" @change="onImageImport" />
         <el-divider direction="vertical" />
         <el-button size="small" :icon="Setting" @click="globalSettingsDialog.visible = true" title="全局设置">设置</el-button>
+        <el-button size="small" :icon="Memo" @click="auditPanel?.open()" title="平台操作审计日志">审计</el-button>
         <el-button size="small" :icon="Key" @click="aiConfigVisible = true" title="AI 接口配置">AI 设置</el-button>
         <el-dropdown @command="applyTemplateCmd" trigger="click">
           <el-button size="small" :icon="Files" title="从模板新建拓扑">模板<el-icon class="el-icon--right"><ArrowDown /></el-icon></el-button>
@@ -188,13 +189,15 @@
 
     <!-- Global Settings Dialog -->
     <GlobalSettingsDialog ref="globalSettingsDialog" />
+    <!-- Audit Log Panel -->
+    <AuditPanel ref="auditPanel" />
     </template>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight, Connection, Document } from '@element-plus/icons-vue'
+import { Search, Download, Upload, Delete, PictureFilled, Setting, Sunny, Moon, Camera, Key, FolderOpened, ArrowDown, Files, DArrowLeft, DArrowRight, Connection, Document, Memo } from '@element-plus/icons-vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 import axios from 'axios'
 import TopologyEditor from './components/TopologyEditor.vue'
@@ -210,6 +213,7 @@ import GlobalSettingsDialog from './components/GlobalSettingsDialog.vue'
 import LoginView from './components/LoginView.vue'
 import AIConfigDialog from './components/AIConfigDialog.vue'
 import NetworkDiscoverDialog from './components/NetworkDiscoverDialog.vue'
+import AuditPanel from './components/AuditPanel.vue'
 import { deviceCategories } from './topology/deviceDefinitions.js'
 import { autoAssignSubnets } from './topology/subnetPlanner.js'
 import { validateTopology } from './topology/topologyValidator.js'
@@ -251,6 +255,7 @@ const cliDevice = ref(null)
 // Global settings dialog
 const globalSettingsDialog = ref(null)
 const discoverDialog = ref(null)
+const auditPanel = ref(null)
 
 // Auto-layout
 const layoutLoading = ref(false)

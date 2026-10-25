@@ -68,7 +68,7 @@
 - **连通性验收** — 下发完成后可从设备指定源地址（VLANIF/管理口）ping 一组业务目标（DHCP 服务器、网关等），输出 PASS/FAIL 验收表格——验证的是业务网段真实可达，全绿才算"真的通"
 - **验收报告导出** — 验收结果一键导出 **Markdown / Word / PDF** 三种格式，直接归档交付
 - **割接方案导出** — 一键生成《割接方案》文档（概述/拓扑图/设备清单/命令明细/回退方案/验收项/签字页七章结构），支持 **Word / PDF / Markdown** 三种格式
-- **操作审计** — 所有下发/回滚/验收操作记录 JSON Lines 审计日志，平台内可查
+- **操作审计** — 所有下发/回滚/验收/登录操作自动记录审计日志：SQLite 落库 + JSON Lines 双写，自动记录操作者 IP 与会话标识；平台内置**审计日志面板**（按动作/结果/主机/关键字/时间范围筛选，分页浏览 + 近 7 天操作统计），支持一键导出 CSV 归档
 - **登录防爆破** — 同源连续 5 次密码失败自动锁定 10 分钟
 - **命令过滤** — 自动剔除注释行、告警横幅等无效行，仅下发有效配置命令
 
@@ -101,7 +101,7 @@ topology-config-tool/
 │   ├── console_init.py         # Console 初始化命令模板（华为/H3C/思科/锐捷）
 │   ├── change_plan.py          # 割接方案文档生成（python-docx 七章结构）
 │   ├── report_export.py        # 验收报告/割接方案导出（MD/DOCX/PDF）
-│   ├── audit.py                # 操作审计日志（JSON Lines）
+│   ├── audit.py                # 操作审计模块（SQLite + JSONL 双写，过滤/分页/统计/CSV 导出）
 │   ├── chat.py                 # AI 对话
 │   ├── prompts.py              # Prompt 模板
 │   ├── knowledge_base/         # 厂商命令模板库（20 个 JSON）
@@ -250,7 +250,11 @@ cd frontend && npm run dev
 | POST | `/api/device/backups/diff` | 两个备份版本配置漂移对比 |
 | GET | `/api/device/backups` | 查询设备历史备份版本 |
 | POST | `/api/device/rollback` | 回滚到指定备份版本 |
-| GET | `/api/audit` | 查询操作审计日志 |
+| GET | `/api/audit` | 最近审计记录（兼容旧接口） |
+| GET | `/api/audit/query` | 审计条件查询（动作/结果/主机/关键字/时间范围+分页） |
+| GET | `/api/audit/actions` | 审计动作类型统计 |
+| GET | `/api/audit/stats` | 近 N 天操作统计（趋势/分布/失败数） |
+| GET | `/api/audit/export` | 审计日志导出 CSV |
 | POST | `/api/console-init` | 生成 Console 初始化命令（四厂商） |
 | POST | `/api/export/acceptance-report` | 导出验收报告（format=md/docx/pdf） |
 | POST | `/api/export/change-plan` | 导出割接方案（format=md/docx/pdf） |

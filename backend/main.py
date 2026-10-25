@@ -156,6 +156,7 @@ async def api_auth_change_password(request: ChangePasswordRequest):
 @app.middleware("http")
 async def auth_middleware(request, call_next):
     path = request.url.path
+    token = ""
     # 登录接口与前端静态资源放行, 其余 /api/* 一律要求会话 token
     if path.startswith("/api/") and path != "/api/auth/login":
         auth = request.headers.get("authorization", "")
@@ -165,6 +166,8 @@ async def auth_middleware(request, call_next):
             _sessions.pop(token, None)
             from fastapi.responses import JSONResponse
             return JSONResponse(status_code=401, content={"detail": "未登录或会话已过期"})
+    # 审计上下文: 本请求后续 audit() 自动带上操作者 IP 与脱敏会话标识
+    audit_log.set_context(_client_ip(request), token)
     return await call_next(request)
 
 
@@ -890,8 +893,44 @@ async def api_device_push_batch(request: BatchPushRequest):
 # ---- 审计日志查询 ----
 @app.get("/api/audit")
 async def api_audit(limit: int = 100):
-    """最近 limit 条平台操作审计记录 (新→旧)."""
+    """最近 limit 条平台操作审计记录 (新→旧). 兼容旧接口."""
     return {"status": "success", "data": audit_log.recent(min(max(limit, 1), 500))}
+
+
+@app.get("/api/audit/query")
+async def api_audit_query(action: str = "", result: str = "", host: str = "",
+                          keyword: str = "", start: str = "", end: str = "",
+                          page: int = 1, pageSize: int = 20):
+    """审计日志条件查询: 动作/结果/主机/关键字/时间范围 + 分页."""
+    data = audit_log.query(action=action.strip(), result=result.strip(),
+                           host=host.strip(), keyword=keyword.strip(),
+                           start=start.strip(), end=end.strip(),
+                           page=page, page_size=pageSize)
+    return {"status": "success", "data": data}
+
+
+@app.get("/api/audit/actions")
+async def api_audit_actions():
+    """审计中出现过的动作类型及计数 (筛选下拉用)."""
+    return {"status": "success", "data": audit_log.actions()}
+
+
+@app.get("/api/audit/stats")
+async def api_audit_stats(days: int = 7):
+    """近 N 天操作统计: 按天趋势 / 按动作分布 / 失败数."""
+    return {"status": "success", "data": audit_log.stats(min(max(days, 1), 90))}
+
+
+@app.get("/api/audit/export")
+async def api_audit_export(action: str = "", result: str = "", host: str = "",
+                           keyword: str = "", start: str = "", end: str = ""):
+    """按过滤条件导出审计日志 CSV."""
+    csv_text = audit_log.export_csv(action=action.strip(), result=result.strip(),
+                                    host=host.strip(), keyword=keyword.strip(),
+                                    start=start.strip(), end=end.strip())
+    filename = f"audit-{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    return Response(content=csv_text, media_type="text/csv; charset=utf-8",
+                    headers={"Content-Disposition": f"attachment; filename={filename}"})
 
 
 # ============================================================
